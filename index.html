@@ -118,7 +118,7 @@
     <div class="section" id="homeSection">
       <div class="container-fluid gx-0">
         <div class="row">
-         <div class="col-xl-6">
+         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
           <div class="row">
             <div class="banner-left banner" style="background-image: url(images/background/left-header-banner.jpg);">
               <div class="section-content">
@@ -134,7 +134,7 @@
             </div>  
           </div>
          </div>
-          <div class="col-xl-6">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
             <div class="row">
               <div class="banner-right banner">
                 <video autoplay muted loop class="bg-v">
@@ -211,7 +211,7 @@
           </div>
         </div>
         <div class="row d-flex align-items-stretch speaker-section justify-content-center p-3">
-          <div class="col-md-3 col-sm-6 speaker d-flex">
+          <div style="margin-bottom: 5rem" class="col-lg-3 col-md-4 col-sm-6 speaker d-flex">
               <div class="inner-box flex-grow-1 d-flex flex-column">
                   <img src="images/speakers/Sanjoli.webp" alt="Uros Mikic - CEO, Webflow Expert" class="mx-auto d-block">
                   <div class="speaker-info flex-grow-1">
@@ -227,7 +227,7 @@
               </div>
           </div>
       
-          <div class="col-md-3 col-sm-6 speaker d-flex">
+          <div style="margin-bottom: 5rem" class="col-lg-3 col-md-4 col-sm-6 speaker d-flex">
               <div class="inner-box flex-grow-1 d-flex flex-column">
                   <img src="images/speakers/Sanjoli.webp" alt="Uros Mikic - CEO, Webflow Expert" class="mx-auto d-block">
                   <div class="speaker-info flex-grow-1">
@@ -243,7 +243,7 @@
               </div>
           </div>
       
-          <div class="col-md-3 col-sm-6 speaker d-flex">
+          <div style="margin-bottom: 5rem" class="col-lg-3 col-md-4 col-sm-6 speaker d-flex">
               <div class="inner-box flex-grow-1 d-flex flex-column">
                   <img src="images/speakers/Sanjoli.webp" alt="Uros Mikic - CEO, Webflow Expert" class="mx-auto d-block">
                   <div class="speaker-info flex-grow-1">
@@ -259,7 +259,7 @@
               </div>
           </div>
       
-          <div class="col-md-3 col-sm-6 speaker d-flex">
+          <div style="margin-bottom: 5rem" class="col-lg-3 col-md-4 col-sm-6 speaker d-flex">
               <div class="inner-box flex-grow-1 d-flex flex-column">
                   <img src="images/speakers/Sanjoli.webp" alt="Uros Mikic - CEO, Webflow Expert" class="mx-auto d-block">
                   <div class="speaker-info flex-grow-1">
@@ -288,7 +288,7 @@
           <p>Fuel your mind with captivating keynotes, engaging panels, and exclusive industry insights</p>
         </div>
         <div class="row pt-3">
-          <div class="col-md-3">
+          <div class="col-md-3 col-sm-12">
             <div class="highlights">
               <div class="highlight-text">Innovative Hospitality Solutions</div>
             </div>
@@ -311,7 +311,7 @@
               <div class="highlight-text">CSRD in the hospitality industry</div>
             </div>
           </div>
-          <div class="col-md-3 hlt-section">
+          <div class="col-md-3 col-sm-12 hlt-section">
             <div class="highlights">
               <div class="highlight-text">Technological Evolutions</div>
             </div>
@@ -334,15 +334,19 @@
               <div class="highlight-text">Sustainability Practices</div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 col-sm-12">
             <div class="row">
               <div class="col-md-6 align-self-start">
-                <h5 class="m-5 text-center">Attendees By Region</h5>
-                <canvas id="myDoughnutChart" width="300" height="400"></canvas>
+                <div class="graphs-wrap">
+                  <h5 class="m-5 text-center">Attendees By Region</h5>
+                  <canvas id="myDoughnutChart" width="300" height="400"></canvas>
+              </div>
               </div>
               <div class="col-md-6 align-self-end">
-                <h5 class="m-5 text-center">Attendees By Industry</h5>
-                <canvas id="myRegionChart" width="300" height="400"></canvas>
+                <div class="graphs-wrap">
+                  <h5 class="m-5 text-center">Attendees By Industry</h5>
+                  <canvas id="myRegionChart" width="300" height="400"></canvas>
+                </div>
               </div>
             </div>
           </div>
@@ -373,7 +377,7 @@
             </div>
             <div class="col-md-9">
               <div class="row">
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -384,7 +388,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -395,7 +399,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -406,7 +410,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -417,7 +421,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -428,7 +432,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!--href="https://altoida.com/" target="_blank" rel="nofollow"-->
@@ -449,7 +453,7 @@
             </div>
             <div class="col-md-9">
               <div class="row">
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -460,7 +464,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -471,7 +475,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -482,7 +486,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -493,7 +497,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -504,7 +508,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!--href="https://altoida.com/" target="_blank" rel="nofollow"-->
@@ -525,7 +529,7 @@
             </div>
             <div class="col-md-9">
               <div class="row">
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -536,7 +540,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -547,7 +551,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -558,7 +562,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -569,7 +573,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -580,7 +584,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!--href="https://altoida.com/" target="_blank" rel="nofollow"-->
@@ -601,7 +605,7 @@
             </div>
             <div class="col-md-9">
               <div class="row">
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -612,7 +616,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -623,7 +627,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -634,7 +638,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -645,7 +649,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -656,7 +660,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!--href="https://altoida.com/" target="_blank" rel="nofollow"-->
@@ -677,7 +681,7 @@
             </div>
             <div class="col-md-9">
               <div class="row">
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -688,7 +692,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -699,7 +703,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -710,7 +714,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -721,7 +725,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -732,7 +736,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!--href="https://altoida.com/" target="_blank" rel="nofollow"-->
@@ -753,7 +757,7 @@
             </div>
             <div class="col-md-9">
               <div class="row">
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -764,7 +768,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -775,7 +779,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -786,7 +790,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -797,7 +801,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -808,7 +812,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!--href="https://altoida.com/" target="_blank" rel="nofollow"-->
@@ -829,7 +833,7 @@
             </div>
             <div class="col-md-9">
               <div class="row">
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -840,7 +844,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -851,7 +855,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -862,7 +866,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -873,7 +877,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
@@ -884,7 +888,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
                   <div class="sponsor-logo">
                       <!--href="https://altoida.com/" target="_blank" rel="nofollow"-->
@@ -1075,7 +1079,7 @@
           <p>If You are Looking to Book 5+ Tickets Please Get in Touch for Group Rates</p>
         </div>
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4" style="margin-bottom: 20px">
             <div class="pricing-table h-100 d-flex flex-column">
               <div class="product-category">
                 <h3>General Admission for Academia, <br>Non-Profit, Government<br> (Non Service Provider)</h3>
@@ -1098,7 +1102,7 @@
               <img src="images/background/up-right-arrow.png" class="arrow-img">
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" style="margin-bottom: 20px">
             <div class="pricing-table h-100 d-flex flex-column">
               <div class="product-category">
                 <h3>Vendor / Company / Service Provider</h3>
@@ -1121,7 +1125,7 @@
               <img src="images/background/up-right-arrow.png" class="arrow-img">
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" style="margin-bottom: 20px">
             <div class="pricing-table h-100 d-flex flex-column">
               <div class="product-category">
                 <h3>Student Pass</h3>
