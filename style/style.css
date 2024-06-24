@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   zoom: 95%;
-}
+} */
 
 a {
   text-decoration: none !important;
@@ -91,7 +91,12 @@ a {
 
 .home-bg {
   position: relative; /* Ensure the parent element has a position */
-  background-image: linear-gradient(0deg,rgba(0, 106, 44, 0.574),rgb(0, 106, 45, 0.8)), url("../images/background/speaker-bg.jpg");
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 106, 44, 0.574),
+      rgb(0, 106, 45, 0.8)
+    ),
+    url("../images/background/speaker-bg.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -299,9 +304,79 @@ button.accordion-button:active {
   opacity: 1;
 }
 
-.speaker {
+/* .speaker {
   text-align: center;
   margin-bottom: 30px;
+} */
+
+.speaker {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.speaker .details {
+  text-align: center;
+  padding-top: 10px;
+  transition: all 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.img-speaker {
+  position: relative;
+  width: 100%;
+  background-color: #28a745;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.img-speaker .img-filter {
+  mix-blend-mode: hard-light;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+.img-speaker:hover .img-filter {
+  filter: blur(5px);
+  transform: scale(1.1);
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(7, 151, 132, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.img-speaker:hover .overlay {
+  opacity: 1;
+}
+.overlay i {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  background-color: white;
+  color: #28a745;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-speaker:hover .overlay i {
+  opacity: 1;
+  transform: translateY(0);
+}
+.speaker .details h3 {
+  color: #42646a;
+  font-size: 22px;
+  font-weight: 600;
+}
+.speaker .details p {
+  color: black;
+  font-size: 15px;
+  margin-bottom: 7px;
 }
 
 .inner-box {
@@ -313,17 +388,17 @@ button.accordion-button:active {
   /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
 }
 
-.speaker img {
+/* .speaker img {
   width: 50%;
   border-radius: 50%;
   border: 5px solid #e1e1e0;
   margin-bottom: 15px;
   margin-top: -70px;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
-}
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+} */
 
-.speaker-info {
+/* .speaker-info {
   padding: 10px;
 }
 
@@ -337,7 +412,7 @@ button.accordion-button:active {
   font-size: 15px;
   color: #696969;
   margin-bottom: 5px;
-}
+} */
 
 .card-footer {
   color: #000000;
@@ -350,7 +425,7 @@ button.accordion-button:active {
 }
 
 .section-header-spk {
-  margin-bottom: 100px;
+  margin-bottom: 30px;
 }
 
 .section-header-spk p {
@@ -750,6 +825,11 @@ button.accordion-button:active {
 
 .agenda-time {
   color: white;
+  padding: 34.8px 30px;
+}
+
+.agenda-detail {
+  padding: 32px 30px;
 }
 
 .img-block {
@@ -759,6 +839,7 @@ button.accordion-button:active {
 }
 
 .speak-slot {
+  padding: 12px;
   border-left: #9b9b9b 1px solid;
 }
 
@@ -774,15 +855,244 @@ button.accordion-button:active {
 .conference-location .fa-location-dot {
   color: #28a745;
 }
-
+/* Venue Section */
+.location-map {
+  height: fit-content;
+}
+.location-content {
+  padding: 15px;
+}
+.location-content .fa-location-dot {
+  color: #28a745;
+}
+.location-images img {
+  transition: all ease-in-out 0.4s;
+}
+.location-images img:hover {
+  transform: scale(1.1);
+}
+.dht-website .modal {
+  display: none;
+  position: fixed;
+  z-index: 120;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+.dht-website .close {
+  color: white !important;
+  position: absolute;
+  top: 70px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+.dht-website .modal-content {
+  position: relative;
+  /* background-color: #fefefe; */
+  background-color: transparent;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+.dht-website .prev,
+.dht-website .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  text-decoration: none;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.dht-website .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.dht-website .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* Program Section */
+#programSection .card {
+  border: none;
+  padding: 18px 20px;
+  /* padding-top: 18px; */
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+.graphs-wrap {
+  margin-top: -60px;
+  /* margin-top: -40px; */
+}
+.counter-stats {
+  text-align: center;
+}
+.counter-stats .counter {
+  font-size: 30px;
+  font-weight: 600;
+}
+.counter-stats p {
+  font-size: 1rem;
+  margin: 0 0 1em;
+  color: #000000;
+}
+.counter-stats .counter-icon {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  background: #dec32b;
+  color: #fff;
+  text-align: center;
+  margin: auto;
+}
+/* Footer */
+#footerSection {
+  background: #1e2b3b;
+}
+#footerSection .footer .footer-menu {
+  margin-top: 50px;
+}
+#footerSection .footer ul {
+  justify-content: space-evenly;
+  list-style: none;
+}
+#footerSection .footer ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  color: #ffffff;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#footerSection .footer a:hover {
+  text-decoration: underline;
+  color: #28a645;
+}
+#footerSection .footer .footer-widget-social {
+  border-top: 1px solid #4a555f;
+  gap: 20px;
+  padding-top: 35px;
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+#footerSection .footer .footer-widget-social a {
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  background-color: #34404b;
+  border-radius: 50%;
+  font-size: 22px;
+  color: #ffffff;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#footerSection .footer .footer-widget-social a:hover {
+  color: #28a645;
+}
+#footerSection .footer .footer-copyright {
+  margin-top: 42px;
+}
+#footerSection .footer .footer-copyright p {
+  color: #919191;
+}
+/* About Section */
+.about-img {
+  padding: 20px;
+}
+.about-content {
+  padding: 20px;
+  text-align: justify;
+  vertical-align: middle;
+}
+.about-content p {
+  margin-bottom: 10px;
+}
+.about-content h3 {
+  font-size: 30px;
+}
+/* Glance Section */
+.schedule-container {
+  padding: 20px;
+}
+.schedule-title {
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 25px;
+  padding-left: 20px;
+}
+.schedule-item {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 15px;
+  margin: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  font-size: 18px;
+}
+.schedule-time {
+  color: #28a745;
+  margin-right: 20px;
+}
+.scrollable-content {
+  height: 80vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.scrollable-content .schedule-item div {
+  font-size: 17px;
+}
 /* Media Queries */
+
+@media (max-width: 1199px) {
+  .agenda-time {
+    padding: 47px 30px;
+  }
+  .speak-slot {
+    padding: 24px 12px;
+  }
+}
 @media (max-width: 992px) {
   #homeSection .banner-left {
     justify-content: center;
     word-break: break-word;
   }
-  .section-content .event-name{
+  .section-content .event-name {
     font-size: 2em;
+  }
+  .agenda-time {
+    padding: 46px 12px;
+  }
+  .speak-slot {
+    padding: 0px 7px;
+  }
+  #agendaSection .row > * {
+    margin-top: 0 !important;
+  }
+  #agendaSection .agenda-col {
+    margin-bottom: 20px;
+  }
+  #agendaSection .speak-slot {
+    border: none;
   }
 }
 @media (max-width: 767px) {

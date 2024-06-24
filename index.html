@@ -1,73 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Full Screen Slider with Scroll Transition</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Screen Slider with Scroll Transition</title>
 
-  <link rel="stylesheet" href="style/style.css">
-  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="vendor/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
-  <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="vendor/font-awesome/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css"
+    />
+    <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <style>
+      ::-webkit-scrollbar {
+        width: 2px;
+      }
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #28a645;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #28a645;
+      }
+    </style>
+  </head>
+  <body class="dht-website">
+    <header id="headerSection">
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="images/dht-logo.png" alt="Logo" width="200" />
+          </a>
 
-</head>
-<body>
-  
-  <header>
-    <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="images/dht-logo.png" alt="Logo" width="200">
-        </a>
+          <button
+            class="btn btn-menu button-86"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBackdrop"
+            aria-controls="offcanvasWithBackdrop"
+          >
+            <i class="fa-solid fa-bars"></i> Menu
+          </button>
 
-        <button class="btn btn-menu button-86" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop"><i class="fa-solid fa-bars"></i> Menu</button>
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+
+      <div
+        class="offcanvas offcanvas-end bg-black"
+        tabindex="-1"
+        id="offcanvasWithBackdrop"
+        aria-labelledby="offcanvasWithBackdropLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">Menu</h5>
+          <button
+            type="button"
+            class="btn-close text-reset bg-success"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="scrollToSection('home')"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="scrollToSection('about')"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="scrollToSection('speakers')"
+                >Speakers</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="scrollToSection('program')"
+                >Program</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="scrollToSection('sponsors')"
+                >Sponsors</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                onclick="scrollToSection('testimonials')"
+                >Testimonials</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="scrollToSection('agenda')"
+                >Agenda</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="scrollToSection('tickets')"
+                >Buy Tickets</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </nav>
-        
-    <div class="offcanvas offcanvas-end bg-black" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">Menu</h5>
-        <button type="button" class="btn-close text-reset bg-success" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="scrollToSection('home')">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="scrollToSection('about')">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="scrollToSection('speakers')">Speakers</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="scrollToSection('program')">Program</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="scrollToSection('sponsors')">Sponsors</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="scrollToSection('testimonials')">Testimonials</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="scrollToSection('agenda')">Agenda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="scrollToSection('tickets')">Buy Tickets</a>
-          </li>
-        </ul>
-      </div>
-    </div>
 
-    <!-- Sticky Navbar -->
-    <!-- <nav class="navbar navbar-expand-lg fixed-top">
+      <!-- Sticky Navbar -->
+      <!-- <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img src="images/dht-logo.png" alt="Digital Transformation in Hotel Technology" width="250px">
@@ -102,273 +164,579 @@
         </div>
       </div>
     </nav> -->
-  </header>
+    </header>
 
-<!-- Social Icons -->
-<div class="social-icons">
-  <a href="#"><i class="fa-brands fa-facebook"></i></a>
-  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-  <a href="#"><i class="fa-brands fa-instagram"></i></a>
-  <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-</div>
-
-  <!-- Fullpage.js Sections -->
-  <div id="fullpage">
-
-    <div class="section" id="homeSection">
-      <div class="container-fluid gx-0">
-        <div class="row">
-         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-          <div class="row">
-            <div class="banner-left banner" style="background-image: url(images/background/left-header-banner.jpg);">
-              <div class="section-content">
-                <p class="slogan">Innovation | Collaboration | Transformation</p>
-                <h1 class="event-name">Digital Transformation
-                <br>in Hotel Technology</h1>
-                <div class="event-detail">
-                  <p><i class="fa-regular fa-calendar-days"></i> 28-29 January 2025</p>
-                  <p><i class="fa-solid fa-location-dot"></i> Nice, France</p>
-                 </div>
-                <a href=""><button class="main-btn">Request Agenda</button></a>
-            </div>
-            </div>  
-          </div>
-         </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-            <div class="row">
-              <div class="banner-right banner">
-                <video autoplay muted loop class="bg-v">
-                  <source src="images/background/Testimonial.mp4" type="video/mp4">
-                </video>
-              </div>  
-            </div>
-         </div>
-        </div> 
-      </div>
+    <!-- Social Icons -->
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
     </div>
 
-    <div class="section" id="aboutSection">
-      <div class="container about-container">
-        <div class="row p-3">
-            <div class="col-md-6">
-                <div class="content" id="contentArea">
-                    <!-- Content area will be dynamically updated -->
-                </div>
-                <div id="accordion">
-                    <div class="accordion-item show" data-heading="Networking Sessions" data-content="Elevate your knowledge and expand your professional network with our dynamic sessions, & exhibitions. Gain insights, maximize learning efficiency, make connections, and seize opportunities for professional development." data-image="images/background/hotel-technology.jpg">
-                        <h3 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                              Networking Sessions
-                            </button>
-                        </h3>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion">
-                            <div class="accordion-body"></div>
-                        </div>
+    <!-- Fullpage.js Sections -->
+    <div id="fullpage">
+      <div class="section" id="homeSection">
+        <div class="container-fluid gx-0">
+          <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+              <div class="row">
+                <div
+                  class="banner-left banner"
+                  style="
+                    background-image: url(images/background/left-header-banner.jpg);
+                  "
+                >
+                  <div class="section-content" style="z-index: 1">
+                    <p class="slogan">
+                      Innovation | Collaboration | Transformation
+                    </p>
+                    <h1 class="event-name">
+                      Digital Transformation <br />in Hotel Technology
+                    </h1>
+                    <div class="event-detail">
+                      <p>
+                        <i class="fa-regular fa-calendar-days"></i> 28-29
+                        January 2025
+                      </p>
+                      <p>
+                        <i class="fa-solid fa-location-dot"></i> Nice, France
+                      </p>
                     </div>
-                    <div class="accordion-item" data-heading="Engaging Meeting" data-content="Immerse yourself in an engaging meeting experience, where connections are forged, and knowledge is shared in deep dive sessions, peer-to-peer & fishbowl discussions." data-image="images/background/hotel-technology.jpg">
-                        <h3 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                              Engaging Meeting
-                            </button>
-                        </h3>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion">
-                            <div class="accordion-body"></div>
-                        </div>
-                    </div>
-                    <div class="accordion-item" data-heading="Refreshment and Happy Hour" data-content="Recharge your mind and body with our curated selection of coffee and drinks, refreshing activities, and Mocha Moment's luncheons, fostering connections over casual conversations." data-image="images/background/hotel-technology.jpg">
-                      <h3 class="accordion-header" id="headingThree">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Refreshment and Happy Hour
-                          </button>
-                      </h3>
-                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
-                          <div class="accordion-body"></div>
-                      </div>
+                    <a href=""
+                      ><button class="main-btn">Request Agenda</button></a
+                    >
                   </div>
                 </div>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+              <div class="row">
+                <div class="banner-right banner">
+                  <video autoplay muted loop class="bg-v">
+                    <source
+                      src="images/background/Testimonial.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section about-section" id="aboutSection">
+        <div class="container">
+          <div class="row justify-content-center g-3 p-3">
+            <div class="col-md-6">
+              <div class="about-img">
+                <img
+                  src="images/background/hotel-about.webp"
+                  alt=""
+                  class="img-fluid"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="about-content">
+                <p class="fw-bold mb-1">About Event</p>
+                <h3>Where Innovation Meets Every Stay!</h3>
+                <p>
+                  Welcome to the forefront of hotel transformation with us at
+                  our upcoming conference!
+                </p>
+                <p>
+                  Get ready to be blown away as we dive headfirst into the
+                  exciting world of tomorrow's hotels. Imagine walking into a
+                  lobby where your every need is anticipated by AI-driven guest
+                  services. Picture rooms that adjust to your preferences before
+                  you even unpack your bags, thanks to cutting-edge IoT
+                  applications. It's not just futuristic – it's the reality
+                  we're building together!
+                </p>
+                <p>
+                  Join us for riveting discussions where we'll unveil the latest
+                  in digital revenue management strategies. From pricing
+                  optimization that keeps occupancy rates soaring to
+                  cybersecurity measures that safeguard guest data, we're
+                  covering it all. But that's just the beginning! Prepare to be
+                  amazed by the marvels of smart hospitality. Automation,
+                  personalization, and connectivity converge to create
+                  experiences that guests will never forget.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="networkingSection">
+        <div class="container about-container">
+          <div class="row p-3">
+            <div class="col-md-6">
+              <div class="content" id="contentArea">
+                <!-- Content area will be dynamically updated -->
+              </div>
+              <div id="accordion">
+                <div
+                  class="accordion-item show"
+                  data-heading="Networking Sessions"
+                  data-content="Elevate your knowledge and expand your professional network with our dynamic sessions, & exhibitions. Gain insights, maximize learning efficiency, make connections, and seize opportunities for professional development."
+                  data-image="images/background/hotel-technology.jpg"
+                >
+                  <h3 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Networking Sessions
+                    </button>
+                  </h3>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordion"
+                  >
+                    <div class="accordion-body"></div>
+                  </div>
+                </div>
+                <div
+                  class="accordion-item"
+                  data-heading="Engaging Meeting"
+                  data-content="Immerse yourself in an engaging meeting experience, where connections are forged, and knowledge is shared in deep dive sessions, peer-to-peer & fishbowl discussions."
+                  data-image="images/background/hotel-technology.jpg"
+                >
+                  <h3 class="accordion-header" id="headingTwo">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      Engaging Meeting
+                    </button>
+                  </h3>
+                  <div
+                    id="collapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#accordion"
+                  >
+                    <div class="accordion-body"></div>
+                  </div>
+                </div>
+                <div
+                  class="accordion-item"
+                  data-heading="Refreshment and Happy Hour"
+                  data-content="Recharge your mind and body with our curated selection of coffee and drinks, refreshing activities, and Mocha Moment's luncheons, fostering connections over casual conversations."
+                  data-image="images/background/hotel-technology.jpg"
+                >
+                  <h3 class="accordion-header" id="headingThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      Refreshment and Happy Hour
+                    </button>
+                  </h3>
+                  <div
+                    id="collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#accordion"
+                  >
+                    <div class="accordion-body"></div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="col-md-6 p-3" id="imageColumn">
-                <!-- Image area will be dynamically updated -->
-            </div>
-        </div>
-    </div>                            
-    </div>
-
-    <div class="section" id="speakersSection">
-      <div class="container mt-4">
-        <div class="section-header-spk">
-          <div class="row p-2">
-            <div class="col-md-6">
-              <p>Who's Speaking</p>
-              <h2>Confirmed Speakers</h2>
-              <p>Industry Leaders Take the Stage at DHT 2025</p>
-            </div>
-            <div class="col-md-6 d-flex flex-column justify-content-end">
-              <div class="gap-1 d-md-flex justify-content-md-end">
-                <a href=""><button class="main-btn me-md-2">Become a Speaker</button></a>
-              </div>
+              <!-- Image area will be dynamically updated -->
             </div>
           </div>
         </div>
-        <div class="row d-flex align-items-stretch speaker-section justify-content-center p-3">
-          <div style="margin-bottom: 5rem" class="col-lg-3 col-md-4 col-sm-6 speaker d-flex">
-              <div class="inner-box flex-grow-1 d-flex flex-column">
-                  <img src="images/speakers/Sanjoli.webp" alt="Uros Mikic - CEO, Webflow Expert" class="mx-auto d-block">
-                  <div class="speaker-info flex-grow-1">
-                      <h3>Uros Mikic</h3>
-                      <p>Vice President, Global Head of Partnering</p>
-                      <p class="fw-bold">Roche Information Solution</p>
-                  </div>
-                  <hr width="80%" class="mx-auto border-dark">
-                  <div class="card-footer mt-auto">
-                      <i class="fa-brands fa-linkedin"></i>
-                      <i class="fa-solid fa-square-plus"></i>
-                  </div>
-              </div>
-          </div>
-      
-          <div style="margin-bottom: 5rem" class="col-lg-3 col-md-4 col-sm-6 speaker d-flex">
-              <div class="inner-box flex-grow-1 d-flex flex-column">
-                  <img src="images/speakers/Sanjoli.webp" alt="Uros Mikic - CEO, Webflow Expert" class="mx-auto d-block">
-                  <div class="speaker-info flex-grow-1">
-                      <h3>Uros Mikic</h3>
-                      <p>Principal, Patients & Strategy Lead, Cystic Fibrosis Patient Advocate</p>
-                      <p class="fw-bold">Florence Healthcare</p>
-                  </div>
-                  <hr width="80%" class="mx-auto border-dark">
-                  <div class="card-footer mt-auto">
-                      <i class="fa-brands fa-linkedin"></i>
-                      <i class="fa-solid fa-square-plus"></i>
-                  </div>
-              </div>
-          </div>
-      
-          <div style="margin-bottom: 5rem" class="col-lg-3 col-md-4 col-sm-6 speaker d-flex">
-              <div class="inner-box flex-grow-1 d-flex flex-column">
-                  <img src="images/speakers/Sanjoli.webp" alt="Uros Mikic - CEO, Webflow Expert" class="mx-auto d-block">
-                  <div class="speaker-info flex-grow-1">
-                      <h3>Uros Mikic</h3>
-                      <p>Professor of Medicine, Biomedical Data Science, and Surgery</p>
-                      <p class="fw-bold">Webflow Expert</p>
-                  </div>
-                  <hr width="80%" class="mx-auto border-dark">
-                  <div class="card-footer mt-auto">
-                      <i class="fa-brands fa-linkedin"></i>
-                      <i class="fa-solid fa-square-plus"></i>
-                  </div>
-              </div>
-          </div>
-      
-          <div style="margin-bottom: 5rem" class="col-lg-3 col-md-4 col-sm-6 speaker d-flex">
-              <div class="inner-box flex-grow-1 d-flex flex-column">
-                  <img src="images/speakers/Sanjoli.webp" alt="Uros Mikic - CEO, Webflow Expert" class="mx-auto d-block">
-                  <div class="speaker-info flex-grow-1">
-                      <h3>Uros Mikic</h3>
-                      <p>Co-founder & CEO</p>
-                      <p class="fw-bold">Webflow Expert</p>
-                  </div>
-                  <hr width="80%" class="mx-auto border-dark">
-                  <div class="card-footer mt-auto">
-                      <i class="fa-brands fa-linkedin"></i>
-                      <i class="fa-solid fa-square-plus"></i>
-                  </div>
-              </div>
-          </div>
       </div>
-      <div class="text-center mx-auto">
-        <a href="" class=""><button class="main-btn">View More Speakers</button></a>
-      </div>
-      </div>   
-    </div>
 
-    <div class="section" id="programSection">
-      <div class="container">
-        <div class="program-section">
-          <h2>Exciting Agenda Highlights</h2>
-          <p>Fuel your mind with captivating keynotes, engaging panels, and exclusive industry insights</p>
+      <div class="section" id="speakersSection">
+        <div class="container">
+          <div class="section-header-spk">
+            <div class="row p-2">
+              <div class="col-md-6">
+                <p>Who's Speaking</p>
+                <h2>Confirmed Speakers</h2>
+                <p>Industry Leaders Take the Stage at DHT 2025</p>
+              </div>
+              <div class="col-md-6 d-flex flex-column justify-content-end">
+                <div class="gap-1 d-md-flex justify-content-md-end">
+                  <a href=""
+                    ><button class="main-btn me-md-2">
+                      Become a Speaker
+                    </button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-6">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="100">
+                <div class="img-speaker">
+                  <img
+                    src="images/speakers/Amy.png"
+                    alt="Worldbi Speaker"
+                    class="img-fluid img-filter"
+                    style="width: 100%"
+                  />
+                  <div class="overlay">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-solid fa-user"></i></a>
+                  </div>
+                </div>
+                <div class="details">
+                  <h3 class="name">Jane Myles</h3>
+                  <p>Program Director, Special Projects</p>
+                  <h5>DTRA</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="100">
+                <div class="img-speaker">
+                  <img
+                    src="images/speakers/Amy.png"
+                    alt="Worldbi Speaker"
+                    class="img-fluid img-filter"
+                    style="width: 100%"
+                  />
+                  <div class="overlay">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-solid fa-user"></i></a>
+                  </div>
+                </div>
+                <div class="details">
+                  <h3 class="name">Jane Myles</h3>
+                  <p>Program Director, Special Projects</p>
+                  <h5>DTRA</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="100">
+                <div class="img-speaker">
+                  <img
+                    src="images/speakers/Amy.png"
+                    alt="Worldbi Speaker"
+                    class="img-fluid img-filter"
+                    style="width: 100%"
+                  />
+                  <div class="overlay">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-solid fa-user"></i></a>
+                  </div>
+                </div>
+                <div class="details">
+                  <h3 class="name">Jane Myles</h3>
+                  <p>Program Director, Special Projects</p>
+                  <h5>DTRA</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="100">
+                <div class="img-speaker">
+                  <img
+                    src="images/speakers/Amy.png"
+                    alt="Worldbi Speaker"
+                    class="img-fluid img-filter"
+                    style="width: 100%"
+                  />
+                  <div class="overlay">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-solid fa-user"></i></a>
+                  </div>
+                </div>
+                <div class="details">
+                  <h3 class="name">Jane Myles</h3>
+                  <p>Program Director, Special Projects</p>
+                  <h5>DTRA</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mx-auto">
+            <a href="" class=""
+              ><button class="main-btn">View More Speakers</button></a
+            >
+          </div>
         </div>
-        <div class="row pt-3">
-          <div class="col-md-3 col-sm-12">
-            <div class="highlights">
-              <div class="highlight-text">Innovative Hospitality Solutions</div>
-            </div>
-            <div class="highlights">
-              <div class="highlight-text">Personalized Guest Experience</div>
-            </div>
-            <div class="highlights">
-              <div class="highlight-text">Navigating Tomorrow's Hospitality Landscape</div>
-            </div>
-            <div class="highlights">
-              <div class="highlight-text">Green Hospitality Initiatives</div>
-            </div>
-            <div class="highlights">
-              <div class="highlight-text">Revolutionizing Dining Experiences with AI</div>
-            </div>
-            <div class="highlights">
-              <div class="highlight-text">Blockchain Implementations</div>
-            </div>
-            <div class="highlights">
-              <div class="highlight-text">CSRD in the hospitality industry</div>
-            </div>
+      </div>
+
+      <div class="section" id="programSection">
+        <div class="container">
+          <div class="program-section">
+            <h2>What To Expect</h2>
+            <p>
+              Fuel your mind with captivating keynotes, engaging panels, and
+              exclusive industry insights
+            </p>
           </div>
-          <div class="col-md-3 col-sm-12 hlt-section">
-            <div class="highlights">
-              <div class="highlight-text">Technological Evolutions</div>
-            </div>
-            <div class="highlights">
-              <div class="highlight-text">Challenges in technology Adaptions</div>
-            </div>
-            <div class="highlights">
-              <div class="highlight-text">Maximizing Revenue Strategies</div>
-            </div>
-            <div class="highlights">
-              <div class="highlight-text">Hotel in Pocket</div>
-            </div>
-            <div class="highlights">
-              <div class="highlight-text">Empowering Entrepreneurs with Smart Hospitality</div>
-            </div>
-            <div class="highlights">
-              <div class="highlight-text">Cybersecurity and Privacy Concerns</div>
-            </div>
-            <div class="highlights">
-              <div class="highlight-text">Sustainability Practices</div>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <div class="row">
-              <div class="col-md-6 align-self-start">
-                <div class="graphs-wrap">
-                  <h5 class="m-5 text-center">Attendees By Region</h5>
-                  <canvas id="myDoughnutChart" width="300" height="400"></canvas>
+          <div class="row pt-3">
+            <div class="col-md-6 col-sm-12">
+              <div class="card">
+                <div class="row">
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="counter-stats">
+                      <div class="counter-icon">
+                        <img
+                          class="img-fluid"
+                          alt="WorlBI Stats"
+                          src="images/icons/01.png"
+                          width="100%"
+                        />
+                      </div>
+                      <div
+                        class="counter"
+                        data-target="200"
+                        data-suffix="+"
+                      ></div>
+                      <p>
+                        <span class="fw-semibold"
+                          >Attendees To Meet Each Year</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="counter-stats">
+                      <div class="counter-icon">
+                        <img
+                          class="img-fluid"
+                          alt="WorlBI Stats"
+                          src="images/icons/01.png"
+                          width="100%"
+                        />
+                      </div>
+                      <div
+                        class="counter"
+                        data-target="30"
+                        data-suffix="+"
+                      ></div>
+                      <p>
+                        <span class="fw-semibold">
+                          Exhibitors To Meet Each Year
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="counter-stats">
+                      <div class="counter-icon">
+                        <img
+                          class="img-fluid"
+                          alt="WorlBI Stats"
+                          src="images/icons/03.png"
+                          width="100%"
+                        />
+                      </div>
+                      <div
+                        class="counter"
+                        data-target="80"
+                        data-suffix="%"
+                      ></div>
+                      <p>
+                        <span class="fw-semibold">
+                          Attendees at Director+ Level</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="counter-stats">
+                      <div class="counter-icon">
+                        <img
+                          class="img-fluid"
+                          alt="WorlBI Stats"
+                          src="images/icons/02.png"
+                          width="100%"
+                        />
+                      </div>
+                      <div
+                        class="counter"
+                        data-target="100"
+                        data-suffix="+"
+                      ></div>
+                      <p>
+                        <span class="fw-semibold">Industry Delegates</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              </div>
-              <div class="col-md-6 align-self-end">
-                <div class="graphs-wrap">
-                  <h5 class="m-5 text-center">Attendees By Industry</h5>
-                  <canvas id="myRegionChart" width="300" height="400"></canvas>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <div class="row">
+                <div class="col-md-6 align-self-start">
+                  <div class="graphs-wrap">
+                    <h5 class="m-5 text-center">Attendees By Region</h5>
+                    <canvas
+                      id="myDoughnutChart"
+                      width="300"
+                      height="400"
+                    ></canvas>
+                  </div>
+                </div>
+                <div class="col-md-6 align-self-end">
+                  <div class="graphs-wrap">
+                    <h5 class="m-5 text-center">Attendees By Industry</h5>
+                    <canvas
+                      id="myRegionChart"
+                      width="300"
+                      height="400"
+                    ></canvas>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="section bg-secondary-subtle" id="sponsorsSection">
-      <div class="container">
-        <div class="section-header-spn">
-          <div class="row p-2">
-            <div class="col-md-6">
-              <h2>Meet Our Trusted Partners 2024!</h2>
-              <p>Building Bridges, Forging Success</p>
+      <div class="section" id="highlightsSection">
+        <div class="container">
+          <div class="program-section">
+            <h2>Exciting Agenda Highlights</h2>
+            <p>
+              Fuel your mind with captivating keynotes, engaging panels, and
+              exclusive industry insights
+            </p>
+          </div>
+          <div class="row pt-3">
+            <div class="col-md-6 col-sm-12">
+              <div class="highlights">
+                <div class="highlight-text">
+                  Innovative Hospitality Solutions
+                </div>
+              </div>
+              <div class="highlights">
+                <div class="highlight-text">Personalized Guest Experience</div>
+              </div>
+              <div class="highlights">
+                <div class="highlight-text">
+                  Navigating Tomorrow's Hospitality Landscape
+                </div>
+              </div>
+              <div class="highlights">
+                <div class="highlight-text">Green Hospitality Initiatives</div>
+              </div>
+              <div class="highlights">
+                <div class="highlight-text">
+                  Revolutionizing Dining Experiences with AI
+                </div>
+              </div>
+              <div class="highlights">
+                <div class="highlight-text">Blockchain Implementations</div>
+              </div>
+              <div class="highlights">
+                <div class="highlight-text">
+                  CSRD in the hospitality industry
+                </div>
+              </div>
             </div>
-            <div class="col-md-6 d-flex flex-column justify-content-end">
-              <div class="gap-1 d-md-flex justify-content-md-end">
-                <a href=""><button class="main-btn me-md-2">Become a Sponsor</button></a>
+            <div class="col-md-6 col-sm-12 hlt-section">
+              <div class="highlights">
+                <div class="highlight-text">Technological Evolutions</div>
+              </div>
+              <div class="highlights">
+                <div class="highlight-text">
+                  Challenges in technology Adaptions
+                </div>
+              </div>
+              <div class="highlights">
+                <div class="highlight-text">Maximizing Revenue Strategies</div>
+              </div>
+              <div class="highlights">
+                <div class="highlight-text">Hotel in Pocket</div>
+              </div>
+              <div class="highlights">
+                <div class="highlight-text">
+                  Empowering Entrepreneurs with Smart Hospitality
+                </div>
+              </div>
+              <div class="highlights">
+                <div class="highlight-text">
+                  Cybersecurity and Privacy Concerns
+                </div>
+              </div>
+              <div class="highlights">
+                <div class="highlight-text">Sustainability Practices</div>
+              </div>
+            </div>
+            <!-- <div class="col-md-6 col-sm-12">
+              <div class="row">
+                <div class="col-md-6 align-self-start">
+                  <div class="graphs-wrap">
+                    <h5 class="m-5 text-center">Attendees By Region</h5>
+                    <canvas
+                      id="myDoughnutChart"
+                      width="300"
+                      height="400"
+                    ></canvas>
+                  </div>
+                </div>
+                <div class="col-md-6 align-self-end">
+                  <div class="graphs-wrap">
+                    <h5 class="m-5 text-center">Attendees By Industry</h5>
+                    <canvas
+                      id="myRegionChart"
+                      width="300"
+                      height="400"
+                    ></canvas>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="section bg-secondary-subtle" id="sponsorsSection">
+        <div class="container scrollable-content">
+          <div class="section-header-spn">
+            <div class="row p-2">
+              <div class="col-md-6">
+                <h2>Meet Our Trusted Partners 2024!</h2>
+                <p>Building Bridges, Forging Success</p>
+              </div>
+              <div class="col-md-6 d-flex flex-column justify-content-end">
+                <div
+                  class="gap-1 d-md-flex justify-content-md-end"
+                  style="z-index: 1"
+                >
+                  <a href=""
+                    ><button class="main-btn me-md-2">
+                      Become a Sponsor
+                    </button></a
+                  >
+                </div>
               </div>
             </div>
           </div>
-        </div>
           <div class="row p-2 pb-0 align-items-center justify-content-center">
             <div class="col-md-3">
               <div class="sponsor-heading">
@@ -379,69 +747,107 @@
               <div class="row">
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/bonafi.jpg" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/bonafi.jpg"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/frieghtos.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/frieghtos.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Kintsugi.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/Kintsugi.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/phenocell.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/phenocell.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Vetter.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/Vetter.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!--href="https://altoida.com/" target="_blank" rel="nofollow"-->
-                    <a href="" data-bs-toggle="modal" data-bs-target="#altoida"><img src="images/sponsors/videra-health.svg" class="img-fluid" alt="Worldbi Business Partner"></a>
+                      <a
+                        href=""
+                        data-bs-toggle="modal"
+                        data-bs-target="#altoida"
+                        ><img
+                          src="images/sponsors/videra-health.svg"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                </div>
                 </div>
               </div>
             </div>
@@ -455,69 +861,107 @@
               <div class="row">
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/bonafi.jpg" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/bonafi.jpg"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/frieghtos.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/frieghtos.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Kintsugi.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/Kintsugi.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/phenocell.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/phenocell.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Vetter.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/Vetter.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!--href="https://altoida.com/" target="_blank" rel="nofollow"-->
-                    <a href="" data-bs-toggle="modal" data-bs-target="#altoida"><img src="images/sponsors/videra-health.svg" class="img-fluid" alt="Worldbi Business Partner"></a>
+                      <a
+                        href=""
+                        data-bs-toggle="modal"
+                        data-bs-target="#altoida"
+                        ><img
+                          src="images/sponsors/videra-health.svg"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                </div>
                 </div>
               </div>
             </div>
@@ -531,69 +975,107 @@
               <div class="row">
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/bonafi.jpg" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/bonafi.jpg"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/frieghtos.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/frieghtos.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Kintsugi.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/Kintsugi.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/phenocell.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/phenocell.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Vetter.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/Vetter.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!--href="https://altoida.com/" target="_blank" rel="nofollow"-->
-                    <a href="" data-bs-toggle="modal" data-bs-target="#altoida"><img src="images/sponsors/videra-health.svg" class="img-fluid" alt="Worldbi Business Partner"></a>
+                      <a
+                        href=""
+                        data-bs-toggle="modal"
+                        data-bs-target="#altoida"
+                        ><img
+                          src="images/sponsors/videra-health.svg"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                </div>
                 </div>
               </div>
             </div>
@@ -607,69 +1089,107 @@
               <div class="row">
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/bonafi.jpg" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/bonafi.jpg"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/frieghtos.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/frieghtos.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Kintsugi.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/Kintsugi.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/phenocell.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/phenocell.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Vetter.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/Vetter.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!--href="https://altoida.com/" target="_blank" rel="nofollow"-->
-                    <a href="" data-bs-toggle="modal" data-bs-target="#altoida"><img src="images/sponsors/videra-health.svg" class="img-fluid" alt="Worldbi Business Partner"></a>
+                      <a
+                        href=""
+                        data-bs-toggle="modal"
+                        data-bs-target="#altoida"
+                        ><img
+                          src="images/sponsors/videra-health.svg"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                </div>
                 </div>
               </div>
             </div>
@@ -683,69 +1203,107 @@
               <div class="row">
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/bonafi.jpg" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/bonafi.jpg"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/frieghtos.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/frieghtos.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Kintsugi.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/Kintsugi.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/phenocell.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/phenocell.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Vetter.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/Vetter.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!--href="https://altoida.com/" target="_blank" rel="nofollow"-->
-                    <a href="" data-bs-toggle="modal" data-bs-target="#altoida"><img src="images/sponsors/videra-health.svg" class="img-fluid" alt="Worldbi Business Partner"></a>
+                      <a
+                        href=""
+                        data-bs-toggle="modal"
+                        data-bs-target="#altoida"
+                        ><img
+                          src="images/sponsors/videra-health.svg"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                </div>
                 </div>
               </div>
             </div>
@@ -759,69 +1317,107 @@
               <div class="row">
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/bonafi.jpg" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/bonafi.jpg"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/frieghtos.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/frieghtos.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Kintsugi.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/Kintsugi.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/phenocell.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/phenocell.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Vetter.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/Vetter.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!--href="https://altoida.com/" target="_blank" rel="nofollow"-->
-                    <a href="" data-bs-toggle="modal" data-bs-target="#altoida"><img src="images/sponsors/videra-health.svg" class="img-fluid" alt="Worldbi Business Partner"></a>
+                      <a
+                        href=""
+                        data-bs-toggle="modal"
+                        data-bs-target="#altoida"
+                        ><img
+                          src="images/sponsors/videra-health.svg"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                </div>
                 </div>
               </div>
             </div>
@@ -835,622 +1431,1194 @@
               <div class="row">
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/bonafi.jpg" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/bonafi.jpg"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/frieghtos.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/frieghtos.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Kintsugi.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/Kintsugi.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/phenocell.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/phenocell.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!-- data-bs-toggle="modal" data-bs-target="#curebase" -->
-                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Vetter.png" class="img-fluid" alt="Worldbi Business Partner" width="150px"></a>
+                      <a href="" target="_blank" rel="nofollow"
+                        ><img
+                          src="images/sponsors/Vetter.png"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                          width="150px"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                 </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
-                  <div class="sponsor-logo">
+                    <div class="sponsor-logo">
                       <!--href="https://altoida.com/" target="_blank" rel="nofollow"-->
-                    <a href="" data-bs-toggle="modal" data-bs-target="#altoida"><img src="images/sponsors/videra-health.svg" class="img-fluid" alt="Worldbi Business Partner"></a>
+                      <a
+                        href=""
+                        data-bs-toggle="modal"
+                        data-bs-target="#altoida"
+                        ><img
+                          src="images/sponsors/videra-health.svg"
+                          class="img-fluid"
+                          alt="Worldbi Business Partner"
+                      /></a>
+                    </div>
+                    <div class="sponsor-overlay">
+                      <a href="">Learn More</a>
+                    </div>
                   </div>
-                  <div class="sponsor-overlay">
-                    <a href="">Learn More</a>
-                  </div>
-                </div>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
-    </div>
+      </div>
 
-
-    <div class="section bg-dark-subtle" id="testimonialsSection">
-      <video autoplay muted loop class="bg-v">
-          <source src="images/background/Testimonial.mp4" type="video/mp4">
-      </video>
-      <div class="container testimonial-container">
+      <div class="section bg-dark-subtle" id="testimonialsSection">
+        <video autoplay muted loop class="bg-v">
+          <source src="images/background/Testimonial.mp4" type="video/mp4" />
+        </video>
+        <div class="container testimonial-container">
           <div class="banner-content">
-              <div class="row">
-                  <div class="col-md-12 text-container">
-                      <div class="text-content">
-                          <h2>Inspiring Testimonials<br> from Delighted Customers</h2>
-                          <p>Hear It from Our Satisfied Clients</p>
-                      </div>
-                    <div class="testimonial-slider"> 
-                      <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-
-                          <div class="swiper-slide">
-                            <div class="testimonial-box">
-                              <div class="testimonial-content">
-                                <p>I had an incredible experience attending the event. The event was well-organized, and what I appreciate the most was the chance to engage in meaningful conversations and share experiences.</p>
-                              </div>
-                              <div class="author-block d-flex align-items-center">
-                                <div class="icon-block d-flex align-items-center justify-content-center">
-                                  <i class="fa-solid fa-quote-right"></i>
-                                </div>
-                                <div class="author-info">
-                                  <h5>CEO</h5>
-                                  <h4>Frigga</h4>
-                                </div>
-                              </div>
-                            </div>
+            <div class="row">
+              <div class="col-md-12 text-container">
+                <div class="text-content">
+                  <h2>
+                    Inspiring Testimonials<br />
+                    from Delighted Customers
+                  </h2>
+                  <p>Hear It from Our Satisfied Clients</p>
+                </div>
+                <div class="testimonial-slider">
+                  <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="testimonial-box">
+                          <div class="testimonial-content">
+                            <p>
+                              I had an incredible experience attending the
+                              event. The event was well-organized, and what I
+                              appreciate the most was the chance to engage in
+                              meaningful conversations and share experiences.
+                            </p>
                           </div>
-                          
-                          <div class="swiper-slide">
-                            <div class="testimonial-box">
-                              <div class="testimonial-content">
-                                <p>I had an incredible experience attending the event. The event was well-organized, and what I appreciate the most was the chance to engage in meaningful conversations and share experiences.</p>
-                              </div>
-                              <div class="author-block d-flex align-items-center">
-                                <div class="icon-block d-flex align-items-center justify-content-center">
-                                  <i class="fa-solid fa-quote-right"></i>
-                                </div>
-                                <div class="author-info">
-                                  <h5>CEO</h5>
-                                  <h4>Frigga</h4>
-                                </div>
-                              </div>
+                          <div class="author-block d-flex align-items-center">
+                            <div
+                              class="icon-block d-flex align-items-center justify-content-center"
+                            >
+                              <i class="fa-solid fa-quote-right"></i>
                             </div>
-                          </div>
-
-                          <div class="swiper-slide">
-                            <div class="testimonial-box">
-                              <div class="testimonial-content">
-                                <p>I had an incredible experience attending the event. The event was well-organized, and what I appreciate the most was the chance to engage in meaningful conversations and share experiences.</p>
-                              </div>
-                              <div class="author-block d-flex align-items-center">
-                                <div class="icon-block d-flex align-items-center justify-content-center">
-                                  <i class="fa-solid fa-quote-right"></i>
-                                </div>
-                                <div class="author-info">
-                                  <h5>CEO</h5>
-                                  <h4>Frigga</h4>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="swiper-slide">
-                            <div class="testimonial-box">
-                              <div class="testimonial-content">
-                                <p>I had an incredible experience attending the event. The event was well-organized, and what I appreciate the most was the chance to engage in meaningful conversations and share experiences.</p>
-                              </div>
-                              <div class="author-block d-flex align-items-center">
-                                <div class="icon-block d-flex align-items-center justify-content-center">
-                                  <i class="fa-solid fa-quote-right"></i>
-                                </div>
-                                <div class="author-info">
-                                  <h5>CEO</h5>
-                                  <h4>Frigga</h4>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="swiper-slide">
-                            <div class="testimonial-box">
-                              <div class="testimonial-content">
-                                <p>I had an incredible experience attending the event. The event was well-organized, and what I appreciate the most was the chance to engage in meaningful conversations and share experiences.</p>
-                              </div>
-                              <div class="author-block d-flex align-items-center">
-                                <div class="icon-block d-flex align-items-center justify-content-center">
-                                  <i class="fa-solid fa-quote-right"></i>
-                                </div>
-                                <div class="author-info">
-                                  <h5>CEO</h5>
-                                  <h4>Frigga</h4>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="swiper-slide">
-                            <div class="testimonial-box">
-                              <div class="testimonial-content">
-                                <p>I had an incredible experience attending the event. The event was well-organized, and what I appreciate the most was the chance to engage in meaningful conversations and share experiences.</p>
-                              </div>
-                              <div class="author-block d-flex align-items-center">
-                                <div class="icon-block d-flex align-items-center justify-content-center">
-                                  <i class="fa-solid fa-quote-right"></i>
-                                </div>
-                                <div class="author-info">
-                                  <h5>CEO</h5>
-                                  <h4>Frigga</h4>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="swiper-slide">
-                            <div class="testimonial-box">
-                              <div class="testimonial-content">
-                                <p>I had an incredible experience attending the event. The event was well-organized, and what I appreciate the most was the chance to engage in meaningful conversations and share experiences.</p>
-                              </div>
-                              <div class="author-block d-flex align-items-center">
-                                <div class="icon-block d-flex align-items-center justify-content-center">
-                                  <i class="fa-solid fa-quote-right"></i>
-                                </div>
-                                <div class="author-info">
-                                  <h5>CEO</h5>
-                                  <h4>Frigga</h4>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="swiper-slide">
-                            <div class="testimonial-box">
-                              <div class="testimonial-content">
-                                <p>I had an incredible experience attending the event. The event was well-organized, and what I appreciate the most was the chance to engage in meaningful conversations and share experiences.</p>
-                              </div>
-                              <div class="author-block d-flex align-items-center">
-                                <div class="icon-block d-flex align-items-center justify-content-center">
-                                  <i class="fa-solid fa-quote-right"></i>
-                                </div>
-                                <div class="author-info">
-                                  <h5>CEO</h5>
-                                  <h4>Frigga</h4>
-                                </div>
-                              </div>
+                            <div class="author-info">
+                              <h5>CEO</h5>
+                              <h4>Frigga</h4>
                             </div>
                           </div>
                         </div>
-                        <!-- <div class="swiper-btns">
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="testimonial-box">
+                          <div class="testimonial-content">
+                            <p>
+                              I had an incredible experience attending the
+                              event. The event was well-organized, and what I
+                              appreciate the most was the chance to engage in
+                              meaningful conversations and share experiences.
+                            </p>
+                          </div>
+                          <div class="author-block d-flex align-items-center">
+                            <div
+                              class="icon-block d-flex align-items-center justify-content-center"
+                            >
+                              <i class="fa-solid fa-quote-right"></i>
+                            </div>
+                            <div class="author-info">
+                              <h5>CEO</h5>
+                              <h4>Frigga</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="testimonial-box">
+                          <div class="testimonial-content">
+                            <p>
+                              I had an incredible experience attending the
+                              event. The event was well-organized, and what I
+                              appreciate the most was the chance to engage in
+                              meaningful conversations and share experiences.
+                            </p>
+                          </div>
+                          <div class="author-block d-flex align-items-center">
+                            <div
+                              class="icon-block d-flex align-items-center justify-content-center"
+                            >
+                              <i class="fa-solid fa-quote-right"></i>
+                            </div>
+                            <div class="author-info">
+                              <h5>CEO</h5>
+                              <h4>Frigga</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="testimonial-box">
+                          <div class="testimonial-content">
+                            <p>
+                              I had an incredible experience attending the
+                              event. The event was well-organized, and what I
+                              appreciate the most was the chance to engage in
+                              meaningful conversations and share experiences.
+                            </p>
+                          </div>
+                          <div class="author-block d-flex align-items-center">
+                            <div
+                              class="icon-block d-flex align-items-center justify-content-center"
+                            >
+                              <i class="fa-solid fa-quote-right"></i>
+                            </div>
+                            <div class="author-info">
+                              <h5>CEO</h5>
+                              <h4>Frigga</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="testimonial-box">
+                          <div class="testimonial-content">
+                            <p>
+                              I had an incredible experience attending the
+                              event. The event was well-organized, and what I
+                              appreciate the most was the chance to engage in
+                              meaningful conversations and share experiences.
+                            </p>
+                          </div>
+                          <div class="author-block d-flex align-items-center">
+                            <div
+                              class="icon-block d-flex align-items-center justify-content-center"
+                            >
+                              <i class="fa-solid fa-quote-right"></i>
+                            </div>
+                            <div class="author-info">
+                              <h5>CEO</h5>
+                              <h4>Frigga</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="testimonial-box">
+                          <div class="testimonial-content">
+                            <p>
+                              I had an incredible experience attending the
+                              event. The event was well-organized, and what I
+                              appreciate the most was the chance to engage in
+                              meaningful conversations and share experiences.
+                            </p>
+                          </div>
+                          <div class="author-block d-flex align-items-center">
+                            <div
+                              class="icon-block d-flex align-items-center justify-content-center"
+                            >
+                              <i class="fa-solid fa-quote-right"></i>
+                            </div>
+                            <div class="author-info">
+                              <h5>CEO</h5>
+                              <h4>Frigga</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="testimonial-box">
+                          <div class="testimonial-content">
+                            <p>
+                              I had an incredible experience attending the
+                              event. The event was well-organized, and what I
+                              appreciate the most was the chance to engage in
+                              meaningful conversations and share experiences.
+                            </p>
+                          </div>
+                          <div class="author-block d-flex align-items-center">
+                            <div
+                              class="icon-block d-flex align-items-center justify-content-center"
+                            >
+                              <i class="fa-solid fa-quote-right"></i>
+                            </div>
+                            <div class="author-info">
+                              <h5>CEO</h5>
+                              <h4>Frigga</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="testimonial-box">
+                          <div class="testimonial-content">
+                            <p>
+                              I had an incredible experience attending the
+                              event. The event was well-organized, and what I
+                              appreciate the most was the chance to engage in
+                              meaningful conversations and share experiences.
+                            </p>
+                          </div>
+                          <div class="author-block d-flex align-items-center">
+                            <div
+                              class="icon-block d-flex align-items-center justify-content-center"
+                            >
+                              <i class="fa-solid fa-quote-right"></i>
+                            </div>
+                            <div class="author-info">
+                              <h5>CEO</h5>
+                              <h4>Frigga</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <div class="swiper-btns">
                           <div class="swiper-button-next"></div>
                           <div class="swiper-button-prev"></div>
                         </div> -->
-                      </div>
-                  </div> 
                   </div>
+                </div>
               </div>
-          </div>
-      </div>
-    </div>
-    
-
-    <div class="section bg-black" id="ticketsSection">
-      <div class="container">
-        <div class="program-section text-white">
-          <h2>Get Your Attendee Pass</h2>
-          <p>If You are Looking to Book 5+ Tickets Please Get in Touch for Group Rates</p>
-        </div>
-        <div class="row">
-          <div class="col-md-4" style="margin-bottom: 20px">
-            <div class="pricing-table h-100 d-flex flex-column">
-              <div class="product-category">
-                <h3>General Admission for Academia, <br>Non-Profit, Government<br> (Non Service Provider)</h3>
-              </div>
-              <div class="product-price">
-                <h4>2 Days | £999</h4>
-              </div>
-              <div class="product-detail">
-                <ul>
-                  <li><i class="fa-solid fa-check"></i> Full 2-day Conference and Exhibit Hall Ticket</li>
-                  <li><i class="fa-solid fa-check"></i> Access to In-person Presentations and Panels</li>
-                  <li><i class="fa-solid fa-check"></i> All Inclusive Breakfasts, Lunches and Refreshments</li>
-                  <li><i class="fa-solid fa-check"></i> Free access to the Drinks Reception</li>
-                  <li><i class="fa-solid fa-check"></i> Access to Event Networking App</li>
-                </ul>
-              </div>
-              <div class="text-center mb-2">
-                <a href="" class="buy-ticket-btn">Book Now</a>
-              </div>
-              <img src="images/background/up-right-arrow.png" class="arrow-img">
-            </div>
-          </div>
-          <div class="col-md-4" style="margin-bottom: 20px">
-            <div class="pricing-table h-100 d-flex flex-column">
-              <div class="product-category">
-                <h3>Vendor / Company / Service Provider</h3>
-              </div>
-              <div class="product-price">
-                <h4>2 Days | £1,999</h4>
-              </div>
-              <div class="product-detail">
-                <ul>
-                  <li><i class="fa-solid fa-check"></i> Full 2-day Conference and Exhibit Hall Ticket</li>
-                  <li><i class="fa-solid fa-check"></i> Access to In-person Presentations and Panels</li>
-                  <li><i class="fa-solid fa-check"></i> All Inclusive Breakfasts, Lunches and Refreshments</li>
-                  <li><i class="fa-solid fa-check"></i> Free access to the Drinks Reception</li>
-                  <li><i class="fa-solid fa-check"></i> Access to Event Networking App</li>
-                </ul>
-              </div>
-              <div class="text-center mb-2">
-                <a href="" class="buy-ticket-btn">Book Now</a>
-              </div>
-              <img src="images/background/up-right-arrow.png" class="arrow-img">
-            </div>
-          </div>
-          <div class="col-md-4" style="margin-bottom: 20px">
-            <div class="pricing-table h-100 d-flex flex-column">
-              <div class="product-category">
-                <h3>Student Pass</h3>
-              </div>
-              <div class="product-price">
-                <h4>2 Days | VIP Complementry Pass</h4>
-              </div>
-              <div class="product-detail">
-                <ul>
-                  <li><i class="fa-solid fa-check"></i> Full 2-day Conference and Exhibit Hall Ticket</li>
-                  <li><i class="fa-solid fa-check"></i> Access to In-person Presentations and Panels</li>
-                  <!-- <li><i class="fa-solid fa-check"></i> All Inclusive Breakfasts, Lunches and Refreshments</li> -->
-                  <!-- <li><i class="fa-solid fa-check"></i> Free access to the Drinks Reception</li> -->
-                  <li><i class="fa-solid fa-check"></i> Access to Event Networking App</li>
-                </ul>
-              </div>
-              <div class="text-center mb-2">
-                <a href="" class="buy-ticket-btn">Book Now</a>
-              </div>
-              <img src="images/background/up-right-arrow.png" class="arrow-img">
             </div>
           </div>
         </div>
       </div>
 
-    </div>
-  
-    <div class="section bg-dark-subtle" id="agendaSection">
-      <div class="container">
-        <div class="program-section">
-          <h2>Exciting Agenda</h2>
-          <p>Fuel your mind with captivating keynotes, engaging panels, and exclusive industry insights</p>
-        </div>
-        <div class="row mt-2 gx-0 gy-2">
-          <div class="col-md-2">
-            <div class="agenda-time p-4">
-             <p>8:00 A.M. - 8:00 A.M.</p>
-             <h5>Opening Ceremony</h5>
-            </div>
+      <div class="section bg-black" id="ticketsSection">
+        <div class="container scrollable-content">
+          <div class="program-section text-white">
+            <h2>Get Your Attendee Pass</h2>
+            <p>
+              If You are Looking to Book 5+ Tickets Please Get in Touch for
+              Group Rates
+            </p>
           </div>
-          <div class="col-md-6">
-            <div class="agenda-detail p-4 bg-light">
-              <h4>Introduce the Event</h4>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et esse ipsa quae facilis repellendus vel iste qui sit! Laborum velit</p>
-              <div class="conference-location">
-                <p class="d-inline"><i class="fa-solid fa-location-dot"></i> Exploration Hall</p>
-                <p class="d-inline"><i class="fa-solid fa-location-dot"></i> Hall 01</p>
+          <div class="row">
+            <div class="col-md-4" style="margin-bottom: 20px">
+              <div class="pricing-table h-100 d-flex flex-column">
+                <div class="product-category">
+                  <h3>
+                    General Admission for Academia, <br />Non-Profit,
+                    Government<br />
+                    (Non Service Provider)
+                  </h3>
+                </div>
+                <div class="product-price">
+                  <h4>2 Days | £999</h4>
+                </div>
+                <div class="product-detail">
+                  <ul>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Full 2-day Conference
+                      and Exhibit Hall Ticket
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Access to In-person
+                      Presentations and Panels
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i> All Inclusive
+                      Breakfasts, Lunches and Refreshments
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Free access to the
+                      Drinks Reception
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Access to Event
+                      Networking App
+                    </li>
+                  </ul>
+                </div>
+                <div class="text-center mb-2">
+                  <a href="" class="buy-ticket-btn">Book Now</a>
+                </div>
+                <img
+                  src="images/background/up-right-arrow.png"
+                  class="arrow-img"
+                />
+              </div>
+            </div>
+            <div class="col-md-4" style="margin-bottom: 20px">
+              <div class="pricing-table h-100 d-flex flex-column">
+                <div class="product-category">
+                  <h3>Vendor / Company / Service Provider</h3>
+                </div>
+                <div class="product-price">
+                  <h4>2 Days | £1,999</h4>
+                </div>
+                <div class="product-detail">
+                  <ul>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Full 2-day Conference
+                      and Exhibit Hall Ticket
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Access to In-person
+                      Presentations and Panels
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i> All Inclusive
+                      Breakfasts, Lunches and Refreshments
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Free access to the
+                      Drinks Reception
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Access to Event
+                      Networking App
+                    </li>
+                  </ul>
+                </div>
+                <div class="text-center mb-2">
+                  <a href="" class="buy-ticket-btn">Book Now</a>
+                </div>
+                <img
+                  src="images/background/up-right-arrow.png"
+                  class="arrow-img"
+                />
+              </div>
+            </div>
+            <div class="col-md-4" style="margin-bottom: 20px">
+              <div class="pricing-table h-100 d-flex flex-column">
+                <div class="product-category">
+                  <h3>Student Pass</h3>
+                </div>
+                <div class="product-price">
+                  <h4>2 Days | VIP Complementry Pass</h4>
+                </div>
+                <div class="product-detail">
+                  <ul>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Full 2-day Conference
+                      and Exhibit Hall Ticket
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Access to In-person
+                      Presentations and Panels
+                    </li>
+                    <!-- <li><i class="fa-solid fa-check"></i> All Inclusive Breakfasts, Lunches and Refreshments</li> -->
+                    <!-- <li><i class="fa-solid fa-check"></i> Free access to the Drinks Reception</li> -->
+                    <li>
+                      <i class="fa-solid fa-check"></i> Access to Event
+                      Networking App
+                    </li>
+                  </ul>
+                </div>
+                <div class="text-center mb-2">
+                  <a href="" class="buy-ticket-btn">Book Now</a>
+                </div>
+                <img
+                  src="images/background/up-right-arrow.png"
+                  class="arrow-img"
+                />
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-              <div class="speak-slot bg-light p-3 d-flex justify-content-between align-items-center">
-                  <div class="d-flex align-items-center justify-content-center">
-                    <img src="images/speakers/Sanjoli.webp" alt="" class="img-fluid img-block">
-                  </div>
-                  <div class="spk-info">
-                    <h4>Uros Mikic</h4>
-                    <p>Professor of Medicine, Biomedical Data Science, and Surgery</p>
-                    <p class="fw-bold">Webflow Expert</p>
-                  </div>
-              </div>
-          </div>
-
-          <div class="col-md-2">
-            <div class="agenda-time p-4">
-             <p>8:00 A.M. - 8:00 A.M.</p>
-             <h5>Opening Ceremony</h5>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="agenda-detail p-4 bg-light">
-              <h4>Introduce the Event</h4>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et esse ipsa quae facilis repellendus vel iste qui sit! Laborum velit</p>
-              <div class="conference-location">
-                <p class="d-inline"><i class="fa-solid fa-location-dot"></i> Exploration Hall</p>
-                <p class="d-inline"><i class="fa-solid fa-location-dot"></i> Hall 01</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-              <div class="speak-slot bg-light p-3 d-flex justify-content-between align-items-center">
-                  <div class="d-flex align-items-center justify-content-center">
-                    <img src="images/speakers/Sanjoli.webp" alt="" class="img-fluid img-block">
-                  </div>
-                  <div class="spk-info">
-                    <h4>Uros Mikic</h4>
-                    <p>Professor of Medicine, Biomedical Data Science, and Surgery</p>
-                    <p class="fw-bold">Webflow Expert</p>
-                  </div>
-              </div>
-          </div>
- 
-          <div class="col-md-2">
-            <div class="agenda-time p-4">
-             <p>8:00 A.M. - 8:00 A.M.</p>
-             <h5>Opening Ceremony</h5>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="agenda-detail p-4 bg-light">
-              <h4>Introduce the Event</h4>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et esse ipsa quae facilis repellendus vel iste qui sit! Laborum velit</p>
-              <div class="conference-location">
-                <p class="d-inline"><i class="fa-solid fa-location-dot"></i> Exploration Hall</p>
-                <p class="d-inline"><i class="fa-solid fa-location-dot"></i> Hall 01</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-              <div class="speak-slot bg-light p-3 d-flex justify-content-between align-items-center">
-                  <div class="d-flex align-items-center justify-content-center">
-                    <img src="images/speakers/Sanjoli.webp" alt="" class="img-fluid img-block">
-                  </div>
-                  <div class="spk-info">
-                    <h4>Uros Mikic</h4>
-                    <p>Professor of Medicine, Biomedical Data Science, and Surgery</p>
-                    <p class="fw-bold">Webflow Expert</p>
-                  </div>
-              </div>
-          </div>
-
         </div>
       </div>
+
+      <div class="section bg-dark-subtle" id="agendaSection">
+        <div class="container">
+          <div class="program-section">
+            <h2>Exciting Agenda</h2>
+            <p>
+              Fuel your mind with captivating keynotes, engaging panels, and
+              exclusive industry insights
+            </p>
+          </div>
+          <div class="row mt-2 gx-0 gy-2">
+            <div class="col-md-2">
+              <div class="agenda-time">
+                <p>8:00 A.M. - 8:00 A.M.</p>
+                <h5>Opening Ceremony</h5>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="agenda-detail bg-light">
+                <h4>Introduce the Event</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
+                  esse ipsa quae facilis repellendus vel iste qui sit! Laborum
+                  velit
+                </p>
+                <div class="conference-location">
+                  <p class="d-inline">
+                    <i class="fa-solid fa-location-dot"></i> Exploration Hall
+                  </p>
+                  <p class="d-inline">
+                    <i class="fa-solid fa-location-dot"></i> Hall 01
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 agenda-col">
+              <div
+                class="speak-slot bg-light d-flex justify-content-between align-items-center"
+              >
+                <div class="d-flex align-items-center justify-content-center">
+                  <img
+                    src="images/speakers/Sanjoli.webp"
+                    alt=""
+                    class="img-fluid img-block"
+                  />
+                </div>
+                <div class="spk-info">
+                  <h4>Uros Mikic</h4>
+                  <p>
+                    Professor of Medicine, Biomedical Data Science, and Surgery
+                  </p>
+                  <p class="fw-bold">Webflow Expert</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <div class="agenda-time">
+                <p>8:00 A.M. - 8:00 A.M.</p>
+                <h5>Opening Ceremony</h5>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="agenda-detail bg-light">
+                <h4>Introduce the Event</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
+                  esse ipsa quae facilis repellendus vel iste qui sit! Laborum
+                  velit
+                </p>
+                <div class="conference-location">
+                  <p class="d-inline">
+                    <i class="fa-solid fa-location-dot"></i> Exploration Hall
+                  </p>
+                  <p class="d-inline">
+                    <i class="fa-solid fa-location-dot"></i> Hall 01
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 agenda-col">
+              <div
+                class="speak-slot bg-light d-flex justify-content-between align-items-center"
+              >
+                <div class="d-flex align-items-center justify-content-center">
+                  <img
+                    src="images/speakers/Sanjoli.webp"
+                    alt=""
+                    class="img-fluid img-block"
+                  />
+                </div>
+                <div class="spk-info">
+                  <h4>Uros Mikic</h4>
+                  <p>
+                    Professor of Medicine, Biomedical Data Science, and Surgery
+                  </p>
+                  <p class="fw-bold">Webflow Expert</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <div class="agenda-time">
+                <p>8:00 A.M. - 8:00 A.M.</p>
+                <h5>Opening Ceremony</h5>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="agenda-detail bg-light">
+                <h4>Introduce the Event</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
+                  esse ipsa quae facilis repellendus vel iste qui sit! Laborum
+                  velit
+                </p>
+                <div class="conference-location">
+                  <p class="d-inline">
+                    <i class="fa-solid fa-location-dot"></i> Exploration Hall
+                  </p>
+                  <p class="d-inline">
+                    <i class="fa-solid fa-location-dot"></i> Hall 01
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 agenda-col">
+              <div
+                class="speak-slot bg-light d-flex justify-content-between align-items-center"
+              >
+                <div class="d-flex align-items-center justify-content-center">
+                  <img
+                    src="images/speakers/Sanjoli.webp"
+                    alt=""
+                    class="img-fluid img-block"
+                  />
+                </div>
+                <div class="spk-info">
+                  <h4>Uros Mikic</h4>
+                  <p>
+                    Professor of Medicine, Biomedical Data Science, and Surgery
+                  </p>
+                  <p class="fw-bold">Webflow Expert</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="glanceSection">
+        <div class="container scrollable-content">
+          <h3>Event At a Glance</h3>
+          <div class="row justify-content-center g-3 p-3">
+            <div class="col-md-6">
+              <div class="schedule-title" style="color: #000">Day 1</div>
+              <div class="schedule-item">
+                <div class="schedule-time">08:00 - 08:55</div>
+                <div>Opening & Welcome Address with Coffee</div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-time">08:55 - 10:20</div>
+                <div>Hotel Innovation</div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-time">10:20 - 11:10</div>
+                <div>Coffee break & Networking Session</div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-time">11:10 - 12:55</div>
+                <div>Sustainability Trends</div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-time">12:55 - 13:55</div>
+                <div>Luncheon</div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-time">13:55 - 15:45</div>
+                <div>AI & Guest Experience</div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-time">15:45 - 16:50</div>
+                <div>Closing with Refreshment</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="schedule-title" style="color: #000">Day 2</div>
+              <div class="schedule-item">
+                <div class="schedule-time">08:00 - 08:55</div>
+                <div>Opening & Welcome Address with Coffee</div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-time">08:55 - 10:20</div>
+                <div>Digi-Revenue Management</div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-time">10:20 - 11:10</div>
+                <div>Coffee break & Networking Session</div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-time">11:10 - 12:30</div>
+                <div>Smart Hospitality</div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-time">12:30 - 13:30</div>
+                <div>Luncheon</div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-time">13:30 - 14:45</div>
+                <div>Cybersecurity & Privacy Concerns</div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-time">14:45 - 15:20</div>
+                <div>Closing remarks with Coffee</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section venue-section" id="venueSection">
+        <div class="container">
+          <div class="row justify-content-center g-3">
+            <div class="location-content">
+              <h2 style="font-weight: 600; font-size: 2.7rem">
+                Event Location
+              </h2>
+              <h3><i class="fa-solid fa-location-dot"></i> Nice, France</h3>
+              <h6 class="text-secondary">Street Address:- France</h6>
+            </div>
+            <div class="col-md-6">
+              <div class="location-detail">
+                <div class="location-images">
+                  <div class="row g-1">
+                    <div class="col-md-6">
+                      <img
+                        src="images/background/LeNegresco-img1.webp"
+                        alt=""
+                        class="img-fluid"
+                        onclick="openModal();currentSlide(1)"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <img
+                        src="images/background/LeNegresco-img2.webp"
+                        alt=""
+                        class="img-fluid"
+                        onclick="openModal();currentSlide(2)"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <img
+                        src="images/background/LeNegresco-img3.webp"
+                        alt=""
+                        class="img-fluid"
+                        onclick="openModal();currentSlide(3)"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <img
+                        src="images/background/LeNegresco-img4.webp"
+                        alt=""
+                        class="img-fluid"
+                        onclick="openModal();currentSlide(4)"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="location-map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92299.32275368716!2d7.252811950000001!3d43.70319525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdd0106a852d31%3A0x40819a5fd979a70!2sNice%2C%20France!5e0!3m2!1sen!2s!4v1718364280210!5m2!1sen!2s"
+                  width="100%"
+                  height="410"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="footerSection">
+        <footer class="footer">
+          <div class="footer-widget text-center">
+            <div class="container">
+              <!-- Footer Logo Start -->
+              <div class="footer-logo">
+                <a href="index.php"
+                  ><img
+                    class="img-fluid"
+                    src="images/world BI logo.png"
+                    alt="WorldBI Logo"
+                    width="26%"
+                /></a>
+              </div>
+              <!-- Footer Logo End -->
+
+              <div class="footer-menu">
+                <ul
+                  class="d-flex text-white justify-content-space-between"
+                  style="flex-wrap: wrap"
+                >
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="speaker-single.html">Speaker</a></li>
+                  <li><a href="event-single.html">Sponsor</a></li>
+                  <li><a href="blog.html">Blog </a></li>
+                  <li><a href="contact.html"> Contact</a></li>
+                </ul>
+              </div>
+
+              <!-- Footer widget Social Start -->
+              <div class="footer-widget-social">
+                <a href="https://twitter.com/worldbi_uk"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="https://www.facebook.com/worldbigroup"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="https://www.instagram.com/worldbigroup"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="https://www.linkedin.com/company/world-bi"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <a
+                  href="https://www.youtube.com/channel/UCmENNVvbz_ojHcRI2OUrfow"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+                <a href="https://www.flickr.com/people/196701978@N06/"
+                  ><i class="fab fa-flickr"></i
+                ></a>
+                <a
+                  href="https://www.tiktok.com/@worldbigroup?is_from_webapp=1&sender_device=pc "
+                  ><i class="fa-brands fa-tiktok"></i
+                ></a>
+                <a href="https://www.pinterest.com/worldbigroup/ "
+                  ><i class="fab fa-pinterest"></i
+                ></a>
+              </div>
+              <!-- Footer widget Social End -->
+
+              <!-- Footer Copyright Start -->
+              <div class="footer-copyright">
+                <p>
+                  © Copyright 2024 All Rights Reserved. <br />Designed &amp;
+                  Developed By
+                  <a href="https://worldbigroup.com/" style="color: white"
+                    >World BI</a
+                  >
+                </p>
+              </div>
+              <!-- Footer Copyright End -->
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
-  
-  </div>
 
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <div class="mySlides text-center">
+          <div class="numbertext">1 / 4</div>
+          <img
+            src="images/background/LeNegresco-img1.webp"
+            style="width: 90%; height: 33rem"
+          />
+        </div>
 
+        <div class="mySlides text-center">
+          <div class="numbertext">2 / 4</div>
+          <img
+            src="images/background/LeNegresco-img2.webp"
+            style="width: 90%; height: 33rem"
+          />
+        </div>
 
+        <div class="mySlides text-center">
+          <div class="numbertext">3 / 4</div>
+          <img
+            src="images/background/LeNegresco-img3.webp"
+            style="width: 90%; height: 33rem"
+          />
+        </div>
 
+        <div class="mySlides text-center">
+          <div class="numbertext">4 / 4</div>
+          <img
+            src="images/background/LeNegresco-img4.webp"
+            style="width: 90%; height: 33rem"
+          />
+        </div>
 
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </div>
 
-  <script src="vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/vendors/scrolloverflow.min.js"></script> -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    new fullpage('#fullpage', {
-        scrollingSpeed: 1000,
-        // scrollOverflow: true,
-        // scrollHorizontally: true,
-        // autoScrolling: true,
-        navigation: true,
-        loopBottom: true,
-        responsiveWidth: 800,
-        anchors: ['home', 'about', 'speakers', 'program', 'sponsors', 'testimonials', 'tickets', 'agenda'],
-        afterLoad: function(origin, destination, direction){
-            if (destination.index === 0) { // Home section
-                var homeVideo = document.querySelector('.section:nth-child(1) .bg-v');
-                if (homeVideo) {
-                    homeVideo.play();
-                    // console.log("Home video is playing");
-                } else {
-                    // console.log("Home video element not found");
-                }
-            } else if (destination.index === 5) { // Testimonials section
-                var testimonialsVideo = document.querySelector('.section:nth-child(6) .bg-v');
-                if (testimonialsVideo) {
-                    testimonialsVideo.play();
-                    // console.log("Testimonials video is playing");
-                } else {
-                    // console.log("Testimonials video element not found");
-                }
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/vendors/scrolloverflow.min.js"></script> -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new fullpage("#fullpage", {
+          scrollingSpeed: 1000,
+          // scrollOverflow: true,
+          // scrollHorizontally: true,
+          // autoScrolling: true,
+          scrollOverflow: true,
+          normalScrollElements: ".scrollable-content",
+          navigation: true,
+          loopBottom: true,
+          fitToSection: true,
+          bigSectionsDestination: top,
+          responsiveWidth: 800,
+          fitToSection: true,
+          anchors: [
+            "home",
+            "about",
+            "networking",
+            "speakers",
+            "program",
+            "highlights",
+            "sponsors",
+            "testimonials",
+            "tickets",
+            "agenda",
+            "glance",
+            "venue",
+            "footer",
+          ],
+          paddingTop: "4rem",
+          afterLoad: function (origin, destination, direction) {
+            if (destination.index === 0) {
+              // Home section
+              var homeVideo = document.querySelector(
+                ".section:nth-child(1) .bg-v"
+              );
+              if (homeVideo) {
+                homeVideo.play();
+              }
+            } else if (destination.index === 5) {
+              // Testimonials section
+              var testimonialsVideo = document.querySelector(
+                ".section:nth-child(6) .bg-v"
+              );
+              if (testimonialsVideo) {
+                testimonialsVideo.play();
+              }
             }
-        }
+          },
+        });
       });
-    });
 
-    function scrollToSection(sectionId) {
-      fullpage_api.moveTo(sectionId);
-    }
+      function scrollToSection(sectionId) {
+        fullpage_api.moveTo(sectionId);
+      }
 
-    document.addEventListener('DOMContentLoaded', function () {
-    const contentArea = document.getElementById('contentArea');
-    const imageColumn = document.getElementById('imageColumn');
-    const accordionItems = document.querySelectorAll('.accordion-item');
+      document.addEventListener("DOMContentLoaded", function () {
+        const contentArea = document.getElementById("contentArea");
+        const imageColumn = document.getElementById("imageColumn");
+        const accordionItems = document.querySelectorAll(".accordion-item");
 
-    function updateContentAndImage(item) {
-        const heading = item.getAttribute('data-heading');
-        const content = item.getAttribute('data-content');
-        const imageUrl = item.getAttribute('data-image');
+        function updateContentAndImage(item) {
+          const heading = item.getAttribute("data-heading");
+          const content = item.getAttribute("data-content");
+          const imageUrl = item.getAttribute("data-image");
 
-        contentArea.innerHTML = `<h2>${heading}</h2><p>${content}</p>`;
-        imageColumn.innerHTML = `<img src="${imageUrl}" alt="Your Image" class="img-fluid fade-in" id="imageArea">`;
-    }
+          contentArea.innerHTML = `<h2>${heading}</h2><p>${content}</p>`;
+          imageColumn.innerHTML = `<img src="${imageUrl}" alt="Your Image" class="img-fluid fade-in" id="imageArea">`;
+        }
 
-    // Show first accordion item by default
-    const defaultItem = document.querySelector('.accordion-item');
-    defaultItem.classList.add('show');
-    updateContentAndImage(defaultItem);
+        // Show first accordion item by default
+        const defaultItem = document.querySelector(".accordion-item");
+        defaultItem.classList.add("show");
+        updateContentAndImage(defaultItem);
 
-    accordionItems.forEach(function (item) {
-        item.addEventListener('shown.bs.collapse', function () {
+        accordionItems.forEach(function (item) {
+          item.addEventListener("shown.bs.collapse", function () {
             updateContentAndImage(item);
-        });
+          });
 
-        item.addEventListener('click', function () {
-            const activeItem = document.querySelector('.accordion-item.show');
+          item.addEventListener("click", function () {
+            const activeItem = document.querySelector(".accordion-item.show");
             if (activeItem && activeItem !== item) {
-                activeItem.classList.remove('show');
-                setTimeout(function () {
-                    item.classList.add('show');
-                }, 200);
+              activeItem.classList.remove("show");
+              setTimeout(function () {
+                item.classList.add("show");
+              }, 200);
             }
+          });
         });
-    });
-});
-  </script>
+      });
+    </script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-  const swiper = new Swiper('.mySwiper', {
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    autoplay: {
-      delay: 5500,
-      disableOnInteraction: false,
-    },
-    slidesPerView: 2,
-    spaceBetween: 30,
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 30,
-      },
-    },
-  });
-});
-</script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const swiper = new Swiper(".mySwiper", {
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          autoplay: {
+            delay: 5500,
+            disableOnInteraction: false,
+          },
+          slidesPerView: 2,
+          spaceBetween: 30,
+          breakpoints: {
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+          },
+        });
+      });
+    </script>
 
-<script>
-  var ctx = document.getElementById('myDoughnutChart').getContext('2d');
-  var myDoughnutChart = new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-      labels: ['Element 1', 'Element 2', 'Element 3', 'Element 4', 'Element 5'],
-      datasets: [{
-        data: [20, 20, 20, 20, 20],
-        backgroundColor: [
-          '#3D550C', '#81B622', '#59981A', '#787D12', '#76B947'
-        ],
-        borderColor: [
-          '#3D550C','#81B622','#59981A','#787D12','#76B947'
-        ],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      plugins: {
-        legend: {
-          display: false
+    <script>
+      var ctx = document.getElementById("myDoughnutChart").getContext("2d");
+      var myDoughnutChart = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+          labels: [
+            "Element 1",
+            "Element 2",
+            "Element 3",
+            "Element 4",
+            "Element 5",
+          ],
+          datasets: [
+            {
+              data: [20, 20, 20, 20, 20],
+              backgroundColor: [
+                "#3D550C",
+                "#81B622",
+                "#59981A",
+                "#787D12",
+                "#76B947",
+              ],
+              borderColor: [
+                "#3D550C",
+                "#81B622",
+                "#59981A",
+                "#787D12",
+                "#76B947",
+              ],
+              borderWidth: 1,
+            },
+          ],
         },
-        tooltip: {
-          enabled: true
+        options: {
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              enabled: true,
+            },
+            datalabels: {
+              color: "white",
+              formatter: function (value, context) {
+                return context.chart.data.labels[context.dataIndex];
+              },
+              font: {
+                weight: "bold",
+                size: 14,
+              },
+              textAlign: "center",
+            },
+          },
+          cutout: "45%",
         },
-        datalabels: {
-          color: 'white',
-          formatter: function(value, context) {
-            return context.chart.data.labels[context.dataIndex];
+        plugins: [ChartDataLabels],
+      });
+    </script>
+
+    <script>
+      var ctx = document.getElementById("myRegionChart").getContext("2d");
+      var myRegionChart = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+          labels: [
+            "Element 1",
+            "Element 2",
+            "Element 3",
+            "Element 4",
+            "Element 5",
+          ],
+          datasets: [
+            {
+              data: [20, 20, 20, 20, 20],
+              backgroundColor: [
+                "#94C973",
+                "#2F5233",
+                "#B1D8B7",
+                "#76B947",
+                "#2C5E1A",
+              ],
+              borderColor: [
+                "#94C973",
+                "#2F5233",
+                "#B1D8B7",
+                "#76B947",
+                "#2C5E1A",
+              ],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              enabled: true,
+            },
+            datalabels: {
+              color: "white",
+              formatter: function (value, context) {
+                return context.chart.data.labels[context.dataIndex];
+              },
+              font: {
+                weight: "bold",
+                size: 14,
+              },
+              textAlign: "center",
+            },
           },
-          font: {
-            weight: 'bold',
-            size: 14
-          },
-          textAlign: 'center'
+          cutout: "45%",
+        },
+        plugins: [ChartDataLabels],
+      });
+    </script>
+
+    <!-- Code for start Counter -->
+    <script>
+      const counters = document.querySelectorAll(".counter");
+
+      counters.forEach((counter) => {
+        const target = +counter.getAttribute("data-target");
+        const suffix = counter.getAttribute("data-suffix") || "";
+        const increment = target / 100; // Adjust as needed for animation speed
+        let count = 0; // Start count from 0 initially
+
+        // Immediately display the suffix
+        counter.innerText = `${suffix}`;
+
+        const updateCounter = () => {
+          if (count < target) {
+            count += increment;
+            if (count > target) {
+              count = target; // Ensure we don't overshoot the target
+            }
+            counter.innerText = `${Math.ceil(count)}${suffix}`;
+            setTimeout(updateCounter, 20); // Adjust timeout (ms) for smoother animation
+          } else {
+            counter.innerText = `${target}${suffix}`;
+          }
+        };
+
+        updateCounter();
+      });
+    </script>
+
+    <!-- For LightBox -->
+    <script>
+      // Open the Modal
+      function openModal() {
+        console.log("Modal opening...");
+        document.getElementById("myModal").style.display = "block";
+      }
+
+      // Close the Modal
+      function closeModal() {
+        console.log("Modal closing...");
+        document.getElementById("myModal").style.display = "none";
+      }
+
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) {
+          slideIndex = 1;
         }
-      },
-      cutout: '45%',
-    },
-    plugins: [ChartDataLabels]
-  });
-</script>
-
-<script>
-  var ctx = document.getElementById('myRegionChart').getContext('2d');
-  var myRegionChart = new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-      labels: ['Element 1', 'Element 2', 'Element 3', 'Element 4', 'Element 5'],
-      datasets: [{
-        data: [20, 20, 20, 20, 20],
-        backgroundColor: [
-          '#94C973', '#2F5233', '#B1D8B7', '#76B947', '#2C5E1A'  
-        ],
-        borderColor: [
-          '#94C973','#2F5233','#B1D8B7','#76B947','#2C5E1A'
-        ],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      plugins: {
-        legend: {
-          display: false
-        },
-        tooltip: {
-          enabled: true
-        },
-        datalabels: {
-          color: 'white',
-          formatter: function(value, context) {
-            return context.chart.data.labels[context.dataIndex];
-          },
-          font: {
-            weight: 'bold',
-            size: 14
-          },
-          textAlign: 'center'
+        if (n < 1) {
+          slideIndex = slides.length;
         }
-      },
-      cutout: '45%',
-    },
-    plugins: [ChartDataLabels]
-  });
-</script>
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+      }
+    </script>
 
-<!-- <script>
+    <!-- <script>
 
   var countDownDate = new Date("Jun 30, 2024 15:37:25").getTime();
 
@@ -1476,7 +2644,5 @@
     }
   }, 1000);
 </script> -->
-
-
-</body>
+  </body>
 </html>
