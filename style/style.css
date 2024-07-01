@@ -1244,10 +1244,13 @@ button.accordion-button:active {
 
 @media (max-width: 1199px) {
   .agenda-time {
-    padding: 47px 30px;
+    padding: 25px 30px;
+  }
+  .agenda-detail{
+    padding: 10px 30px;
   }
   .speak-slot {
-    padding: 24px 12px;
+    padding: 12px;
   }
 }
 @media (max-width: 1063px) {
@@ -1263,6 +1266,12 @@ button.accordion-button:active {
 @media (min-width: 993px) and (max-width: 1078px) {
 }
 @media (max-width: 992px) {
+  #agendaSection .speak-slot {
+    /* border: none; */
+  }
+  .agenda-time, .agenda-detail, .speak-slot{
+    height: 14rem;
+  }
   #homeSection .banner-left {
     justify-content: center;
     word-break: break-word;
@@ -1282,9 +1291,6 @@ button.accordion-button:active {
   #agendaSection .agenda-col {
     margin-bottom: 20px;
   }
-  #agendaSection .speak-slot {
-    border: none;
-  }
   #homeSection .counter-stats p {
     font-size: 13px;
   }
@@ -1300,6 +1306,25 @@ button.accordion-button:active {
   }
 }
 @media (max-width: 767px) {
+  .agenda-detail {
+    padding: 30px;
+  }
+  .agenda-time {
+    padding: 37px 12px;
+  }
+  .speak-slot{
+    margin-top: 1px;
+    border: none;
+  }
+  #agendaSection .agenda-col{
+    margin-bottom: 10px;
+  }
+  .agenda-time, .agenda-detail, .speak-slot {
+    height: 5rem;
+  }
+  .speak-slot {
+    padding: 0px 7px;
+  }
   .about-container #imageColumn {
     display: none;
   }
