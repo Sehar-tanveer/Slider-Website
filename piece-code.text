@@ -1,0 +1,98 @@
+<!-- <div class="section" id="networkingSection">
+        <div class="container about-container">
+          <div class="row p-3">
+            <div class="col-md-6">
+              <div class="content" id="contentArea">
+              </div>
+              <div id="accordion">
+                <div
+                  class="accordion-item show"
+                  data-heading="Networking Sessions"
+                  data-content="Elevate your knowledge and expand your professional network with our dynamic sessions, & exhibitions. Gain insights, maximize learning efficiency, make connections, and seize opportunities for professional development."
+                  data-image="images/background/hotel-technology.jpg"
+                >
+                  <h3 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Networking Sessions
+                    </button>
+                  </h3>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordion"
+                  >
+                    <div class="accordion-body"></div>
+                  </div>
+                </div>
+                <div
+                  class="accordion-item"
+                  data-heading="Engaging Meeting"
+                  data-content="Immerse yourself in an engaging meeting experience, where connections are forged, and knowledge is shared in deep dive sessions, peer-to-peer & fishbowl discussions."
+                  data-image="images/background/hotel-technology.jpg"
+                >
+                  <h3 class="accordion-header" id="headingTwo">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      Engaging Meeting
+                    </button>
+                  </h3>
+                  <div
+                    id="collapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#accordion"
+                  >
+                    <div class="accordion-body"></div>
+                  </div>
+                </div>
+                <div
+                  class="accordion-item"
+                  data-heading="Refreshment and Happy Hour"
+                  data-content="Recharge your mind and body with our curated selection of coffee and drinks, refreshing activities, and Mocha Moment's luncheons, fostering connections over casual conversations."
+                  data-image="images/background/hotel-technology.jpg"
+                >
+                  <h3 class="accordion-header" id="headingThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      Refreshment and Happy Hour
+                    </button>
+                  </h3>
+                  <div
+                    id="collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#accordion"
+                  >
+                    <div class="accordion-body"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 p-3" id="imageColumn">
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+
+      

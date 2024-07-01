@@ -176,7 +176,7 @@
 
     <!-- Fullpage.js Sections -->
     <div id="fullpage">
-      <div class="section" id="homeSection">
+      <div class="section home-section" id="homeSection">
         <div class="container-fluid gx-0">
           <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
@@ -187,7 +187,7 @@
                     background-image: url(images/background/left-header-banner.jpg);
                   "
                 >
-                  <div class="section-content" style="z-index: 1">
+                  <div class="section-content content-up" style="z-index: 1">
                     <p class="slogan">
                       Innovation | Collaboration | Transformation
                     </p>
@@ -213,13 +213,54 @@
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
               <div class="row">
                 <div class="banner-right banner">
-                  <video autoplay muted loop class="bg-v">
+                  <video autoplay muted loop class="bg-vv">
                     <source
                       src="images/background/Testimonial.mp4"
                       type="video/mp4"
                     />
                   </video>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="counter-stats">
+          <div class="counter-wrapp d-flex mt-3" style="width: 100%;">
+            <div class="cols" style="margin-bottom: 20px;">
+              <div class="counters">
+                <div class="counter-wrapp"> <div class="counter" data-target="200" data-suffix="+"></div></div>
+                <div class="counter-wrapp">
+                  <p>
+                    <span class="fw-semibold">Attendees To Meet Each Year</span>
+                </p>
+              </div>
+              </div>
+            </div>
+
+            <div class="cols counters" style="margin-bottom: 20px;">
+             <div class="counter-wrapp"> <div class="counter" data-target="30" data-suffix="+"></div> </div>
+              <div class="counter-wrapp">
+                <p>
+                  <span class="fw-semibold">Exhibitors To Meet Each Year</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="cols counters" style="margin-bottom: 20px;">
+              <div class="counter-wrapp"> <div class="counter" data-target="80" data-suffix="%"></div> </div>
+              <div class="counter-wrapp">
+                <p>
+                  <span class="fw-semibold"> Attendees at Director + Level </span>
+                </p>
+              </div>
+            </div>
+
+            <div class="cols counters" style="margin-bottom: 20px;">
+              <div class="counter-wrapp"> <div class="counter" data-target="100" data-suffix="+"></div> </div>
+              <div class="counter-wrapp">
+                <p>
+                  <span class="fw-semibold">Industry Delegates</span>
+                </p>
               </div>
             </div>
           </div>
@@ -272,103 +313,29 @@
         </div>
       </div>
 
-      <div class="section" id="networkingSection">
-        <div class="container about-container">
-          <div class="row p-3">
-            <div class="col-md-6">
-              <div class="content" id="contentArea">
-                <!-- Content area will be dynamically updated -->
-              </div>
-              <div id="accordion">
-                <div
-                  class="accordion-item show"
-                  data-heading="Networking Sessions"
-                  data-content="Elevate your knowledge and expand your professional network with our dynamic sessions, & exhibitions. Gain insights, maximize learning efficiency, make connections, and seize opportunities for professional development."
-                  data-image="images/background/hotel-technology.jpg"
-                >
-                  <h3 class="accordion-header" id="headingOne">
-                    <button
-                      class="accordion-button"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne"
-                      aria-expanded="true"
-                      aria-controls="collapseOne"
-                    >
-                      Networking Sessions
-                    </button>
-                  </h3>
-                  <div
-                    id="collapseOne"
-                    class="accordion-collapse collapse show"
-                    aria-labelledby="headingOne"
-                    data-bs-parent="#accordion"
-                  >
-                    <div class="accordion-body"></div>
-                  </div>
+      <div class="section highlights-section" id="networkingSection">
+        <div class="container">
+            <div class="event-hours">
+                <div class="row">
+                    <h3 style="font-size: 2.5rem;">What Makes it Special</h3>
+                    <div class="col-md-6">
+                        <div class="col-12 content" id="content">
+                            <h2>Our Digital Transformation in Hotel Technology Event</h2>
+                            <!-- <p style="text-align: justify;">Default paragraph content.</p> -->
+                        </div>
+                        <div class="col-12 filter-buttons d-grid gap-2">
+                            <button class="btn mx-3 fltr-btn" onclick="changeContent('filter1', this)">Networking</button>
+                            <button class="btn mx-3 fltr-btn" onclick="changeContent('filter2', this)">Meetings</button>
+                            <button class="btn mx-3 fltr-btn" onclick="changeContent('filter3', this)">Happy Hours</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 picture" id="picture">
+                        <img style="border-radius: 15px" src="images/background/hotel-technology.webp" alt="Default Picture" class="img-fluid">
+                    </div>
                 </div>
-                <div
-                  class="accordion-item"
-                  data-heading="Engaging Meeting"
-                  data-content="Immerse yourself in an engaging meeting experience, where connections are forged, and knowledge is shared in deep dive sessions, peer-to-peer & fishbowl discussions."
-                  data-image="images/background/hotel-technology.jpg"
-                >
-                  <h3 class="accordion-header" id="headingTwo">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="collapseTwo"
-                    >
-                      Engaging Meeting
-                    </button>
-                  </h3>
-                  <div
-                    id="collapseTwo"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingTwo"
-                    data-bs-parent="#accordion"
-                  >
-                    <div class="accordion-body"></div>
-                  </div>
-                </div>
-                <div
-                  class="accordion-item"
-                  data-heading="Refreshment and Happy Hour"
-                  data-content="Recharge your mind and body with our curated selection of coffee and drinks, refreshing activities, and Mocha Moment's luncheons, fostering connections over casual conversations."
-                  data-image="images/background/hotel-technology.jpg"
-                >
-                  <h3 class="accordion-header" id="headingThree">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseThree"
-                      aria-expanded="false"
-                      aria-controls="collapseThree"
-                    >
-                      Refreshment and Happy Hour
-                    </button>
-                  </h3>
-                  <div
-                    id="collapseThree"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingThree"
-                    data-bs-parent="#accordion"
-                  >
-                    <div class="accordion-body"></div>
-                  </div>
-                </div>
-              </div>
             </div>
-            <div class="col-md-6 p-3" id="imageColumn">
-              <!-- Image area will be dynamically updated -->
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
 
       <div class="section" id="speakersSection">
         <div class="container">
@@ -487,7 +454,7 @@
       <div class="section" id="programSection">
         <div class="container">
           <div class="program-section">
-            <h2>What To Expect</h2>
+            <h2>Who Will Attend</h2>
             <p>
               Fuel your mind with captivating keynotes, engaging panels, and
               exclusive industry insights
@@ -495,95 +462,62 @@
           </div>
           <div class="row pt-3">
             <div class="col-md-6 col-sm-12">
-              <div class="card">
-                <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="counter-stats">
-                      <div class="counter-icon">
-                        <img
-                          class="img-fluid"
-                          alt="WorlBI Stats"
-                          src="images/icons/01.png"
-                          width="100%"
-                        />
-                      </div>
-                      <div
-                        class="counter"
-                        data-target="200"
-                        data-suffix="+"
-                      ></div>
-                      <p>
-                        <span class="fw-semibold"
-                          >Attendees To Meet Each Year</span
-                        >
-                      </p>
+              <div class="row pt-3">
+                <div class="col-md-6 col-sm-12" style="padding-right: 0;">
+                  <div class="highlights">
+                    <div class="highlight-text">
+                      Chief Digital Officers and IT Operations Chiefs
                     </div>
                   </div>
-
-                  <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="counter-stats">
-                      <div class="counter-icon">
-                        <img
-                          class="img-fluid"
-                          alt="WorlBI Stats"
-                          src="images/icons/01.png"
-                          width="100%"
-                        />
-                      </div>
-                      <div
-                        class="counter"
-                        data-target="30"
-                        data-suffix="+"
-                      ></div>
-                      <p>
-                        <span class="fw-semibold">
-                          Exhibitors To Meet Each Year
-                        </span>
-                      </p>
+                  <div class="highlights">
+                    <div class="highlight-text">
+                      Chief Information Officers (CIOs) and Group CTOs
                     </div>
                   </div>
-
-                  <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="counter-stats">
-                      <div class="counter-icon">
-                        <img
-                          class="img-fluid"
-                          alt="WorlBI Stats"
-                          src="images/icons/03.png"
-                          width="100%"
-                        />
-                      </div>
-                      <div
-                        class="counter"
-                        data-target="80"
-                        data-suffix="%"
-                      ></div>
-                      <p>
-                        <span class="fw-semibold">
-                          Attendees at Director+ Level</span
-                        >
-                      </p>
+                  <div class="highlights">
+                    <div class="highlight-text">
+                      Global and Regional Chief, VP Development Officers
                     </div>
                   </div>
-
-                  <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="counter-stats">
-                      <div class="counter-icon">
-                        <img
-                          class="img-fluid"
-                          alt="WorlBI Stats"
-                          src="images/icons/02.png"
-                          width="100%"
-                        />
-                      </div>
-                      <div
-                        class="counter"
-                        data-target="100"
-                        data-suffix="+"
-                      ></div>
-                      <p>
-                        <span class="fw-semibold">Industry Delegates</span>
-                      </p>
+                  <div class="highlights">
+                    <div class="highlight-text">
+                      Vice Presidents in Global Guest Technology & Innovation, Hotel Technology, Development, and IT
+                    </div>
+                  </div>
+                  <div class="highlights">
+                    <div class="highlight-text">
+                      Directors of Information Technology, Hotel Development, and Digital Strategy
+                    </div>
+                  </div>
+                  <div class="highlights">
+                    <div class="highlight-text">Chief, VP Commercial Officers and Revenue Management</div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12 hlt-section" style="padding-left: 0;">
+                  <div class="highlights">
+                    <div class="highlight-text">Chief Sustainability, CSRD Officers.</div>
+                  </div>
+                  <div class="highlights">
+                    <div class="highlight-text">
+                      Professors and Lecturers specializing in Technological Innovation
+                    </div>
+                  </div>
+                  <div class="highlights">
+                    <div class="highlight-text">
+                      VP and Chief of Hotel Operations
+                    </div>
+                  </div>
+                  <div class="highlights">
+                    <div class="highlight-text">Vice president in Digital Marketing, E-commerce, and Digital Transformation</div>
+                  </div>
+                  <div class="highlights">
+                    <div class="highlight-text">
+                      Project Managers, Innovation Leaders, and Digitalization Directors
+                    </div>
+                  </div>
+                  <div class="highlights">
+                    <div class="highlight-text">
+                      Director of Cruise Hotel Operations and Revenue Operation
                     </div>
                   </div>
                 </div>
@@ -617,100 +551,338 @@
         </div>
       </div>
 
-      <div class="section" id="highlightsSection">
+      <div class="section highlights-section" id="highlightsSection">
         <div class="container">
-          <div class="program-section">
-            <h2>Exciting Agenda Highlights</h2>
-            <p>
-              Fuel your mind with captivating keynotes, engaging panels, and
-              exclusive industry insights
-            </p>
-          </div>
-          <div class="row pt-3">
-            <div class="col-md-6 col-sm-12">
-              <div class="highlights">
-                <div class="highlight-text">
-                  Innovative Hospitality Solutions
+          <div class="highlights-wrapp">
+            <div class="row justify-content-center g-3 p-3">
+              <h2 style="font-size: 2.5rem;">Events Highlights</h2>
+              <div class="col-md-4 col-sm-12">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#highlight-One"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseOne"
+                      >
+                        Hotel Innovation
+                      </button>
+                    </h2>
+                    <div
+                      id="highlight-One"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        How to integrate the latest innovations seamlessly to
+                        enhance operations, boost efficiency, and stay ahead in a
+                        rapidly evolving industry.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#highlight-Two"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseTwo"
+                      >
+                        Cutting-Edge Technology Planning
+                      </button>
+                    </h2>
+                    <div
+                      id="highlight-Two"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-headingTwo"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        Into the future of hospitality where creative solutions
+                        transform ordinary stays into extraordinary experiences.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#highlight-Three"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseThree"
+                      >
+                        CSRD & Beyond
+                      </button>
+                    </h2>
+                    <div
+                      id="highlight-Three"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-headingThree"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        The impact of Corporate Social Responsibility Disclosure
+                        (CSRD) on the hospitality sector. Learn how to go beyond
+                        compliance and lead with responsible, transparent
+                        practices that resonate with modern travelers.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#highlight-four"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseThree"
+                      >
+                        Path to Excellence
+                      </button>
+                    </h2>
+                    <div
+                      id="highlight-four"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-headingThree"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        Chart your course to becoming a top-rated hotel.
+                        Understand the key decisions and best practices that drive
+                        excellence, guest satisfaction, and industry recognition.
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="highlights">
-                <div class="highlight-text">Personalized Guest Experience</div>
-              </div>
-              <div class="highlights">
-                <div class="highlight-text">
-                  Navigating Tomorrow's Hospitality Landscape
+              <div class="col-md-4 col-sm-12">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#highlight-Six"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseOne"
+                      >
+                        Green & Sustainable
+                      </button>
+                    </h2>
+                    <div
+                      id="highlight-Six"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        The future with eco-friendly solutions that make a
+                        difference. Dive into the latest sustainability trends and
+                        practices that protect the planet and attract
+                        conscientious guests.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#highlight-Seven"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseTwo"
+                      >
+                        Personalization in the Guest's Journey
+                      </button>
+                    </h2>
+                    <div
+                      id="highlight-Seven"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-headingTwo"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        Your guests with tailored experiences. Learn how to use
+                        data and technology to create personalized, memorable
+                        stays that turn first-time visitors into loyal customers.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#highlight-Eight"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseThree"
+                      >
+                        Hotel in Your Pocket
+                      </button>
+                    </h2>
+                    <div
+                      id="highlight-Eight"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-headingThree"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        Convenience with mobile hospitality innovations. Discover
+                        how mobile apps and technologies can streamline
+                        operations, enhance guest experiences, and keep your hotel
+                        at guests’ fingertips.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#highlight-Nine"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseThree"
+                      >
+                        Integrating AI & IoT Devices
+                      </button>
+                    </h2>
+                    <div
+                      id="highlight-Nine"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-headingThree"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        How these cutting-edge technologies can revolutionize
+                        hotel operations, enhance guest experiences, and
+                        streamline services for ultimate efficiency.
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="highlights">
-                <div class="highlight-text">Green Hospitality Initiatives</div>
-              </div>
-              <div class="highlights">
-                <div class="highlight-text">
-                  Revolutionizing Dining Experiences with AI
-                </div>
-              </div>
-              <div class="highlights">
-                <div class="highlight-text">Blockchain Implementations</div>
-              </div>
-              <div class="highlights">
-                <div class="highlight-text">
-                  CSRD in the hospitality industry
+              <div class="col-md-4 col-sm-12">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#highlight-Eleven"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseOne"
+                      >
+                        Digi-Revenue Management
+                      </button>
+                    </h2>
+                    <div
+                      id="highlight-Eleven"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        New revenue potentials with digital revenue management
+                        strategies. Learn how to leverage data analytics and
+                        automated systems to optimize pricing, boost occupancy,
+                        and maximize profits.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#highlight-Twelve"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseTwo"
+                      >
+                        Cybersecurity & Privacy Concerns
+                      </button>
+                    </h2>
+                    <div
+                      id="highlight-Twelve"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-headingTwo"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        Effective cybersecurity measures and privacy protocols to
+                        protect sensitive information and build customer trust.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#highlight-Thirteen"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseThree"
+                      >
+                        Data-Driven Decision Making
+                      </button>
+                    </h2>
+                    <div
+                      id="highlight-Thirteen"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-headingThree"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        How to harness the power of data analytics to drive
+                        strategic planning, improve operations, and enhance guest
+                        experiences.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#highlight-Fourteen"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseThree"
+                      >
+                        Technology Implementation
+                      </button>
+                    </h2>
+                    <div
+                      id="highlight-Fourteen"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-headingThree"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        Insights into common hurdles in technology implementation
+                        and learn practical solutions to overcome them and achieve
+                        seamless integration.
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-sm-12 hlt-section">
-              <div class="highlights">
-                <div class="highlight-text">Technological Evolutions</div>
-              </div>
-              <div class="highlights">
-                <div class="highlight-text">
-                  Challenges in technology Adaptions
-                </div>
-              </div>
-              <div class="highlights">
-                <div class="highlight-text">Maximizing Revenue Strategies</div>
-              </div>
-              <div class="highlights">
-                <div class="highlight-text">Hotel in Pocket</div>
-              </div>
-              <div class="highlights">
-                <div class="highlight-text">
-                  Empowering Entrepreneurs with Smart Hospitality
-                </div>
-              </div>
-              <div class="highlights">
-                <div class="highlight-text">
-                  Cybersecurity and Privacy Concerns
-                </div>
-              </div>
-              <div class="highlights">
-                <div class="highlight-text">Sustainability Practices</div>
-              </div>
-            </div>
-            <!-- <div class="col-md-6 col-sm-12">
-              <div class="row">
-                <div class="col-md-6 align-self-start">
-                  <div class="graphs-wrap">
-                    <h5 class="m-5 text-center">Attendees By Region</h5>
-                    <canvas
-                      id="myDoughnutChart"
-                      width="300"
-                      height="400"
-                    ></canvas>
-                  </div>
-                </div>
-                <div class="col-md-6 align-self-end">
-                  <div class="graphs-wrap">
-                    <h5 class="m-5 text-center">Attendees By Industry</h5>
-                    <canvas
-                      id="myRegionChart"
-                      width="300"
-                      height="400"
-                    ></canvas>
-                  </div>
-                </div>
-              </div>
-            </div> -->
           </div>
         </div>
       </div>
@@ -718,12 +890,12 @@
       <div class="section bg-secondary-subtle" id="sponsorsSection">
         <div class="container scrollable-content">
           <div class="section-header-spn">
-            <div class="row p-2">
-              <div class="col-md-6">
+            <div class="row p-2 sponsor-wrapp">
+              <div class="col-sm-6 mr-sm-3" >
                 <h2>Meet Our Trusted Partners 2024!</h2>
                 <p>Building Bridges, Forging Success</p>
               </div>
-              <div class="col-md-6 d-flex flex-column justify-content-end">
+              <div class="col-sm-6 ml-sm-3 d-flex flex-column justify-content-end">
                 <div
                   class="gap-1 d-md-flex justify-content-md-end"
                   style="z-index: 1"
@@ -737,13 +909,13 @@
               </div>
             </div>
           </div>
-          <div class="row p-2 pb-0 align-items-center justify-content-center">
-            <div class="col-md-3">
+          <div class="row p-2 pb-0 align-items-center justify-content-center sponsor-wrapp" >
+            <div class="col-sm-3 mr-sm-3">
               <div class="sponsor-heading">
                 <h3>Premium Partner</h3>
               </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-sm-9">
               <div class="row">
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
@@ -852,12 +1024,12 @@
               </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-sm-3">
               <div class="sponsor-heading">
                 <h3>Gold Partner</h3>
               </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-sm-9">
               <div class="row">
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
@@ -966,12 +1138,12 @@
               </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-sm-3">
               <div class="sponsor-heading">
                 <h3>Silver Partner</h3>
               </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-sm-9">
               <div class="row">
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
@@ -1080,12 +1252,12 @@
               </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-sm-3">
               <div class="sponsor-heading">
                 <h3>Presentation Partner</h3>
               </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-sm-9">
               <div class="row">
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
@@ -1194,12 +1366,12 @@
               </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-sm-3">
               <div class="sponsor-heading">
                 <h3>Meeting Partner</h3>
               </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-sm-9">
               <div class="row">
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
@@ -1308,12 +1480,12 @@
               </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-sm-3">
               <div class="sponsor-heading">
                 <h3>Presentation Partner</h3>
               </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-sm-9">
               <div class="row">
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
@@ -1422,12 +1594,12 @@
               </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-sm-3">
               <div class="sponsor-heading">
                 <h3>Media Partner</h3>
               </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-sm-9">
               <div class="row">
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <div class="sponsor">
@@ -1772,7 +1944,7 @@
           </div>
           <div class="row">
             <div class="col-md-4" style="margin-bottom: 20px">
-              <div class="pricing-table h-100 d-flex flex-column">
+              <div class="pricing-table position-relative h-100 d-flex flex-column">
                 <div class="product-category">
                   <h3>
                     General Admission for Academia, <br />Non-Profit,
@@ -2133,7 +2305,6 @@
                         src="images/background/LeNegresco-img1.webp"
                         alt=""
                         class="img-fluid"
-                        onclick="openModal();currentSlide(1)"
                       />
                     </div>
                     <div class="col-md-6">
@@ -2141,7 +2312,6 @@
                         src="images/background/LeNegresco-img2.webp"
                         alt=""
                         class="img-fluid"
-                        onclick="openModal();currentSlide(2)"
                       />
                     </div>
                     <div class="col-md-6">
@@ -2149,7 +2319,6 @@
                         src="images/background/LeNegresco-img3.webp"
                         alt=""
                         class="img-fluid"
-                        onclick="openModal();currentSlide(3)"
                       />
                     </div>
                     <div class="col-md-6">
@@ -2157,7 +2326,6 @@
                         src="images/background/LeNegresco-img4.webp"
                         alt=""
                         class="img-fluid"
-                        onclick="openModal();currentSlide(4)"
                       />
                     </div>
                   </div>
@@ -2178,6 +2346,44 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="section gallery" id="gallerySection">
+        <div class="container">
+          <div class="row p-2 mb-3">
+            <div class="col-md-6">
+              <h2>Gallery</h2>
+              <p style="margin-bottom: 5px;">Photo Collection from Past Events</p>
+            </div>
+            <div class="col-md-6 d-flex flex-column justify-content-end">
+              <div class="gap-1 d-md-flex justify-content-md-end" style="z-index: 1">
+                <a href="">
+                  <button class="main-btn me-md-2">Visit Gallery </button> 
+                </a>
+              </div>
+            </div>
+          </div>
+            <div class="row justify-content-center g-1">
+              <div class="col-lg-4 col-md-4 col-sm-6"">
+                <img class="img-fluid"  alt="WorldBI Events" src="images/background/DHI-Event4.webp" onclick="openModal();currentSlide(1)" />
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6"">
+                <img class="img-fluid"  alt="WorldBI Events" src="images/background/DDIP-Event3.webp" onclick="openModal();currentSlide(2)" />
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6"">
+                <img class="img-fluid"  alt="WorldBI Events" src="images/background/CTIP-Event1.webp" onclick="openModal();currentSlide(3)" />
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6"">
+                <img class="img-fluid"  alt="WorldBI Events" src="images/background/CTS-Event3.webp" onclick="openModal();currentSlide(4)" />
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6"">
+                <img class="img-fluid"  alt="WorldBI Events" src="images/background/DRCC-Event2.webp" onclick="openModal();currentSlide(5)" />
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6"">
+                <img class="img-fluid"  alt="WorldBI Events" src="images/background/BPC-Event1.webp" onclick="openModal();currentSlide(6)" />
+              </div>
+            </div>
         </div>
       </div>
 
@@ -2204,15 +2410,36 @@
                 >
                   <li><a href="index.html">Home</a></li>
                   <li><a href="about.html">About Us</a></li>
-                  <li><a href="speaker-single.html">Speaker</a></li>
-                  <li><a href="event-single.html">Sponsor</a></li>
-                  <li><a href="blog.html">Blog </a></li>
-                  <li><a href="contact.html"> Contact</a></li>
+                  <li><a href="speaker-single.html">Marketplace</a></li>
+                  <li><a href="blog.html">Testimonials</a></li>
+                  <li><a href="event-single.html">Industry Blogs</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
                 </ul>
               </div>
 
+              <div class="footer-menu text-white text-start company-location">
+                <div class="row">
+                  <div class="col-md-3 col-sm-12">
+                    <h5>Call Us:</h5>
+                    <p><i class="fas fa-light fa-phone"></i> &nbsp; <a href="tel: 020 3004 8847">020 3004 8847</a></p>
+                  </div>
+                  <div class="col-md-3 col-sm-12">
+                    <h5>Email Us:</h5>
+                    <p><i class="fas fa-light fa-envelope"></i> &nbsp;<a href="mailto: info@worldbigroup.com">info@worldbigroup.com</a></p>
+                  </div>
+                  <div class="col-md-3 col-sm-12">
+                    <h5>Our Location</h5>
+                    <p><i class="fas fa-light fa-location-dot"></i> &nbsp;WorldBI, Office 7, 35-37 Ludgate Hill, London. EC4M 7JN</p>
+                  </div>
+                  <div class="col-md-3 col-sm-12">
+                    <h5 style="visibility: hidden;">Our Location</h5>
+                    <p style="font-size: 14.2px;"><i class="fas fa-light fa-location-dot"></i>&nbsp; Canada Office: 55 Village Centre Place, Suite 200, Mississauga, ON, L4Z 1VP</p>                    
+                  </div>
+                </div>
+              </div>
+
               <!-- Footer widget Social Start -->
-              <div class="footer-widget-social">
+              <div class="footer-widget-social footer-space">
                 <a href="https://twitter.com/worldbi_uk"
                   ><i class="fab fa-twitter"></i
                 ></a>
@@ -2245,11 +2472,7 @@
               <!-- Footer Copyright Start -->
               <div class="footer-copyright">
                 <p>
-                  © Copyright 2024 All Rights Reserved. <br />Designed &amp;
-                  Developed By
-                  <a href="https://worldbigroup.com/" style="color: white"
-                    >World BI</a
-                  >
+                  © Copyright 2024 All Rights Reserved.
                 </p>
               </div>
               <!-- Footer Copyright End -->
@@ -2261,44 +2484,60 @@
 
     <!-- The Modal/Lightbox -->
     <div id="myModal" class="modal">
-      <span class="close cursor" onclick="closeModal()">&times;</span>
-      <div class="modal-content">
-        <div class="mySlides text-center">
-          <div class="numbertext">1 / 4</div>
-          <img
-            src="images/background/LeNegresco-img1.webp"
-            style="width: 90%; height: 33rem"
-          />
-        </div>
-
-        <div class="mySlides text-center">
-          <div class="numbertext">2 / 4</div>
-          <img
-            src="images/background/LeNegresco-img2.webp"
-            style="width: 90%; height: 33rem"
-          />
-        </div>
-
-        <div class="mySlides text-center">
-          <div class="numbertext">3 / 4</div>
-          <img
-            src="images/background/LeNegresco-img3.webp"
-            style="width: 90%; height: 33rem"
-          />
-        </div>
-
-        <div class="mySlides text-center">
-          <div class="numbertext">4 / 4</div>
-          <img
-            src="images/background/LeNegresco-img4.webp"
-            style="width: 90%; height: 33rem"
-          />
-        </div>
-
-        <!-- Next/previous controls -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <div class="mySlides text-center">
+        <div class="numbertext">1 / 6</div>
+        <img
+          src="images/background/DHI-Event4.webp"
+          style="width: 90%;"
+        />
       </div>
+
+      <div class="mySlides text-center">
+        <div class="numbertext">2 / 6</div>
+        <img
+          src="images/background/DDIP-Event3.webp"
+          style="width: 90%;"
+        />
+      </div>
+
+      <div class="mySlides text-center">
+        <div class="numbertext">3 / 6</div>
+        <img
+          src="images/background/CTIP-Event1.webp"
+          style="width: 90%;"
+        />
+      </div>
+
+      <div class="mySlides text-center">
+        <div class="numbertext">4 / 6</div>
+        <img
+          src="images/background/CTS-Event3.webp"
+          style="width: 90%;"
+        />
+      </div>
+
+      <div class="mySlides text-center">
+        <div class="numbertext">5 / 6</div>
+        <img
+          src="images/background/DRCC-Event2.webp"
+          style="width: 90%;"
+        />
+      </div>
+
+      <div class="mySlides text-center">
+        <div class="numbertext">6 / 6</div>
+        <img
+          src="images/background/BPC-Event1.webp"
+          style="width: 90%;"
+        />
+      </div>
+
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
     </div>
 
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
@@ -2334,6 +2573,7 @@
             "agenda",
             "glance",
             "venue",
+            "gallery",
             "footer",
           ],
           paddingTop: "4rem",
@@ -2617,6 +2857,41 @@
         slides[slideIndex - 1].style.display = "block";
       }
     </script>
+
+    <!-- For Highlights Sections -->
+    <script>
+      const contentData = {
+          filter1: {
+              heading: 'Networking Sessions',
+              paragraph: 'Immerse yourself in a comprehensive series of networking sessions meticulously designed to broaden your professional network and deepen your knowledge base. Our dynamic sessions and vibrant presentations and panels are tailored to provide not only valuable insights but also to foster efficient learning opportunities and facilitate meaningful connections crucial for continuous professional development.',
+              image: 'images/background/hotel-technology.webp'
+          },
+          filter2: {
+              heading: 'Engaging Meeting',
+              paragraph: 'Participate in a diverse range of engaging meetings aimed at nurturing connections and promoting knowledge-sharing through immersive deep dive sessions, interactive peer-to-peer discussions, and stimulating fishbowl conversations. These interactive formats are crafted to ignite innovative ideas, foster collaboration, and offer new perspectives that can significantly enhance your professional journey.',
+              image: 'images/background/hotel-technology.webp'
+          },
+          filter3: {
+              heading: 'Refreshment and Happy Hours',
+              paragraph: 'Take a moment to recharge and rejuvenate amidst our thoughtfully curated selection of beverages, including aromatic coffee and a variety of refreshing options. Our engaging activities and carefully planned luncheons are designed to create a conducive atmosphere for casual conversations, facilitating organic networking opportunities where ideas flow freely and relationships thrive.',
+              image: 'images/background/hotel-technology.webp'
+          }
+      };
+      
+      function changeContent(filter, button) {
+          const data = contentData[filter];
+          document.getElementById('content').innerHTML = `<h2 >${data.heading}</h2><p style="text-align: justify;">${data.paragraph}</p>`;
+          document.getElementById('picture').innerHTML = `<img style="border-radius: 15px" src="${data.image}" alt="${data.heading} Picture">`;
+      
+          // Remove 'active' class from all buttons
+          const buttons = document.querySelectorAll('.fltr-btn');
+          buttons.forEach(btn => btn.classList.remove('active'));
+      
+          // Add 'active' class to the clicked button
+          button.classList.add('active');
+      }
+    </script>
+      
 
     <!-- <script>
 
