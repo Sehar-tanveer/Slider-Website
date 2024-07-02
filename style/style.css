@@ -1195,11 +1195,16 @@ a {
   text-decoration: underline;
   color: #28a645;
 }
-
+#highlightsSection{
+  /* background-image: url('../images/background/abstract.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+}
 #footerSection .footer .footer-widget-social {
-  border-top: 1px solid #4a555f;
+  /* border-top: 1px solid #4a555f; */
   gap: 20px;
-  padding-top: 35px;
+  /* padding-top: 35px; */
   margin-top: 20px;
   display: flex;
   justify-content: center;

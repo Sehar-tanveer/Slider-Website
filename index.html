@@ -69,6 +69,7 @@
         tabindex="-1"
         id="offcanvasWithBackdrop"
         aria-labelledby="offcanvasWithBackdropLabel"
+        style="border-top-left-radius: inherit;"
       >
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">Menu</h5>
@@ -79,7 +80,7 @@
             aria-label="Close"
           ></button>
         </div>
-        <div class="offcanvas-body">
+        <div class="offcanvas-body" style="overflow-y: visible;">
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="#" onclick="scrollToSection('home')"
@@ -174,16 +175,10 @@
       <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
     </div>
 
+    <!-- Enquire Form -->
     <div class="enquire-btn">
       <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#queryModal"> Enquire Now</a>
     </div>
-
-    <!-- Enquire Form -->
-    <!-- <ul class="enquire-ul">
-      <li class="enquire-li">
-          <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#queryModal">Enquire Now</a>
-      </li>
-    </ul> -->
     
     <div class="modal enquire-modal fade" id="queryModal" tabindex="-1" aria-labelledby="queryModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -2457,7 +2452,7 @@
                 </ul>
               </div>
 
-              <div class="footer-menu text-white text-start company-location">
+              <div class="footer-menu text-white text-start company-location" style="border-top: 1px solid #4a555f; padding-top: 35px;">
                 <div class="row">
                   <div class="col-md-3 col-sm-12">
                     <h5>Call Us:</h5>
