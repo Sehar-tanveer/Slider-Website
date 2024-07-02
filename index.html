@@ -173,6 +173,64 @@
       <a href="#"><i class="fa-brands fa-instagram"></i></a>
       <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
     </div>
+    <!-- Enquire Form -->
+    <ul class="enquire-ul">
+      <li class="enquire-li"><a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"> Enquire Now</a></li>
+    </ul>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title text-white" id="exampleModalLabel">Have Any Questions?</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row g-3 form-body">
+            <div class="col-md-6">
+              <input type="text" class="form-control styled-input" placeholder="Full Name" name="name" required>
+              <div class="error" id="name-error"></div>
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control styled-input" placeholder="Your Email" name="email" required>
+              <div class="error" id="email-error"></div>
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control styled-input" placeholder="Your Company" name="company" required>
+              <div class="error" id="company-error"></div>
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control styled-input" placeholder="Subject" name="subject" required>
+              <div class="error" id="subject-error"></div>
+            </div>
+            <div class="col-md-6">
+              <input type="tel" class="form-control styled-input" placeholder="Phone/Mobile No" name="phone" required>
+              <div class="error" id="phone-error"></div>
+            </div>
+            <div class="col-md-6">
+              <select name="inquiry" class="form-control styled-input" required>
+                 <option hidden="hidden" value="" disabled selected>Select Inquiry</option>
+                 <option value="Become a Speaker">Become a Speaker</option>
+                 <option value="Become a Partner">Become a Partner</option>
+                 <option value="Get Attendee List">Get Attendee List</option>
+                 <option value="Get Full Agenda">Get Full Agenda</option>
+              </select>
+              <div class="error" id="inquiry-error"></div>
+            </div>
+            <div class="col-md-12">
+              <textarea class="form-control my-text styled-input" name="message" rows="5" placeholder="Message"></textarea>
+              <div class="error" id="message-error"></div>
+            </div>
+          </div>
+          <br>
+           <div class="text-end">
+              <button class="g-recaptcha main-btn" data-sitekey="6LeC5Q8nAAAAAFf2m1bHTiCLnAwuwNC4_pY9FlZv" data-callback='onSubmit' data-action='submit'>Send Message</button>
+           </div>
+        </form>
+      </div>
+    </div>
+  </div>
+    </div>
 
     <!-- Fullpage.js Sections -->
     <div id="fullpage">
@@ -318,13 +376,11 @@
             <div class="event-hours">
                 <div class="row">
                     <h3 style="font-size: 2.5rem;">What Makes it Special</h3>
-                    <div class="col-md-6">
+                    <div class="col-lg-6 col-sm-12">
                         <div class="col-12 content" id="content">
-                            <h2>Our Digital Transformation in Hotel Technology Event</h2>
-                            <!-- <p style="text-align: justify;">Default paragraph content.</p> -->
                         </div>
                         <div class="col-12 filter-buttons d-grid gap-2">
-                            <button class="btn mx-3 fltr-btn" onclick="changeContent('filter1', this)">Networking</button>
+                            <button class="btn mx-3 fltr-btn active" onclick="changeContent('filter1', this)">Networking</button>
                             <button class="btn mx-3 fltr-btn" onclick="changeContent('filter2', this)">Meetings</button>
                             <button class="btn mx-3 fltr-btn" onclick="changeContent('filter3', this)">Happy Hours</button>
                         </div>
@@ -335,7 +391,7 @@
                 </div>
             </div>
         </div>
-    </div>
+      </div>
 
       <div class="section" id="speakersSection">
         <div class="container">
@@ -346,8 +402,13 @@
                 <h2>Confirmed Speakers</h2>
                 <p>Industry Leaders Take the Stage at DHT 2025</p>
               </div>
-              <div class="col-md-6 d-flex flex-column justify-content-end">
-                <div class="gap-1 d-md-flex justify-content-md-end">
+              <div class="col-md-6 d-flex justify-content-between align-items-center">
+                <div class="text-center mx-auto">
+                  <a href="" class=""
+                    ><button class="main-btn">View More Speakers</button></a
+                  >
+                </div>
+                <div class="gap-1 d-md-flex justify-content-md-center">
                   <a href=""
                     ><button class="main-btn me-md-2">
                       Become a Speaker
@@ -357,12 +418,13 @@
               </div>
             </div>
           </div>
+          <h3 style="font-size: 1.4rem;">Conference ChairPerson</h3>
           <div class="row justify-content-center">
             <div class="col-lg-3 col-md-6">
               <div class="speaker" data-aos="fade-up" data-aos-delay="100">
                 <div class="img-speaker">
                   <img
-                    src="images/speakers/Amy.png"
+                    src="images/speakers/Antonio Ducceschi.webp"
                     alt="Worldbi Speaker"
                     class="img-fluid img-filter"
                     style="width: 100%"
@@ -373,9 +435,9 @@
                   </div>
                 </div>
                 <div class="details">
-                  <h3 class="name">Jane Myles</h3>
-                  <p>Program Director, Special Projects</p>
-                  <h5>DTRA</h5>
+                  <h3 class="name">Antonio Ducceschi</h3>
+                  <p>Chief Commercial Officer</p>
+                  <h5>Starhotels</h5>
                 </div>
               </div>
             </div>
@@ -383,7 +445,7 @@
               <div class="speaker" data-aos="fade-up" data-aos-delay="100">
                 <div class="img-speaker">
                   <img
-                    src="images/speakers/Amy.png"
+                    src="images/speakers/Jeroen van Gils.webp"
                     alt="Worldbi Speaker"
                     class="img-fluid img-filter"
                     style="width: 100%"
@@ -394,9 +456,9 @@
                   </div>
                 </div>
                 <div class="details">
-                  <h3 class="name">Jane Myles</h3>
-                  <p>Program Director, Special Projects</p>
-                  <h5>DTRA</h5>
+                  <h3 class="name">Jeroen van Gils</h3>
+                  <p>Development Director Europe</p>
+                  <h5>BWH Hotels</h5>
                 </div>
               </div>
             </div>
@@ -404,7 +466,7 @@
               <div class="speaker" data-aos="fade-up" data-aos-delay="100">
                 <div class="img-speaker">
                   <img
-                    src="images/speakers/Amy.png"
+                    src="images/speakers/Willy Legrand.webp"
                     alt="Worldbi Speaker"
                     class="img-fluid img-filter"
                     style="width: 100%"
@@ -415,9 +477,9 @@
                   </div>
                 </div>
                 <div class="details">
-                  <h3 class="name">Jane Myles</h3>
-                  <p>Program Director, Special Projects</p>
-                  <h5>DTRA</h5>
+                  <h3 class="name">Willy Legrand Professor</h3>
+                  <p>Professor</p>
+                  <h5>IU International University </h5>
                 </div>
               </div>
             </div>
@@ -425,7 +487,7 @@
               <div class="speaker" data-aos="fade-up" data-aos-delay="100">
                 <div class="img-speaker">
                   <img
-                    src="images/speakers/Amy.png"
+                    src="images/speakers/Miguel Velez.webp"
                     alt="Worldbi Speaker"
                     class="img-fluid img-filter"
                     style="width: 100%"
@@ -436,17 +498,12 @@
                   </div>
                 </div>
                 <div class="details">
-                  <h3 class="name">Jane Myles</h3>
-                  <p>Program Director, Special Projects</p>
-                  <h5>DTRA</h5>
+                  <h3 class="name"> Miguel Velez </h3>
+                  <p>CEO & Founder</p>
+                  <h5>Unlock Boutique Hotels</h5>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="text-center mx-auto">
-            <a href="" class=""
-              ><button class="main-btn">View More Speakers</button></a
-            >
           </div>
         </div>
       </div>
@@ -1944,7 +2001,7 @@
           </div>
           <div class="row">
             <div class="col-md-4" style="margin-bottom: 20px">
-              <div class="pricing-table card1 position-relative h-100 d-flex flex-column">
+              <div class="pricing-table card1 position-relative d-flex flex-column">
                 <div class="product-category">
                   <h3>
                     General Admission for Academia, <br />Non-Profit,
@@ -1989,7 +2046,7 @@
               </div>
             </div>
             <div class="col-md-4" style="margin-bottom: 20px">
-              <div class="pricing-table card2 h-100 d-flex flex-column">
+              <div class="pricing-table card2 d-flex flex-column">
                 <div class="product-category">
                   <h3>Vendor / Company / Service Provider</h3>
                 </div>
@@ -2033,7 +2090,7 @@
               <!-- <span class="sub-title2 "><span class="text">Ticket Price</span></span> -->
               <h2 class="sec-title">Event Pass & Tickets</h2>
               <p class="package-text">The registration fee covers access to all conference sessions, workshops, networking events, exhibition areas, and conference materials. Please refer.</p>
-               <p><a class="btn more-package"> View More Packages</a></p>
+               <p><a href=""><button class="main-btn me-md-2">View More Packages</button></a></p>
               <div>
                 <img clas="img-fluid" style="border-radius: 35px;" alt="Attendee Pass" src="	https://wordpress.themeholy.com/eveni/wp-content/uploads/2024/05/price_1.jpg" width="100%" />
               </div>
@@ -2835,35 +2892,40 @@
     <!-- For Highlights Sections -->
     <script>
       const contentData = {
-          filter1: {
-              heading: 'Networking Sessions',
-              paragraph: 'Immerse yourself in a comprehensive series of networking sessions meticulously designed to broaden your professional network and deepen your knowledge base. Our dynamic sessions and vibrant presentations and panels are tailored to provide not only valuable insights but also to foster efficient learning opportunities and facilitate meaningful connections crucial for continuous professional development.',
-              image: 'images/background/hotel-technology.webp'
-          },
-          filter2: {
-              heading: 'Engaging Meeting',
-              paragraph: 'Participate in a diverse range of engaging meetings aimed at nurturing connections and promoting knowledge-sharing through immersive deep dive sessions, interactive peer-to-peer discussions, and stimulating fishbowl conversations. These interactive formats are crafted to ignite innovative ideas, foster collaboration, and offer new perspectives that can significantly enhance your professional journey.',
-              image: 'images/background/hotel-technology.webp'
-          },
-          filter3: {
-              heading: 'Refreshment and Happy Hours',
-              paragraph: 'Take a moment to recharge and rejuvenate amidst our thoughtfully curated selection of beverages, including aromatic coffee and a variety of refreshing options. Our engaging activities and carefully planned luncheons are designed to create a conducive atmosphere for casual conversations, facilitating organic networking opportunities where ideas flow freely and relationships thrive.',
-              image: 'images/background/hotel-technology.webp'
-          }
+        filter1: {
+          heading: 'Networking Sessions',
+          paragraph: 'Immerse yourself in a comprehensive series of networking sessions meticulously designed to broaden your professional network and deepen your knowledge base. Our dynamic sessions and vibrant presentations and panels are tailored to provide not only valuable insights but also to foster efficient learning opportunities and facilitate meaningful connections crucial for continuous professional development.',
+          image: 'images/background/hotel-technology.webp'
+        },
+        filter2: {
+          heading: 'Engaging Meeting',
+          paragraph: 'Participate in a diverse range of engaging meetings aimed at nurturing connections and promoting knowledge-sharing through immersive deep dive sessions, interactive peer-to-peer discussions, and stimulating fishbowl conversations. These interactive formats are crafted to ignite innovative ideas, foster collaboration, and offer new perspectives that can significantly enhance your professional journey.',
+          image: 'images/background/hotel-technology.webp'
+        },
+        filter3: {
+          heading: 'Refreshment and Happy Hours',
+          paragraph: 'Take a moment to recharge and rejuvenate amidst our thoughtfully curated selection of beverages, including aromatic coffee and a variety of refreshing options. Our engaging activities and carefully planned luncheons are designed to create a conducive atmosphere for casual conversations, facilitating organic networking opportunities where ideas flow freely and relationships thrive.',
+          image: 'images/background/hotel-technology.webp'
+        }
       };
-      
-      function changeContent(filter, button) {
-          const data = contentData[filter];
-          document.getElementById('content').innerHTML = `<h2 >${data.heading}</h2><p style="text-align: justify;">${data.paragraph}</p>`;
-          document.getElementById('picture').innerHTML = `<img style="border-radius: 15px" src="${data.image}" alt="${data.heading} Picture">`;
-      
-          // Remove 'active' class from all buttons
-          const buttons = document.querySelectorAll('.fltr-btn');
-          buttons.forEach(btn => btn.classList.remove('active'));
-      
-          // Add 'active' class to the clicked button
-          button.classList.add('active');
-      }
+
+function changeContent(filter, button) {
+    const data = contentData[filter];
+    document.getElementById('content').innerHTML = `<h2>${data.heading}</h2><p style="text-align: justify;">${data.paragraph}</p>`;
+    document.getElementById('picture').innerHTML = `<img style="border-radius: 15px" src="${data.image}" alt="${data.heading} Picture">`;
+
+    // Remove 'active' class from all buttons
+    const buttons = document.querySelectorAll('.fltr-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    // Add 'active' class to the clicked button
+    button.classList.add('active');
+}
+
+// Set the default active filter button and content on page load
+document.addEventListener('DOMContentLoaded', () => {
+    changeContent('filter1', document.querySelector('.fltr-btn.active'));
+});
     </script>
       
 

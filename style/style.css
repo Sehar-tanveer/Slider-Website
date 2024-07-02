@@ -40,7 +40,7 @@ a {
 
 .social-icons {
   position: fixed;
-  top: 50%;
+  top: 55%;
   left: 0;
   transform: translateY(-50%);
   z-index: 1000;
@@ -424,7 +424,8 @@ button.accordion-button:active {
 } */
 /* .highlights-section .event-hours{} */
 .highlights-section .event-hours {
-  height: 85vh;
+  margin-top: 10px;
+  height: 34.5rem;
   background: lightgray;
   border-radius: 15px;
   display: flex;
@@ -434,7 +435,7 @@ button.accordion-button:active {
   margin-bottom: 10px;
 }
 .highlights-section .content {
-  height: 280px;
+  /* height: 280px; */
   padding: 10px;
 }
 .highlights-section .picture {
@@ -473,7 +474,7 @@ button.accordion-button:active {
 }
 
 .section-header-spk {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .section-header-spk p {
@@ -756,6 +757,7 @@ button.accordion-button:active {
   flex-direction: column;
   justify-content: space-between;
   min-height: 480px;
+  /* height: 32rem; */
   position: relative;
   margin: 10px;
   /* border-top: 20px solid transparent;
@@ -766,6 +768,7 @@ button.accordion-button:active {
 }
 .pricing-table.card2{
   background-color: #28a645;
+  padding-bottom: 50px;
 }
 #ticketsSection .more-package{
   background-color: #28a645;
@@ -779,7 +782,7 @@ button.accordion-button:active {
 }
 .pricing-table::before {
   content: "";
-  top: 0px;
+  top: -2px;
   background-image: url(../images/icons/Ticket-01.png);
   position: absolute;
   left: 0;
@@ -792,7 +795,7 @@ button.accordion-button:active {
 }
 .pricing-table::after {
   content: "";
-  bottom: 0px;
+  bottom: -2px;
   background-image: url(../images/icons/Ticket-01.png);
   position: absolute;
   left: 0;
@@ -807,10 +810,13 @@ button.accordion-button:active {
 #ticketsSection .sec-title{
   margin-top: -0.23em;
   text-transform: capitalize;
-  font-size: 48px;
+  font-size: 30px;
   margin-bottom: 22px;
   line-height: 1.208;
   font-weight: 700;
+}
+#ticketsSection .pass-texts{
+  text-align: center;
 }
 #ticketsSection .pass-texts p.package-text{
   margin: 0 0 18px 0;
@@ -1240,6 +1246,65 @@ button.accordion-button:active {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+/* Enquiry Form Section */
+.enquire-ul {
+  /* clear: both; */
+  position: fixed;
+  display: block;
+  list-style-type: none;
+  left: 0;
+  top: 15%;
+  -webkit-animation: slideright 1s forwards;
+  -webkit-animation-delay: 1.5s;
+  animation: slideright 1s forwards;
+  animation-delay: 1.5s;
+  z-index: 1000;
+}
+/* .enquires-ul{
+  position: absolute;
+  left: -77.5px;
+  top: 5%;
+  list-style: none;
+} */
+@keyframes slideright {
+  100% {
+    right: 0;
+  }
+}
+.enquire-li {
+  margin-bottom: 40px;
+  width: 10%;
+  position: relative;
+  height: 60px;
+  top: 45px;
+  left: -75px;
+  /* margin-right: -40px; */
+  padding: 5px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  background-color: #28A745;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-transition: width .5s, background-color .1s;
+  transition: width .5s, background-color .1s;
+}
+.enquire-li a {
+  font-size: 17px;
+  text-transform: none;
+  text-align: center;
+  text-decoration: none;
+  color: #EBEBEB;
+}
+.enquire-li:hover {
+  background-color: black;
+  color: #fff;
+}
+form .styled-input{
+  padding: 15px;
+  background: lightgray;
+  border-radius: 15px;
+}
 /* Media Queries */
 
 @media (max-width: 1199px) {
@@ -1266,6 +1331,18 @@ button.accordion-button:active {
 @media (min-width: 993px) and (max-width: 1078px) {
 }
 @media (max-width: 992px) {
+  .pricing-table.card2{
+    padding-bottom: 8rem;
+  }
+  .pricing-table::before{
+    top: -4px;
+  }
+  .pricing-table::after{
+    bottom: -4px;
+  }
+  #networkingSection #picture{
+    display: none;
+  }
   #agendaSection .speak-slot {
     /* border: none; */
   }
@@ -1306,6 +1383,9 @@ button.accordion-button:active {
   }
 }
 @media (max-width: 767px) {
+  .pricing-table.card2{
+    padding-bottom: 5rem;
+  }
   .agenda-detail {
     padding: 30px;
   }
@@ -1361,6 +1441,11 @@ button.accordion-button:active {
     margin-top: 15px;
   }
 }
+@media (max-width: 500px){
+  .highlights-section .event-hours{
+    height: 40rem;
+  }
+}
 @media (max-width: 569px) {
   #homeSection .section-content {
     padding: 18px 19px;
@@ -1393,6 +1478,9 @@ button.accordion-button:active {
   #homeSection .counter-stats .counter-wrapp {
     justify-content: center;
   }
+  .highlights-section .event-hours{
+    height: 45rem;
+  }
 }
 @media (max-width: 338px) {
   div#homeSection {
@@ -1401,9 +1489,15 @@ button.accordion-button:active {
   div#speakersSection {
     margin-bottom: 20px;
   }
+  .highlights-section .event-hours{
+    height: 50rem;
+  }
 }
 @media (max-width: 320px) {
   #homeSection .counter-stats {
     height: 52%;
+  }
+  .highlights-section .event-hours{
+    height: 60rem;
   }
 }
