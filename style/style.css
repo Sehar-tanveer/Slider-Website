@@ -556,7 +556,7 @@ a {
   height: 80%;
   object-fit: cover;
   z-index: 1;
-  /* filter: grayscale(100%); */
+  filter: grayscale(100%);
 }
 
 .testimonial-container {
