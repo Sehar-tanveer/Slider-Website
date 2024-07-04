@@ -897,7 +897,7 @@ a {
 }
 
 .product-detail {
-  min-height: 250px;
+  height: 250px;
   align-items: center;
   display: flex;
 }
@@ -1043,7 +1043,7 @@ a {
   height: fit-content;
 }
 .location-map .hotel-map {
-  height: 64.5vh !important;
+  height: 68vh !important;
 }
 .location-content {
   padding: 15px;
