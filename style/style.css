@@ -495,8 +495,9 @@ a {
 }
 .highlights-section .fltr-btn {
   background: #006a2c;
-  text-align: left;
+  text-align: center;
   color: #fff;
+  width: 100%;
   padding: 10px;
   border: 1px solid #006a2c;
 }
