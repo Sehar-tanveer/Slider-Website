@@ -1252,14 +1252,18 @@ a {
   justify-content: center;
 }
 #footerSection .footer .footer-widget-social a {
-  height: 45px;
+  /* height: 45px;
   width: 45px;
-  line-height: 45px;
+  line-height: 45px; */
   background-color: #34404b;
   border-radius: 50%;
   font-size: 22px;
   color: #ffffff;
   transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #footerSection .footer .footer-widget-social a:hover {
   color: #28a645;
