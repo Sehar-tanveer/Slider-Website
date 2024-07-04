@@ -892,7 +892,8 @@ a {
 }
 
 .product-price h4 {
-  font-size: 19px;
+  font-size: 25px;
+  font-weight: 800;
 }
 
 .product-detail {
@@ -1041,6 +1042,9 @@ a {
 .location-map {
   height: fit-content;
 }
+.location-map .hotel-map {
+  height: 64.5vh !important;
+}
 .location-content {
   padding: 15px;
 }
@@ -1168,6 +1172,7 @@ a {
 }
 .counters-wrapp {
   justify-content: space-between;
+  padding-left: 7px;
 }
 .counters-wrapp span {
   color: #bbb8b8;
