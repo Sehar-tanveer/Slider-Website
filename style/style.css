@@ -548,6 +548,9 @@ a {
   z-index: 1;
   filter: grayscale(100%);
 }
+button.button-86, button.button-87 {
+  font-size: 18px;
+}
 .bg-vv {
   position: absolute;
   top: 0;
