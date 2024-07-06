@@ -1170,10 +1170,31 @@ button.button-86, button.button-87 {
 .counters-wrapp {
   justify-content: space-between;
   padding-left: 7px;
+  flex-wrap: wrap;
+  word-break: break-word;
+}
+.counters-wrapp p{
+  margin-right: 5px;
+}
+.about-content .chair-name{
+  margin-bottom: 2px;
+  color: #006a2c;
+  font-size: 28px;
+  font-weight: 600;
+}
+.about-content .chair-title{
+  color: black;
+  font-size: 17px;
+  margin-bottom: 3px;
+}
+.about-content .chair-ratings{
+  border-bottom: 1px dashed #2e2e2e;
+  padding-bottom: 7px;
+  margin-bottom: 10px;
 }
 .counters-wrapp span {
   color: #bbb8b8;
-  font-size: 42px;
+  font-size: 33px;
   font-weight: 800;
 }
 .counters-wrapp p {
@@ -1413,7 +1434,11 @@ form .styled-input {
   border-radius: 15px;
 }
 /* Media Queries */
-
+@media (max-width: 1207px){
+  .counters-wrapp span{
+    font-size: 28px;
+  }
+}
 @media (max-width: 1199px) {
   .agenda-time {
     padding: 25px 30px;
@@ -1427,6 +1452,11 @@ form .styled-input {
 }
 @media (max-width: 1063px) {
   #homeSection .counter-stats .counters {
+    font-size: 25px;
+  }
+}
+@media (max-width: 1036px){
+  .counters-wrapp span{
     font-size: 25px;
   }
 }
@@ -1481,8 +1511,16 @@ form .styled-input {
     font-size: 13px;
   }
 }
+@media (max-width: 930px){
+  .counters-wrapp span{
+    font-size: 22px;
+  }
+}
 @media (max-width: 830px) {
   #homeSection .counter-stats .counter {
+    font-size: 20px;
+  }
+  .counters-wrapp span{
     font-size: 20px;
   }
 }
