@@ -475,6 +475,7 @@ a {
 /* .highlights-section .event-hours{} */
 .highlights-section .event-hours {
   margin-top: 10px;
+  word-break: break-word;
   height: 34.5rem;
   background: lightgray;
   border-radius: 15px;
@@ -787,9 +788,9 @@ button.button-86, button.button-87 {
   /* background: linear-gradient(144deg, #28a745 0%, #000 35%, #000 65%, #006a2d 100%); */
   padding: 30px 20px;
   color: #fff;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around; */
   min-height: 480px;
   position: relative;
   margin: 10px;
@@ -895,10 +896,13 @@ button.button-86, button.button-87 {
 
 .product-detail {
   height: 250px;
+  margin-bottom: 10px;
   align-items: center;
   display: flex;
 }
-
+.product-price {
+  padding: 15px 0;
+}
 .product-detail ul {
   list-style: none;
   padding: 0;
@@ -1086,6 +1090,7 @@ button.button-86, button.button-87 {
   padding: 0;
   width: 90%;
   max-width: 1200px;
+  border: none;
 }
 .gallery .close {
   color: white !important;
@@ -1228,30 +1233,51 @@ button.button-86, button.button-87 {
   padding: 25px 20px;
 }
 /* Footer */
-#footerSection {
-  background: #1e2b3b;
+#inquirySection .quries-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 26px 0 0 0;
+  align-items: center;
 }
-#footerSection .footer .footer-menu {
-  margin-top: 50px;
+#inquirySection .quries-wrap .rounded-img {
+  flex-basis: 25%;
 }
-.company-location p a {
+.quries-details a {
   color: #fff;
 }
-#footerSection .footer ul {
-  justify-content: space-evenly;
-  list-style: none;
+.quries-details p {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
 }
-#footerSection .footer ul li a {
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 24px;
-  font-family: "Archivo", sans-serif;
+#inquirySection .quries-wrap .quries-details {
+  flex-basis: 70%;
+}
+#inquirySection h2{
   font-weight: 700;
-  display: inline-block;
-  color: #ffffff;
-  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-#footerSection .footer a:hover {
+#inquirySection .quries-details h3{
+  font-size: 2rem;
+}
+#inquirySection .quries-details h4{
+  font-size: 1.1rem;
+}
+#inquirySection {
+  background-color: #1e2b3b;
+  /* animation: changes 3s linear infinite; */
+}
+#inquirySection .rounded-img img{
+  /* width: 10%; */
+  border-radius: 50%;
+}
+@keyframes changes {
+  0%{
+    background-color: #1e2b3b;
+  }
+  100%{
+    background-color: #1e3b2b;;
+  }
+}
+#inquirySection a:hover {
   text-decoration: underline;
   color: #28a645;
 }
@@ -1261,7 +1287,7 @@ button.button-86, button.button-87 {
   background-position: center;
   background-size: cover;
 }
-#footerSection .footer .footer-widget-social {
+#inquirySection .footer-widget-social {
   /* border-top: 1px solid #4a555f; */
   gap: 20px;
   /* padding-top: 35px; */
@@ -1269,7 +1295,7 @@ button.button-86, button.button-87 {
   display: flex;
   justify-content: center;
 }
-#footerSection .footer .footer-widget-social a {
+#inquirySection .footer-widget-social a {
   /* height: 45px;
   width: 45px;
   line-height: 45px; */
@@ -1283,13 +1309,16 @@ button.button-86, button.button-87 {
   justify-content: center;
   align-items: center;
 }
-#footerSection .footer .footer-widget-social a:hover {
+.graphs-wrap h5 {
+  font-size: 30px;
+}
+#inquirySection .footer-widget-social a:hover {
   color: #28a645;
 }
-#footerSection .footer .footer-copyright {
+#inquirySection .footer-copyright {
   margin-top: 42px;
 }
-#footerSection .footer .footer-copyright p {
+#inquirySection .footer-copyright p {
   color: #919191;
 }
 /* About Section */
@@ -1300,6 +1329,7 @@ button.button-86, button.button-87 {
   padding: 20px;
   text-align: justify;
   vertical-align: middle;
+  word-break: break-word;
 }
 .about-content p {
   margin-bottom: 10px;
@@ -1468,6 +1498,14 @@ form .styled-input {
 @media (min-width: 993px) and (max-width: 1078px) {
 }
 @media (max-width: 992px) {
+  .product-detail{
+    height: auto;
+  }
+  .scrollables {
+    height: 80vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
   .pricing-table.card2 {
     padding-bottom: 8rem;
   }
@@ -1493,7 +1531,7 @@ form .styled-input {
     word-break: break-word;
   }
   .section-content .event-name {
-    font-size: 2em;
+    font-size: 2.3em;
   }
   .agenda-time {
     padding: 46px 12px;
@@ -1509,6 +1547,9 @@ form .styled-input {
   }
   #homeSection .counter-stats p {
     font-size: 13px;
+  }
+  .product-price h4{
+    font-size: 23px;
   }
 }
 @media (max-width: 930px){
@@ -1526,7 +1567,7 @@ form .styled-input {
 }
 @media (max-width: 788px) {
   #homeSection .counter-stats {
-    height: 25%;
+    height: 33.4%;
   }
 }
 @media (max-width: 767px) {
@@ -1566,6 +1607,7 @@ form .styled-input {
   }
   #homeSection .counter-stats p {
     font-size: 12px;
+    width: 40%;
   }
   /* .sponsor-wrapp{
     flex-wrap: nowrap !important;
@@ -1582,6 +1624,8 @@ form .styled-input {
 @media (max-width: 600px) {
   #homeSection .counter-stats p {
     font-size: 12px;
+    width: 50%;
+    margin: auto;
   }
 }
 @media (min-width: 398px) and (max-width: 576px) {
@@ -1590,8 +1634,8 @@ form .styled-input {
     margin-top: 15px;
   }
 }
-@media (max-width: 500px) {
-  .highlights-section .event-hours {
+@media (max-width: 575px){ 
+  .highlights-section .event-hours{
     height: 40rem;
   }
 }
@@ -1602,6 +1646,16 @@ form .styled-input {
   }
   #homeSection .section-content .event-name {
     font-size: 2.5em;
+  }
+}
+@media (max-width: 486px) {
+  .highlights-section .event-hours {
+    height: 50rem;
+  }
+  #homeSection .counter-stats p {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 3px;
   }
 }
 @media (max-width: 422px) {
@@ -1631,6 +1685,19 @@ form .styled-input {
     height: 45rem;
   }
 }
+@media (max-width: 396px){
+  .highlights-section .event-hours {
+    height: 53rem;
+  }
+}
+@media (max-width: 384px){
+  #homeSection .counter-stats{
+    top: 77%;
+  }
+  .hlt-section{
+    padding-right: 0 !important;
+  }
+}
 @media (max-width: 338px) {
   div#homeSection {
     margin-bottom: 40px;
@@ -1639,12 +1706,12 @@ form .styled-input {
     margin-bottom: 20px;
   }
   .highlights-section .event-hours {
-    height: 50rem;
+    height: 58rem;
   }
 }
 @media (max-width: 320px) {
   #homeSection .counter-stats {
-    height: 52%;
+    height: 35%;
   }
   .highlights-section .event-hours {
     height: 60rem;

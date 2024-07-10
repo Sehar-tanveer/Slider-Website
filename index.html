@@ -315,19 +315,19 @@
     <section class="section about-section" id="aboutSection">
       <div class="container">
         <div class="row justify-content-center align-items-center g-3 p-3">
-          <div class="col-md-4">
+          <div class="col-lg-4 col-sm-12">
             <!-- about-img -->
             <div class="img-speaker">
               <img src="images/speakers/Antonio Ducceschi.webp" alt="Worldbi Speaker" class="img-fluid img-filter"
                 style="width: 100%">
               <div class="overlay">
                 <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                <a style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                    class="fa-solid fa-user"></i></a>
+                <a style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                  onclick="showSpeakerDetails('antonio')"><i class="fa-solid fa-user"></i></a>
               </div>
             </div>
           </div>
-          <div class="col-md-8">
+          <div class="col-lg-8 col-sm-12">
             <div class="about-content">
               <!-- <p class="fw-bold mb-1">Advisory Board Chair Note</p> -->
               <p class="fw-bold mb-1" style="font-size: 2rem;">Welcome Note From Our Chairperson:</p>
@@ -368,7 +368,7 @@
             </div>
           </div>
         </div>
-      </div>
+
     </section>
 
     <section class="section highlights-section" id="networkingSection">
@@ -390,12 +390,12 @@
                       Networking
                     </button>
                   </div>
-                  <div class="col-sm-6">
+                  <div class="col-sm-6" style="margin-bottom: 10px;">
                     <button class="btn mx-3 fltr-btn" onclick="changeContent('filter3', this)">
                       Meetings
                     </button>
                   </div>
-                  <div class="col-sm-6">
+                  <div class="col-sm-6" style="margin-bottom: 10px;">
                     <button class="btn mx-3 fltr-btn" onclick="changeContent('filter4', this)">
                       Happy Hours
                     </button>
@@ -416,17 +416,18 @@
       <div class="container">
         <div class="section-header-spk">
           <div class="row p-2">
-            <div class="col-md-6">
+            <div class="col-md-6 text-md-start text-sm-center">
               <p>Who's Speaking</p>
               <h2>Confirmed Speakers</h2>
               <p>Industry Leaders Take the Stage at DHT 2025</p>
             </div>
-            <div class="col-md-6 d-flex justify-content-end align-items-center">
+            <div
+              class="col-md-6 d-flex justify-content-md-end justify-content-sm-center flex-md-no-wrap flex-sm-wrap align-items-center">
               <div class="text-center" style="margin-right: 20px">
                 <a href="" class=""><button class="main-btn">View More Speakers</button></a>
               </div>
               <div class="gap-1 d-md-flex justify-content-md-center">
-                <a href=""><button class="main-btn me-md-2">
+                <a data-bs-toggle="modal" data-bs-target="#speakerModal"><button class="main-btn me-md-2">
                     Become a Speaker
                   </button></a>
               </div>
@@ -434,7 +435,8 @@
           </div>
         </div>
         <h3 style="font-size: 1.6rem">Conference Chairperson</h3>
-        <div class="row justify-content-center">
+        <!-- <div class="row justify-content-center">
+
           <div class="col-lg-3 col-md-6">
             <div class="speaker" data-aos="fade-up" data-aos-delay="100">
               <div class="img-speaker">
@@ -449,11 +451,6 @@
                 <h3 class="name">Antonio Ducceschi</h3>
                 <p>Chief Commercial Officer</p>
                 <h5>Starhotels</h5>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
               </div>
             </div>
           </div>
@@ -471,11 +468,6 @@
                 <h3 class="name">Jeroen van Gils</h3>
                 <p>Development Director Europe</p>
                 <h5>BWH Hotels</h5>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
               </div>
             </div>
           </div>
@@ -493,11 +485,6 @@
                 <h3 class="name">Tomas Holan</h3>
                 <p>Chief Digital Officer (CDO)</p>
                 <h5>OREA Hotels & Resorts</h5>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
               </div>
             </div>
           </div>
@@ -515,11 +502,80 @@
                 <h3 class="name">Miguel Velez</h3>
                 <p>CEO & Founder</p>
                 <h5>Unlock Boutique Hotels</h5>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <div class="swiper mySpeakerSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="100">
+                <div class="img-speaker">
+                  <img src="images/speakers/Antonio Ducceschi.webp" alt="Worldbi Speaker" class="img-fluid img-filter"
+                    style="width: 100%" />
+                  <div class="overlay">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                      onclick="showSpeakerDetails('antonio')"><i class="fa-solid fa-user"></i></a>
+                  </div>
+                </div>
+                <div class="details">
+                  <h3 class="name">Antonio Ducceschi</h3>
+                  <p>Chief Commercial Officer</p>
+                  <h5>Starhotels</h5>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="100">
+                <div class="img-speaker">
+                  <img src="images/speakers/Jeroen van Gils.webp" alt="Worldbi Speaker" class="img-fluid img-filter"
+                    style="width: 100%" />
+                  <div class="overlay">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-solid fa-user"></i></a>
+                  </div>
+                </div>
+                <div class="details">
+                  <h3 class="name">Jeroen van Gils</h3>
+                  <p>Development Director Europe</p>
+                  <h5>BWH Hotels</h5>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="100">
+                <div class="img-speaker">
+                  <img src="images/speakers/tomas holan.webp" alt="Worldbi Speaker" class="img-fluid img-filter"
+                    style="width: 100%" />
+                  <div class="overlay">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-solid fa-user"></i></a>
+                  </div>
+                </div>
+                <div class="details">
+                  <h3 class="name">Tomas Holan</h3>
+                  <p>Chief Digital Officer (CDO)</p>
+                  <h5>OREA Hotels & Resorts</h5>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="100">
+                <div class="img-speaker">
+                  <img src="images/speakers/Miguel Velez.webp" alt="Worldbi Speaker" class="img-fluid img-filter"
+                    style="width: 100%" />
+                  <div class="overlay">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-solid fa-user"></i></a>
+                  </div>
+                </div>
+                <div class="details">
+                  <h3 class="name">Miguel Velez</h3>
+                  <p>CEO & Founder</p>
+                  <h5>Unlock Boutique Hotels</h>
+                    </5>
+                </div>
               </div>
             </div>
           </div>
@@ -532,7 +588,8 @@
         <div class="highlights-wrapp">
           <div class="row justify-content-center g-3 p-3">
             <h2 class="highlights-text">Events Highlights</h2>
-            <div class="col-md-4 col-sm-12">
+            <!-- col-md-4 col-sm-12 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 ">
               <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="flush-headingOne">
@@ -605,7 +662,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-12">
+            <div class="col-lg-4 col-md-6 col-sm-12">
               <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="flush-headingOne">
@@ -680,7 +737,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-12">
+            <div class="col-lg-4 col-md-6 col-sm-12">
               <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="flush-headingOne">
@@ -759,7 +816,7 @@
     </section>
 
     <section class="section" id="programSection">
-      <div class="container">
+      <div class="container  scrollables">
         <div class="program-section">
           <h2>Who Will Attend</h2>
           <p>
@@ -768,7 +825,7 @@
           </p>
         </div>
         <div class="row pt-3">
-          <div class="col-md-6 col-sm-12">
+          <div class="col-lg-6 col-sm-12">
             <div class="row pt-3">
               <div class="col-md-6 col-sm-12" style="padding-right: 0">
                 <div class="highlights">
@@ -836,17 +893,17 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-sm-12">
+          <div class="col-lg-6 col-sm-12">
             <div class="row">
               <div class="col-md-6 align-self-start">
                 <div class="graphs-wrap">
-                  <h5 class="m-5 text-center">By Ratings</h5>
+                  <h5 class="m-5 text-center fw-bold">By Ratings</h5>
                   <canvas id="myDoughnutChart" width="300" height="400"></canvas>
                 </div>
               </div>
               <div class="col-md-6 align-self-end">
                 <div class="graphs-wrap">
-                  <h5 class="m-5 text-center">By Industry</h5>
+                  <h5 class="m-5 text-center fw-bold">By Industry</h5>
                   <canvas id="myRegionChart" width="300" height="400"></canvas>
                 </div>
               </div>
@@ -936,7 +993,7 @@
             </div>
             <div class="col-sm-6 ml-sm-3 d-flex flex-column justify-content-end">
               <div class="gap-1 d-md-flex justify-content-md-end" style="z-index: 1">
-                <a href=""><button class="main-btn me-md-2">
+                <a data-bs-toggle="modal" data-bs-target="#sponosorModal"><button class="main-btn me-md-2">
                     Become a Sponsor
                   </button></a>
               </div>
@@ -1728,8 +1785,8 @@
           </p>
         </div>
         <div class="row">
-          <div class="col-md-4" style="margin-bottom: 20px">
-            <div class="pricing-table card1 h-100 position-relative d-flex flex-column">
+          <div class="col-md-4 order-lg-1 order-sm-2 order-xs-2" style="margin-bottom: 20px">
+            <div class="pricing-table card1 h-100 position-relative">
               <div class="product-category">
                 <h3>
                   Hotel Experts / Hoteliers / Delegate
@@ -1768,8 +1825,8 @@
               <img src="images/background/up-right-arrow.png" class="arrow-img" />
             </div>
           </div>
-          <div class="col-md-4" style="margin-bottom: 20px">
-            <div class="pricing-table card2 h-100 d-flex flex-column">
+          <div class="col-md-4 order-lg-2 order-sm-3 order-xs-3" style="margin-bottom: 20px">
+            <div class="pricing-table card2 h-100">
               <div class="product-category">
                 <h3>Vendor / Company / Service Provider</h3>
               </div>
@@ -1827,7 +1884,7 @@
               <img src="images/background/up-right-arrow.png" class="arrow-img" />
             </div> -->
           </div>
-          <div class="col-md-4 pass-texts" style="margin-bottom: 20px">
+          <div class="col-md-4 pass-texts order-lg-3 order-sm-1 order-xs-1" style="margin-bottom: 20px">
             <!-- <span class="sub-title2 "><span class="text">Ticket Price</span></span> -->
             <h2 class="sec-title">Event Pass & Tickets</h2>
             <p class="package-text">
@@ -2081,82 +2138,51 @@
       </div>
     </section>
 
-    <section class="section" id="footerSection">
-      <footer class="footer">
-        <div class="footer-widget text-center">
-          <div class="container">
-            <!-- Footer Logo Start -->
-            <div class="footer-logo">
-              <a href="index.php"><img class="img-fluid" src="images/world BI logo.png" alt="WorldBI Logo"
-                  width="26%" /></a>
-            </div>
-            <!-- Footer Logo End -->
+    <section class="section" id="inquirySection">
+      <div class="container text-center">
 
-            <div class="footer-menu">
-              <ul class="d-flex text-white justify-content-space-between" style="flex-wrap: wrap">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="speaker-single.html">Marketplace</a></li>
-                <li><a href="blog.html">Testimonials</a></li>
-                <li><a href="event-single.html">Industry Blogs</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-              </ul>
-            </div>
-
-            <div class="footer-menu text-white text-start company-location"
-              style="border-top: 1px solid #4a555f; padding-top: 35px">
-              <div class="row">
-                <div class="col-md-3 col-sm-12">
-                  <h5>Call Us:</h5>
-                  <p>
-                    <i class="fas fa-light fa-phone"></i> &nbsp;
-                    <a href="tel: 020 3004 8847">020 3004 8847</a>
-                  </p>
-                </div>
-                <div class="col-md-3 col-sm-12">
-                  <h5>Email Us:</h5>
-                  <p>
-                    <i class="fas fa-light fa-envelope"></i> &nbsp;<a
-                      href="mailto: info@worldbigroup.com">info@worldbigroup.com</a>
-                  </p>
-                </div>
-                <div class="col-md-3 col-sm-12">
-                  <h5>Our Location</h5>
-                  <p>
-                    <i class="fas fa-light fa-location-dot"></i>
-                    &nbsp;WorldBI, Office 7, 35-37 Ludgate Hill, London. EC4M
-                    7JN
-                  </p>
-                </div>
-                <div class="col-md-3 col-sm-12">
-                  <h5 style="visibility: hidden">Our Location</h5>
-                  <p style="font-size: 14.2px">
-                    <i class="fas fa-light fa-location-dot"></i>&nbsp; Canada
-                    Office: 55 Village Centre Place, Suite 200, Mississauga,
-                    ON, L4Z 1VP
-                  </p>
-                </div>
+        <div class="row text-white text-start" style="align-items: center; vertical-align: middle;">
+          <div class="col-6 sponsored" style="margin-bottom: 20px;">
+            <h2 class="text-center">Sponsorship Enquiries</h2>
+            <div class="quries-wrap">
+              <div class="rounded-img">
+                <img class="img-fluid" src="images/gallery/zain.jpg" alt="World BI Conferences" />
+              </div>
+              <div class="quries-details">
+                <h3> <a data-bs-toggle="tooltip" data-bs-title="LinkedIn Profile"
+                    href="https://www.linkedin.com/in/zain-jaffari-8b151b88" target="_blank" rel="nofollow">Zain
+                    Jaffari</a> </h3>
+                <h4>Group Sales Director</h4>
+                <p>Mail To: <a href="mailto: zj@worldbigroup.com">zj@worldbigroup.com</a></p>
+                <p> Phone: <a href="tel: +44 20 3950 8884">+44 20 3950 8884</a></p>
+                <p>Mobile: <a href="tel: +44 74 2437 2809">+44 74 2437 2809</a></p>
               </div>
             </div>
-
-            <!-- Footer widget Social Start -->
-            <div class="footer-widget-social footer-space">
-              <a href="https://www.youtube.com/channel/UCmENNVvbz_ojHcRI2OUrfow"><i class="fab fa-youtube"></i></a>
-              <a href="https://www.flickr.com/people/196701978@N06/"><i class="fab fa-flickr"></i></a>
-              <a href="https://www.tiktok.com/@worldbigroup?is_from_webapp=1&sender_device=pc "><i
-                  class="fa-brands fa-tiktok"></i></a>
-              <a href="https://www.pinterest.com/worldbigroup/ "><i class="fab fa-pinterest"></i></a>
+          </div>
+          <div class="col-6 speakered" style="margin-bottom: 20px;">
+            <h2 class="text-center">Speaker Enquires</h2>
+            <div class="quries-wrap">
+              <div class="rounded-img">
+                <img class="img-fluid" src="images/gallery/mona.jpg" alt="World BI Conferences" />
+              </div>
+              <div class="quries-details">
+                <h3> <a data-bs-toggle="tooltip" data-bs-title="LinkedIn Profile"
+                    href="https://www.linkedin.com/in/mona-arslan-01" target="_blank" rel="nofollow">Mona Arslan</a>
+                </h3>
+                <h4>Operations Director</h4>
+                <p>Mail To: <a href="mailto: mona@worldbigroup.com">mona@worldbigroup.com</a></p>
+                <p>Phone: <a href="tel: +44 7466 671163">+44 7466 671163</a></p>
+                <p style="visibility: hidden;">Mobile: <a href="tel: +44 74 2437 2809">+44 74 2437 2809</a></p>
+              </div>
             </div>
-            <!-- Footer widget Social End -->
-
-            <!-- Footer Copyright Start -->
-            <div class="footer-copyright">
-              <p>© Copyright 2025 All Rights Reserved.</p>
-            </div>
-            <!-- Footer Copyright End -->
           </div>
         </div>
-      </footer>
+        <!-- Footer Copyright Start -->
+        <div class="footer-copyright">
+          <p>© Copyright 2025 All Rights Reserved.</p>
+        </div>
+        <!-- Footer Copyright End -->
+      </div>
     </section>
   </div>
 
@@ -2208,25 +2234,165 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Our Chairperson Short Bio</h1>
+          <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p style="text-align: justify;">
-            As Chief Commercial Officer at Starhotels Group, I oversee Sales, Marketing,
-            Revenue, and Distribution for 30 properties, leading a team of 85 professionals. Previously, I managed 11
-            properties as Cluster General Manager in Starhotels' Collezione Division. My career includes roles at
-            Fairmont Hotels & Resorts, MPI, and Starwood Hotels & Resorts, with academic credentials from MPI, Cornell
-            University, HSMAI, and INSEAD's AVIRA course. Actively engaged in professional associations, including
-            leadership roles at the Hotelier Association of Ravenna, Skal International in Monaco, and MPI Italy.
-            Outside work, I enjoy marathon running and live in Florence with my wife Francesca and our children,
-            Alessandro and Leonardo.
-          </p>
+          <p class="modal-bio" style="text-align: justify;"></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
-        <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Sponsor Model -->
+  <div class="modal enquire-modal fade" id="sponosorModal" tabindex="-1" aria-labelledby="sponosorModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" style="justify-content: space-between">
+          <h3 class="modal-title text-white" id="sponosorModalLabel">
+            Become Our Sponsor!
+          </h3>
+          <!-- <span class="close cursor" onclick="lightbox.closeModal()">&times;</span> -->
+          <button type="button" style="
+              color: #fff !important;
+              font-size: 26px;
+              background-color: transparent;
+              border: none;
+            " data-bs-dismiss="modal" aria-label="Close">
+            X
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row g-3 form-body">
+              <div class="col-md-6">
+                <input type="text" class="form-control styled-input" placeholder="Full Name" name="name" required />
+                <div class="error" id="name-error"></div>
+              </div>
+              <div class="col-md-6">
+                <input type="email" class="form-control styled-input" placeholder="Your Email" name="email" required />
+                <div class="error" id="email-error"></div>
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control styled-input" placeholder="Job Title" name="title" required />
+                <div class="error" id="title-error"></div>
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control styled-input" placeholder="Your Company" name="company"
+                  required />
+                <div class="error" id="company-error"></div>
+              </div>
+              <!-- <div class="col-md-6">
+                <input type="text" class="form-control styled-input" placeholder="Subject" name="subject" required />
+                <div class="error" id="subject-error"></div>
+              </div> -->
+              <div class="col-md-6">
+                <input type="tel" class="form-control styled-input" placeholder="Phone/Mobile No" name="phone"
+                  required />
+                <div class="error" id="phone-error"></div>
+              </div>
+              <div class="col-md-6">
+                <select name="inquiry" class="form-control styled-input" required>
+                  <option hidden="hidden" value="" disabled selected>
+                    I would like to attend as:
+                  </option>
+                  <option value="Meeting Partner">Meeting Partner</option>
+                  <option value="Exhibition Partner">Exhibition Partner</option>
+                  <option value="Networking Partner">Networking Partner</option>
+                  <option value="Gold Partner">Gold Partner</option>
+                  <option value="Silver Partner">Silver Partner</option>
+                  <option value="Platinum Partner">Platinum Partner</option>
+                  <option value="Presentation Partner">Presentation Partner</option>
+                </select>
+                <div class="error" id="inquiry-error"></div>
+              </div>
+              <div class="col-md-12">
+                <textarea class="form-control my-text styled-input" name="message" rows="5"
+                  placeholder="Message"></textarea>
+                <div class="error" id="message-error"></div>
+              </div>
+            </div>
+            <br />
+            <div class="text-end">
+              <button class="g-recaptcha main-btn" data-sitekey="6LeC5Q8nAAAAAFf2m1bHTiCLnAwuwNC4_pY9FlZv"
+                data-callback="onSubmit" data-action="submit">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Speaker Model -->
+  <div class="modal enquire-modal fade" id="speakerModal" tabindex="-1" aria-labelledby="speakerModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" style="justify-content: space-between">
+          <h3 class="modal-title text-white" id="speakerModalLabel">
+            Become Our Speaker!
+          </h3>
+          <!-- <span class="close cursor" onclick="lightbox.closeModal()">&times;</span> -->
+          <button type="button" style="
+              color: #fff !important;
+              font-size: 26px;
+              background-color: transparent;
+              border: none;
+            " data-bs-dismiss="modal" aria-label="Close">
+            X
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row g-3 form-body">
+              <div class="col-md-6">
+                <input type="text" class="form-control styled-input" placeholder="Full Name" name="name" required />
+                <div class="error" id="name-error"></div>
+              </div>
+              <div class="col-md-6">
+                <input type="email" class="form-control styled-input" placeholder="Your Email" name="email" required />
+                <div class="error" id="email-error"></div>
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control styled-input" placeholder="Job Title" name="title" required />
+                <div class="error" id="title-error"></div>
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control styled-input" placeholder="Your Company" name="company"
+                  required />
+                <div class="error" id="company-error"></div>
+              </div>
+              <div class="col-md-6">
+                <input type="tel" class="form-control styled-input" placeholder="Phone/Mobile No" name="phone"
+                  required />
+                <div class="error" id="phone-error"></div>
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control styled-input" placeholder="Area of Interest" name="interest"
+                  required />
+                <div class="error" id="interest-error"></div>
+              </div>
+              <div class="col-md-12">
+                <textarea class="form-control my-text styled-input" name="message" rows="5"
+                  placeholder="Message"></textarea>
+                <div class="error" id="message-error"></div>
+              </div>
+            </div>
+            <br />
+            <div class="text-end">
+              <button class="g-recaptcha main-btn" data-sitekey="6LeC5Q8nAAAAAFf2m1bHTiCLnAwuwNC4_pY9FlZv"
+                data-callback="onSubmit" data-action="submit">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -2241,11 +2407,12 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       new fullpage("#fullpage", {
+        // licenseKey: "x",
         scrollingSpeed: 1000,
         // scrollOverflow: true,
         // scrollHorizontally: true,
         // autoScrolling: true,
-        scrollOverflow: true,
+        // scrollOverflow: true,
         normalScrollElements: ".scrollable-content",
         navigation: true,
         loopBottom: true,
@@ -2267,7 +2434,7 @@
           // "agenda",
           "venue",
           "gallery",
-          "footer",
+          "general-enquiries",
         ],
         paddingTop: "4rem",
         afterLoad: function (origin, destination, direction) {
@@ -2298,6 +2465,71 @@
 
   </script>
 
+  <!-- Speakers More Information -->
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
+    const speakers = [
+      {
+        id: 'antonio',
+        title: 'Our Chairperson Short Bio',
+        bio: 'As Chief Commercial Officer at Starhotels Group, I oversee Sales, Marketing, Revenue, and Distribution for 30 properties, leading a team of 85 professionals. Previously, I managed 11 properties as Cluster General Manager in Starhotels\' Collezione Division. My career includes roles at Fairmont Hotels & Resorts, MPI, and Starwood Hotels & Resorts, with academic credentials from MPI, Cornell University, HSMAI, and INSEAD\'s AVIRA course. Actively engaged in professional associations, including leadership roles at the Hotelier Association of Ravenna, Skal International in Monaco, and MPI Italy. Outside work, I enjoy marathon running and live in Florence with my wife Francesca and our children, Alessandro and Leonardo.'
+      }
+    ];
+
+    // Function to show speaker details in the modal
+    function showSpeakerDetails(speakerId) {
+      const modal = document.getElementById('staticBackdrop');
+      const modalTitle = modal.querySelector('.modal-title');
+      const modalBio = modal.querySelector('.modal-bio');
+
+      const speaker = speakers.find(s => s.id === speakerId);
+
+      if (speaker) {
+        modalTitle.textContent = speaker.title;
+        modalBio.textContent = speaker.bio;
+      }
+    }
+  </script>
+
+  <!-- Speaker Swiper Slider -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      function getSwiperConfig() {
+        if (window.matchMedia('(max-width: 639px)').matches) {
+          return { slidesPerView: 1, spaceBetween: 20 };
+        } else if (window.matchMedia('(min-width: 640px) and (max-width: 767px)').matches) {
+          return { slidesPerView: 2, spaceBetween: 30 };
+        } else if (window.matchMedia('(min-width: 768px) and (max-width: 1024px)').matches) {
+          return { slidesPerView: 3, spaceBetween: 30 };
+        } else {
+          return { slidesPerView: 4, spaceBetween: 30 };
+        }
+      }
+
+      function initializeSwiper() {
+        const config = getSwiperConfig();
+        return new Swiper('.mySpeakerSwiper', {
+          slidesPerView: config.slidesPerView,
+          spaceBetween: config.spaceBetween,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+        });
+      }
+
+      let swiperInstance = initializeSwiper();
+
+      window.addEventListener('resize', function () {
+        swiperInstance.destroy(true, true);
+        swiperInstance = initializeSwiper();
+      });
+    });
+  </script>
+
+  <!-- Testimonail Swiper Slider -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const swiper = new Swiper(".mySwiper", {
@@ -2375,8 +2607,8 @@
               return context.chart.data.labels[context.dataIndex];
             },
             font: {
-              weight: "bold",
-              size: 12,
+              weight: "bolder",
+              size: 15,
             },
             textAlign: "center",
           },
@@ -2540,13 +2772,6 @@
           collapse.classList.remove("show");
         }
       });
-    });
-  </script>
-
-  <!-- This is for Reviews -->
-  <script>
-    $(document).ready(function () {
-      $('[data-toggle="tooltip"]').tooltip();
     });
   </script>
 
