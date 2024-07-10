@@ -1,0 +1,1046 @@
+Script For Full Page JS:
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      new fullpage("#fullpage", {
+        licenseKey: 'M5ELH-O101H-X73HK-2KQ28-TJBOP',
+        scrollingSpeed: 1000,
+        // scrollOverflow: true,
+        // scrollHorizontally: true,
+        // autoScrolling: true,
+        // scrollOverflow: true,
+        normalScrollElements: ".scrollable-content",
+        navigation: true,
+        loopBottom: true,
+        fitToSection: true,
+        bigSectionsDestination: top,
+        responsiveWidth: 800,
+        fitToSection: true,
+        anchors: [
+          "home",
+          "about",
+          "networking",
+          "speakers",
+          "highlights",
+          "program",
+          "glance",
+          "sponsors",
+          // "testimonials",
+          "tickets",
+          // "agenda",
+          "venue",
+          "gallery",
+          "general-enquiries",
+        ],
+        paddingTop: "4rem",
+        afterLoad: function (origin, destination, direction) {
+          if (destination.index === 0) {
+            // Home section
+            var homeVideo = document.querySelector(
+              ".section:nth-child(1) .bg-v"
+            );
+            if (homeVideo) {
+              homeVideo.play();
+            }
+          } else if (destination.index === 5) {
+            // Testimonials section
+            var testimonialsVideo = document.querySelector(
+              ".section:nth-child(6) .bg-v"
+            );
+            if (testimonialsVideo) {
+              testimonialsVideo.play();
+            }
+          }
+        },
+      });
+    });
+
+    function scrollToSection(sectionId) {
+      fullpage_api.moveTo(sectionId);
+    }
+
+  </script>
+  
+==========================================================================================================
+Student Pass Template (HTML) :-
+
+<!-- <div class="pricing-table card2 h-100 d-flex flex-column">
+              <div class="product-category">
+                <h3>Vendor / Service Provider / Consultants</h3>
+              </div>
+              <div class="product-price">
+                <h4>2 Days | £1,999</h4>
+              </div>
+              <div class="product-detail">
+                <ul>
+                  <li>
+                    <i class="fa-solid fa-check"></i> Full 2-day Conference
+                    and Exhibit Hall Ticket
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check"></i> Access to In-person
+                    Presentations and Panels
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check"></i> All Inclusive
+                    Breakfasts, Lunches and Refreshments
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check"></i> Free access to the
+                    Drinks Reception
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check"></i> Access to Event
+                    Networking App
+                  </li>
+                </ul>
+              </div>
+              <div class="text-center mb-2">
+                <a href="" class="buy-ticket-btn btn-2">Book Now</a>
+              </div>
+              <img src="images/background/up-right-arrow.png" class="arrow-img" />
+            </div> -->
+
+==========================================================================================================
+Sponsor Section Template ( HTML ) :-
+
+<!-- <div class="col-sm-3 mr-sm-3">
+            <div class="sponsor-heading">
+              <h3>Premium Partner</h3>
+            </div>
+          </div>
+          <div class="col-sm-9">
+            <div class="row">
+              <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                <div class="sponsor">
+                  <div class="sponsor-logo">
+                     data-bs-toggle="modal" data-bs-target="#curebase" 
+                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/bonafi.jpg" class="img-fluid"
+                        alt="Worldbi Business Partner" width="150px" /></a>
+                  </div>
+                  <div class="sponsor-overlay">
+                    <a href="">Learn More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                <div class="sponsor">
+                  <div class="sponsor-logo">
+                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/frieghtos.png" class="img-fluid"
+                        alt="Worldbi Business Partner" width="150px" /></a>
+                  </div>
+                  <div class="sponsor-overlay">
+                    <a href="">Learn More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                <div class="sponsor">
+                  <div class="sponsor-logo">
+                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Kintsugi.png" class="img-fluid"
+                        alt="Worldbi Business Partner" width="150px" /></a>
+                  </div>
+                  <div class="sponsor-overlay">
+                    <a href="">Learn More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                <div class="sponsor">
+                  <div class="sponsor-logo">
+                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/phenocell.png" class="img-fluid"
+                        alt="Worldbi Business Partner" width="150px" /></a>
+                  </div>
+                  <div class="sponsor-overlay">
+                    <a href="">Learn More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                <div class="sponsor">
+                  <div class="sponsor-logo">
+                    <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Vetter.png" class="img-fluid"
+                        alt="Worldbi Business Partner" width="150px" /></a>
+                  </div>
+                  <div class="sponsor-overlay">
+                    <a href="">Learn More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                <div class="sponsor">
+                  <div class="sponsor-logo">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#altoida"><img src="images/sponsors/videra-health.svg"
+              class="img-fluid" alt="Worldbi Business Partner" /></a>
+        </div>
+        <div class="sponsor-overlay">
+          <a href="">Learn More</a>
+        </div>
+      </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="sponsor-heading">
+      <h3>Gold Partner</h3>
+    </div>
+  </div>
+  <div class="col-sm-9">
+    <div class="row">
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/bonafi.jpg" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/frieghtos.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Kintsugi.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/phenocell.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Vetter.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            
+          <a href="" data-bs-toggle="modal" data-bs-target="#altoida"><img src="images/sponsors/videra-health.svg"
+              class="img-fluid" alt="Worldbi Business Partner" /></a>
+        </div>
+        <div class="sponsor-overlay">
+          <a href="">Learn More</a>
+        </div>
+      </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="sponsor-heading">
+      <h3>Silver Partner</h3>
+    </div>
+  </div>
+  <div class="col-sm-9">
+    <div class="row">
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/bonafi.jpg" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/frieghtos.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Kintsugi.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/phenocell.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Vetter.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" data-bs-toggle="modal" data-bs-target="#altoida"><img src="images/sponsors/videra-health.svg"
+                class="img-fluid" alt="Worldbi Business Partner" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="sponsor-heading">
+      <h3>Presentation Partner</h3>
+    </div>
+  </div>
+  <div class="col-sm-9">
+    <div class="row">
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/bonafi.jpg" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/frieghtos.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Kintsugi.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/phenocell.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Vetter.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" data-bs-toggle="modal" data-bs-target="#altoida"><img src="images/sponsors/videra-health.svg"
+                class="img-fluid" alt="Worldbi Business Partner" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="sponsor-heading">
+      <h3>Meeting Partner</h3>
+    </div>
+  </div>
+  <div class="col-sm-9">
+    <div class="row">
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/bonafi.jpg" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/frieghtos.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Kintsugi.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/phenocell.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Vetter.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" data-bs-toggle="modal" data-bs-target="#altoida"><img src="images/sponsors/videra-health.svg"
+                class="img-fluid" alt="Worldbi Business Partner" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="sponsor-heading">
+      <h3>Presentation Partner</h3>
+    </div>
+  </div>
+  <div class="col-sm-9">
+    <div class="row">
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/bonafi.jpg" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/frieghtos.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Kintsugi.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/phenocell.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Vetter.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" data-bs-toggle="modal" data-bs-target="#altoida"><img src="images/sponsors/videra-health.svg"
+                class="img-fluid" alt="Worldbi Business Partner" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="sponsor-heading">
+      <h3>Media Partner</h3>
+    </div>
+  </div>
+  <div class="col-sm-9">
+    <div class="row">
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/bonafi.jpg" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/frieghtos.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Kintsugi.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/phenocell.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" target="_blank" rel="nofollow"><img src="images/sponsors/Vetter.png" class="img-fluid"
+                alt="Worldbi Business Partner" width="150px" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div class="sponsor">
+          <div class="sponsor-logo">
+            <a href="" data-bs-toggle="modal" data-bs-target="#altoida"><img src="images/sponsors/videra-health.svg"
+                class="img-fluid" alt="Worldbi Business Partner" /></a>
+          </div>
+          <div class="sponsor-overlay">
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+==========================================================================================================
+Testimonail Section Tempplate ( HTML ) :-
+
+<!-- <section class="section bg-dark-subtle" id="testimonialsSection">
+        <video autoplay muted loop class="bg-v">
+          <source src="images/background/Testimonial.mp4" type="video/mp4" />
+        </video>
+        <div class="container testimonial-container">
+          <div class="banner-content">
+            <div class="row">
+              <div class="col-md-12 text-container">
+                <div class="text-content">
+                  <h2>
+                    Inspiring Testimonials<br />
+                    from Delighted Customers
+                  </h2>
+                  <p>Hear It from Our Satisfied Clients</p>
+                </div>
+                <div class="testimonial-slider">
+                  <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="testimonial-box">
+                          <div class="testimonial-content">
+                            <p>
+                              I had an incredible experience attending the
+                              event. The event was well-organized, and what I
+                              appreciate the most was the chance to engage in
+                              meaningful conversations and share experiences.
+                            </p>
+                          </div>
+                          <div class="author-block d-flex align-items-center">
+                            <div
+                              class="icon-block d-flex align-items-center justify-content-center"
+                            >
+                              <i class="fa-solid fa-quote-right"></i>
+                            </div>
+                            <div class="author-info">
+                              <h5>CEO</h5>
+                              <h4>Frigga</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="testimonial-box">
+                          <div class="testimonial-content">
+                            <p>
+                              I had an incredible experience attending the
+                              event. The event was well-organized, and what I
+                              appreciate the most was the chance to engage in
+                              meaningful conversations and share experiences.
+                            </p>
+                          </div>
+                          <div class="author-block d-flex align-items-center">
+                            <div
+                              class="icon-block d-flex align-items-center justify-content-center"
+                            >
+                              <i class="fa-solid fa-quote-right"></i>
+                            </div>
+                            <div class="author-info">
+                              <h5>CEO</h5>
+                              <h4>Frigga</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="testimonial-box">
+                          <div class="testimonial-content">
+                            <p>
+                              I had an incredible experience attending the
+                              event. The event was well-organized, and what I
+                              appreciate the most was the chance to engage in
+                              meaningful conversations and share experiences.
+                            </p>
+                          </div>
+                          <div class="author-block d-flex align-items-center">
+                            <div
+                              class="icon-block d-flex align-items-center justify-content-center"
+                            >
+                              <i class="fa-solid fa-quote-right"></i>
+                            </div>
+                            <div class="author-info">
+                              <h5>CEO</h5>
+                              <h4>Frigga</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="testimonial-box">
+                          <div class="testimonial-content">
+                            <p>
+                              I had an incredible experience attending the
+                              event. The event was well-organized, and what I
+                              appreciate the most was the chance to engage in
+                              meaningful conversations and share experiences.
+                            </p>
+                          </div>
+                          <div class="author-block d-flex align-items-center">
+                            <div
+                              class="icon-block d-flex align-items-center justify-content-center"
+                            >
+                              <i class="fa-solid fa-quote-right"></i>
+                            </div>
+                            <div class="author-info">
+                              <h5>CEO</h5>
+                              <h4>Frigga</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="testimonial-box">
+                          <div class="testimonial-content">
+                            <p>
+                              I had an incredible experience attending the
+                              event. The event was well-organized, and what I
+                              appreciate the most was the chance to engage in
+                              meaningful conversations and share experiences.
+                            </p>
+                          </div>
+                          <div class="author-block d-flex align-items-center">
+                            <div
+                              class="icon-block d-flex align-items-center justify-content-center"
+                            >
+                              <i class="fa-solid fa-quote-right"></i>
+                            </div>
+                            <div class="author-info">
+                              <h5>CEO</h5>
+                              <h4>Frigga</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="testimonial-box">
+                          <div class="testimonial-content">
+                            <p>
+                              I had an incredible experience attending the
+                              event. The event was well-organized, and what I
+                              appreciate the most was the chance to engage in
+                              meaningful conversations and share experiences.
+                            </p>
+                          </div>
+                          <div class="author-block d-flex align-items-center">
+                            <div
+                              class="icon-block d-flex align-items-center justify-content-center"
+                            >
+                              <i class="fa-solid fa-quote-right"></i>
+                            </div>
+                            <div class="author-info">
+                              <h5>CEO</h5>
+                              <h4>Frigga</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="testimonial-box">
+                          <div class="testimonial-content">
+                            <p>
+                              I had an incredible experience attending the
+                              event. The event was well-organized, and what I
+                              appreciate the most was the chance to engage in
+                              meaningful conversations and share experiences.
+                            </p>
+                          </div>
+                          <div class="author-block d-flex align-items-center">
+                            <div
+                              class="icon-block d-flex align-items-center justify-content-center"
+                            >
+                              <i class="fa-solid fa-quote-right"></i>
+                            </div>
+                            <div class="author-info">
+                              <h5>CEO</h5>
+                              <h4>Frigga</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="testimonial-box">
+                          <div class="testimonial-content">
+                            <p>
+                              I had an incredible experience attending the
+                              event. The event was well-organized, and what I
+                              appreciate the most was the chance to engage in
+                              meaningful conversations and share experiences.
+                            </p>
+                          </div>
+                          <div class="author-block d-flex align-items-center">
+                            <div
+                              class="icon-block d-flex align-items-center justify-content-center"
+                            >
+                              <i class="fa-solid fa-quote-right"></i>
+                            </div>
+                            <div class="author-info">
+                              <h5>CEO</h5>
+                              <h4>Frigga</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                     <div class="swiper-btns">
+                          <div class="swiper-button-next"></div>
+                          <div class="swiper-button-prev"></div>
+                        </div> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+==========================================================================================================
+Agend Section Tempplate( HTML ) :-
+
+<!-- <section class="section bg-dark-subtle" id="agendaSection">
+        <div class="container">
+          <div class="program-section">
+            <h2>Exciting Agenda</h2>
+            <p>
+              Fuel your mind with captivating keynotes, engaging panels, and
+              exclusive industry insights
+            </p>
+          </div>
+          <div class="row mt-2 gx-0 gy-2">
+            <div class="col-md-2">
+              <div class="agenda-time">
+                <p>8:00 A.M. - 8:00 A.M.</p>
+                <h5>Opening Ceremony</h5>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="agenda-detail bg-light">
+                <h4>Introduce the Event</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
+                  esse ipsa quae facilis repellendus vel iste qui sit! Laborum
+                  velit
+                </p>
+                <div class="conference-location">
+                  <p class="d-inline">
+                    <i class="fa-solid fa-location-dot"></i> Exploration Hall
+                  </p>
+                  <p class="d-inline">
+                    <i class="fa-solid fa-location-dot"></i> Hall 01
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 agenda-col">
+              <div
+                class="speak-slot bg-light d-flex justify-content-between align-items-center"
+              >
+                <div class="d-flex align-items-center justify-content-center">
+                  <img
+                    src="images/speakers/Sanjoli.webp"
+                    alt=""
+                    class="img-fluid img-block"
+                  />
+                </div>
+                <div class="spk-info">
+                  <h4>Uros Mikic</h4>
+                  <p>
+                    Professor of Medicine, Biomedical Data Science, and Surgery
+                  </p>
+                  <p class="fw-bold">Webflow Expert</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <div class="agenda-time">
+                <p>8:00 A.M. - 8:00 A.M.</p>
+                <h5>Opening Ceremony</h5>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="agenda-detail bg-light">
+                <h4>Introduce the Event</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
+                  esse ipsa quae facilis repellendus vel iste qui sit! Laborum
+                  velit
+                </p>
+                <div class="conference-location">
+                  <p class="d-inline">
+                    <i class="fa-solid fa-location-dot"></i> Exploration Hall
+                  </p>
+                  <p class="d-inline">
+                    <i class="fa-solid fa-location-dot"></i> Hall 01
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 agenda-col">
+              <div
+                class="speak-slot bg-light d-flex justify-content-between align-items-center"
+              >
+                <div class="d-flex align-items-center justify-content-center">
+                  <img
+                    src="images/speakers/Sanjoli.webp"
+                    alt=""
+                    class="img-fluid img-block"
+                  />
+                </div>
+                <div class="spk-info">
+                  <h4>Uros Mikic</h4>
+                  <p>
+                    Professor of Medicine, Biomedical Data Science, and Surgery
+                  </p>
+                  <p class="fw-bold">Webflow Expert</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <div class="agenda-time">
+                <p>8:00 A.M. - 8:00 A.M.</p>
+                <h5>Opening Ceremony</h5>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="agenda-detail bg-light">
+                <h4>Introduce the Event</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
+                  esse ipsa quae facilis repellendus vel iste qui sit! Laborum
+                  velit
+                </p>
+                <div class="conference-location">
+                  <p class="d-inline">
+                    <i class="fa-solid fa-location-dot"></i> Exploration Hall
+                  </p>
+                  <p class="d-inline">
+                    <i class="fa-solid fa-location-dot"></i> Hall 01
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 agenda-col">
+              <div
+                class="speak-slot bg-light d-flex justify-content-between align-items-center"
+              >
+                <div class="d-flex align-items-center justify-content-center">
+                  <img
+                    src="images/speakers/Sanjoli.webp"
+                    alt=""
+                    class="img-fluid img-block"
+                  />
+                </div>
+                <div class="spk-info">
+                  <h4>Uros Mikic</h4>
+                  <p>
+                    Professor of Medicine, Biomedical Data Science, and Surgery
+                  </p>
+                  <p class="fw-bold">Webflow Expert</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+==========================================================================================================
+Script For countdown :-
+
+<!-- <script>
+
+  var countDownDate = new Date("Jun 30, 2025 15:37:25").getTime();
+
+  var x = setInterval(function() {
+
+    var now = new Date().getTime();
+    
+    var distance = countDownDate - now;
+    
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("countdown").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+</script> -->
+
+

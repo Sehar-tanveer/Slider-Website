@@ -10,6 +10,34 @@
   box-sizing: border-box;
   font-family: "Catamaran", sans-serif;
 }
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #28a645;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #28a645;
+}
+
+.checked {
+  color: orange;
+}
+
+.btn-closed{
+  color: #fff !important;
+  font-size: 26px; 
+  background-color: transparent; 
+  border: none;
+}
 
 /* body {
   zoom: 95%;
