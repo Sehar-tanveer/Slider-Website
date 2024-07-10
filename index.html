@@ -541,7 +541,7 @@
     <section class="section highlights-section" id="highlightsSection">
       <div class="container scrollable-content">
         <div class="highlights-wrapp">
-          <div class="row justify-content-center g-3 p-3">
+          <div class="row highlights-content g-3 p-3">
             <h2 class="highlights-text">Events Highlights</h2>
             <!-- col-md-4 col-sm-12 -->
             <div class="col-lg-4 col-md-6 col-sm-12 ">
@@ -617,7 +617,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="col-lg-4 col-md-6 col-sm-12 events-highlights1">
               <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="flush-headingOne">
@@ -692,7 +692,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="col-lg-4 col-md-6 col-sm-12 events-highlights">
               <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="flush-headingOne">
@@ -814,7 +814,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-sm-12 hlt-section" style="padding-left: 0">
+              <div class="col-md-6 col-sm-12 hlt-section">
                 <div class="highlights">
                   <div class="highlight-text">
                     VP Global Guest Tech & Innovation, and IT
@@ -1740,7 +1740,7 @@
           </p>
         </div>
         <div class="row">
-          <div class="col-md-4 order-lg-1 order-sm-2 order-xs-2" style="margin-bottom: 20px">
+          <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 20px">
             <div class="pricing-table card1 h-100 position-relative">
               <div class="product-category">
                 <h3>
@@ -1780,7 +1780,7 @@
               <img src="images/background/up-right-arrow.png" class="arrow-img" />
             </div>
           </div>
-          <div class="col-md-4 order-lg-2 order-sm-3 order-xs-3" style="margin-bottom: 20px">
+          <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 20px">
             <div class="pricing-table card2 h-100">
               <div class="product-category">
                 <h3>Vendor / Company / Service Provider</h3>
@@ -1839,7 +1839,7 @@
               <img src="images/background/up-right-arrow.png" class="arrow-img" />
             </div> -->
           </div>
-          <div class="col-md-4 pass-texts order-lg-3 order-sm-1 order-xs-1" style="margin-bottom: 20px">
+          <div class="col-lg-4 col-md-6 col-sm-12 pass-texts" style="margin-bottom: 20px">
             <!-- <span class="sub-title2 "><span class="text">Ticket Price</span></span> -->
             <h2 class="sec-title">Event Pass & Tickets</h2>
             <p class="package-text">
@@ -2007,14 +2007,14 @@
       </section> -->
 
     <section class="section venue-section" id="venueSection">
-      <div class="container">
+      <div class="container scrollables">
         <div class="row justify-content-center g-3">
           <div class="location-content">
             <h2>Event Location</h2>
             <h3><i class="fa-solid fa-location-dot"></i> Nice, France</h3>
             <!-- <h6 class="text-secondary">Street Address:- France</h6> -->
           </div>
-          <div class="col-md-6">
+          <div class="col-lg-6 col-sm-12">
             <div class="location-detail">
               <div class="location-images">
                 <div class="row g-1">
@@ -2034,14 +2034,11 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="location-map">
-              <!-- height="410" -->
-              <iframe class="hotel-map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92299.32275368716!2d7.252811950000001!3d43.70319525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdd0106a852d31%3A0x40819a5fd979a70!2sNice%2C%20France!5e0!3m2!1sen!2s!4v1718364280210!5m2!1sen!2s"
-                width="100%" style="border: 0" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+          <div class="col-lg-6 col-sm-12 location-map">
+            <iframe class="hotel-map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92299.32275368716!2d7.252811950000001!3d43.70319525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdd0106a852d31%3A0x40819a5fd979a70!2sNice%2C%20France!5e0!3m2!1sen!2s!4v1718364280210!5m2!1sen!2s"
+              width="100%" style="border: 0" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
@@ -2532,12 +2529,6 @@
               "#3D550C",
               "#81B622",
               "#59981A",
-              // "#787D12",
-              // "#59981A",
-              // "#76B947",
-              // "#787D12",
-              // "#76B947",
-              // "#59981A",
             ],
             borderColor: [
               "#3D550C",
@@ -2563,7 +2554,7 @@
             },
             font: {
               weight: "bolder",
-              size: 15,
+              size: 18, // Default size, will be updated based on screen size
             },
             textAlign: "center",
           },
@@ -2572,7 +2563,36 @@
       },
       plugins: [ChartDataLabels],
     });
+
+    function updateChartFontSize(chart, fontSize) {
+      chart.options.plugins.datalabels.font.size = fontSize;
+      chart.update();
+    }
+
+    function handleResize() {
+      var width = window.innerWidth;
+      if (width < 430) {
+        updateChartFontSize(myDoughnutChart, 15);
+      } else if (width < 576) {
+        updateChartFontSize(myDoughnutChart, 22); // Extra small devices
+      } else if (width >= 576 && width < 768) {
+        updateChartFontSize(myDoughnutChart, 22); // Small devices
+      } else if (width >= 768 && width < 992) {
+        updateChartFontSize(myDoughnutChart, 23); // Medium devices
+      } else if (width >= 992 && width < 1200) {
+        updateChartFontSize(myDoughnutChart, 16); // Large devices
+      } else {
+        updateChartFontSize(myDoughnutChart, 18); // Extra large devices
+      }
+    }
+
+    // Initial call to set the font size based on the initial screen size
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
   </script>
+
 
   <!-- For Attendees By Industry -->
   <script>
@@ -2610,7 +2630,7 @@
             },
             font: {
               weight: "bold",
-              size: 12,
+              size: 11.5,
             },
             textAlign: "center",
           },
@@ -2619,6 +2639,34 @@
       },
       plugins: [ChartDataLabels],
     });
+
+    function updateChartFont(chart, fontSize) {
+      chart.options.plugins.datalabels.font.size = fontSize;
+      chart.update();
+    }
+
+    function handleResizes() {
+      var width = window.innerWidth;
+      if (width < 430) {
+        updateChartFont(myRegionChart, 12);
+      } else if (width < 576) {
+        updateChartFont(myRegionChart, 13); // Extra small devices
+      } else if (width >= 576 && width < 768) {
+        updateChartFont(myRegionChart, 13); // Small devices
+      } else if (width >= 768 && width < 992) {
+        updateChartFont(myRegionChart, 14); // Medium devices
+      } else if (width >= 992 && width < 1200) {
+        updateChartFont(myRegionChart, 10); // Large devices
+      } else {
+        updateChartFont(myRegionChart, 12); // Extra large devices
+      }
+    }
+
+    // Initial call to set the font size based on the initial screen size
+    handleResizes();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResizes);
   </script>
 
   <!-- For LightBox -->

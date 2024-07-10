@@ -9,8 +9,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Catamaran", sans-serif;
-  /* font-family: "Lato", sans-serif; */
-  /* font-family: myFont; */
 }
 
 /* body {
@@ -1040,11 +1038,15 @@ button.button-86, button.button-87 {
   color: #006a2c;
 }
 /* Venue Section */
-.location-map {
-  height: fit-content;
+.location-map{
+  position: relative !important;
 }
 .location-map .hotel-map {
-  height: 68vh !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 .location-content {
   padding: 15px;
@@ -1232,6 +1234,9 @@ button.button-86, button.button-87 {
   color: #fff;
   padding: 25px 20px;
 }
+.highlights-wrapp .highlights-content{
+  justify-content: center;
+}
 /* Footer */
 #inquirySection .quries-wrap {
   display: flex;
@@ -1246,7 +1251,7 @@ button.button-86, button.button-87 {
   color: #fff;
 }
 .quries-details p {
-  font-size: 1.1rem;
+  font-size: 16px;
   margin-bottom: 4px;
 }
 #inquirySection .quries-wrap .quries-details {
@@ -1316,7 +1321,13 @@ button.button-86, button.button-87 {
   color: #28a645;
 }
 #inquirySection .footer-copyright {
-  margin-top: 42px;
+  border-top: 1px solid #4a555f;
+  margin-top: 5rem;
+  padding-top: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  vertical-align: bottom;
 }
 #inquirySection .footer-copyright p {
   color: #919191;
@@ -1463,7 +1474,15 @@ form .styled-input {
   background: lightgray;
   border-radius: 15px;
 }
+.hlt-section{
+  padding-right: 0 !important;
+}
 /* Media Queries */
+@media  (min-width: 992px) and (max-width: 1199px){
+  .highlight-text{
+    font-size: 12px;
+  }
+}
 @media (max-width: 1207px){
   .counters-wrapp span{
     font-size: 28px;
@@ -1495,9 +1514,13 @@ form .styled-input {
     font-size: 20px;
   }
 }
-@media (min-width: 993px) and (max-width: 1078px) {
-}
 @media (max-width: 992px) {
+  .events-highlights{
+    margin-top: -23px !important;
+  }
+  .highlights-wrapp .highlights-content{
+    justify-content: left;
+  }
   .product-detail{
     height: auto;
   }
@@ -1571,6 +1594,15 @@ form .styled-input {
   }
 }
 @media (max-width: 767px) {
+  .events-highlights1{
+    margin-top: -23px !important;
+  }
+  .events-highlights{
+    margin-top: -18px !important;
+  }
+  .highlights-wrapp .highlights-content{
+    justify-content: center;
+  }
   .pricing-table.card2 {
     padding-bottom: 5rem;
   }
