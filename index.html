@@ -1215,13 +1215,13 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1> -->
+          <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <h3 class="modal-name"></h3>
           <p class="modal-job_title text-secondary"></p>
-          <h5 class="modal-company"></h5>
+          <!-- <h5 class="modal-company"></h5>/ -->
           <p class="modal-bio" style="text-align: justify;"></p>
         </div>
       </div>
@@ -1439,15 +1439,15 @@
     const speakers = [
       {
         id: 'antonio-ducceschi',
-        title: 'Our Chairperson',
-        name: 'Antonio Ducceschi',
+        // title: 'Our Chairperson',
+        title: 'Antonio Ducceschi',
         job_title: 'Chief Commercial Officer',
         company: 'Starhotels',
         bio: 'As Chief Commercial Officer at Starhotels Group, I oversee Sales, Marketing, Revenue, and Distribution for 30 properties, leading a team of 85 professionals. Previously, I managed 11 properties as Cluster General Manager in Starhotels\' Collezione Division. My career includes roles at Fairmont Hotels & Resorts, MPI, and Starwood Hotels & Resorts, with academic credentials from MPI, Cornell University, HSMAI, and INSEAD\'s AVIRA course. Actively engaged in professional associations, including leadership roles at the Hotelier Association of Ravenna, Skal International in Monaco, and MPI Italy. Outside work, I enjoy marathon running and live in Florence with my wife Francesca and our children, Alessandro and Leonardo.'
       },
       {
         id: 'alexander-lennart-schmidt',
-        title: 'Our Advisory',
+        // title: 'Our Advisory',
         name: 'Alexander Lennart Schmidt',
         job_title: 'Professor of Technological Innovation',
         company: 'Hotelschool The Hague',
@@ -1467,10 +1467,10 @@
       const speaker = speakers.find(s => s.id === speakerId);
 
       if (speaker) {
-        modalName.textContent = speaker.name;
+        // modalName.textContent = speaker.name;
         modalTitle.textContent = speaker.title;
-        modalCompany.textContent = speaker.company;
-        modalJobTitle.textContent = speaker.job_title;
+        // modalCompany.textContent = speaker.company;
+        // modalJobTitle.textContent = speaker.job_title;
         modalBio.textContent = speaker.bio;
       }
     }
