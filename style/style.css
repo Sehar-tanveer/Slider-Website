@@ -588,13 +588,23 @@ button.button-86, button.button-87 {
   z-index: 1;
   filter: grayscale(100%);
 }
+/* .section{
+  height: 600px;
+  border-bottom: 1px solid #28a645;
+} */
 .video-banner .row>*{
   padding-right: 0 !important;
 }
-/* .section{
-  height: 900px;
-  border-bottom: 1px solid #28a645;
-} */
+.banner-left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  height: 110vh;
+}
+.banner-left .section-content{
+  margin-top: 10px;
+}
 .testimonial-container {
   position: relative;
   z-index: 2;
@@ -759,8 +769,10 @@ button.button-86, button.button-87 {
   margin: 0 auto;
 }
 #sponsorsSection {
-  height: auto; /* or a specific height you desire */
-  overflow-y: auto;
+  height: 610px;
+  padding-bottom: 10px;
+  /* height: auto; or a specific height you desire
+  overflow-y: auto; */ */
 }
 .section-header-spn {
   margin-bottom: 20px;
@@ -1230,8 +1242,17 @@ button.button-86, button.button-87 {
 }
 .about-content .chair-ratings{
   border-bottom: 1px dashed #2e2e2e;
-  padding-bottom: 7px;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.modal-body .modal-name,
+.modal-body .modal-job_title{
+  margin-bottom: 1px;
+}
+.modal-body .modal-company{
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #6e768a;
 }
 .counters-wrapp span {
   color: #bbb8b8;
