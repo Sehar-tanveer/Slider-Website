@@ -583,12 +583,18 @@ button.button-86, button.button-87 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 80%;
+  height: 85%;
   object-fit: cover;
   z-index: 1;
   filter: grayscale(100%);
 }
-
+.video-banner .row>*{
+  padding-right: 0 !important;
+}
+/* .section{
+  height: 900px;
+  border-bottom: 1px solid #28a645;
+} */
 .testimonial-container {
   position: relative;
   z-index: 2;
@@ -1189,7 +1195,7 @@ button.button-86, button.button-87 {
 }
 #homeSection .counter-stats {
   position: absolute;
-  top: 74%;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 9%;

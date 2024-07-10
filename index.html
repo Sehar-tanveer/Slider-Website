@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style/style.css" />
   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
   <link rel="stylesheet" href="vendor/font-awesome/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.10/fullpage.min.css" />
   <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
@@ -224,7 +224,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 video-banner">
             <div class="row">
               <div class="banner-right banner">
                 <video data-autoplay data-keepplaying autoplay muted loop class="bg-vv">
@@ -1327,13 +1327,15 @@
   <script src="vendor/swiper/swiper-bundle.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/vendors/scrolloverflow.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.10/fullpage.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.10/vendors/scrolloverflow.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       new fullpage("#fullpage", {
         licenseKey: 'M5ELH-O101H-X73HK-2KQ28-TJBOP',
+        // sectionSelector: '.section',
         scrollingSpeed: 1000,
+        scrollOverflow: false,
         normalScrollElements: ".scrollable-content",
         navigation: true,
         loopBottom: true,
@@ -1376,6 +1378,7 @@
           }
         },
       });
+      console.log("Fullpage.js initialized successfully.");
     });
 
     function scrollToSection(sectionId) {
