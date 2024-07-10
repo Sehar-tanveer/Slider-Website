@@ -772,7 +772,7 @@ button.button-86, button.button-87 {
   height: 610px;
   padding-bottom: 10px;
   /* height: auto; or a specific height you desire
-  overflow-y: auto; */ */
+  overflow-y: auto;  */
 }
 .section-header-spn {
   margin-bottom: 20px;
@@ -887,17 +887,25 @@ button.button-86, button.button-87 {
   margin-top: -0.23em;
   text-transform: capitalize;
   font-size: 30px;
-  margin-bottom: 22px;
+  margin-bottom: 5px;
   line-height: 1.208;
   font-weight: 700;
 }
-#ticketsSection .pass-texts {
-  text-align: center;
+/* #ticketsSection .pass-texts {
+  text-align: justify;
+} */
+#ticketsSection .pass-texts p{
+  margin-bottom: 5px;
+ }
+#ticketsSection .pass-texts ul{
+  padding-left: 22px;
+  margin-bottom: 5px;
 }
-#ticketsSection .pass-texts p.package-text {
-  margin: 0 0 18px 0;
+#ticketsSection .pass-texts .package-text {
+  /* margin: 0 0 18px 0; */
   color: #6e768a;
-  line-height: 1.625;
+  /* line-height: 1.625; */
+  text-align: justify;
 }
 #ticketsSection .pass-texts img {
   transition: all ease-in-out 0.4s;
@@ -1241,9 +1249,9 @@ button.button-86, button.button-87 {
   margin-bottom: 3px;
 }
 .about-content .chair-ratings{
-  border-bottom: 1px dashed #2e2e2e;
+  /* border-bottom: 1px dashed #2e2e2e;
   padding-bottom: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 20px; */
 }
 .modal-body .modal-name,
 .modal-body .modal-job_title{

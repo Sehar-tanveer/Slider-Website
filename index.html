@@ -283,9 +283,6 @@
                 <div class="col-lg-8 col-sm-12">
                   <div class="about-content">
                     <p class="fw-bold mb-1" style="font-size: 2rem;">Welcome Note From Our Chairperson:</p>
-                    <h3 class="chair-name mb-1">Antonio Ducceschi</h3>
-                    <p class="chair-title">Chief Commercial Officer</p>
-                    <h5 class="chair-ratings">Starhotels</h5>
                     <p>
                       "As Chairperson of the Digital Transformation in Hotel Technology Conference, I will be delighted
                       to
@@ -301,6 +298,9 @@
                       business in this dynamic digital age. Together, let's pioneer the next wave of hospitality
                       excellence."
                     </p>
+                    <h3 class="chair-name mb-1">Antonio Ducceschi</h3>
+                    <p class="chair-title">Chief Commercial Officer</p>
+                    <h5 class="chair-ratings">Starhotels</h5>
                   </div>
                 </div>
               </div>
@@ -324,9 +324,6 @@
                 <div class="col-lg-8 col-sm-12">
                   <div class="about-content">
                     <p class="fw-bold mb-1" style="font-size: 2rem;">Welcome Note From Our Chair Advisor:</p>
-                    <h3 class="chair-name mb-1">Alexander Lennart Schmidt</h3>
-                    <p class="chair-title">Professor of Technological Innovation</p>
-                    <h5 class="chair-ratings">Hotelschool The Hague</h5>
                     <p>
                       "Welcome to the Digital Transformation in Hotel Technology Conference. As an Advisory Board member
                       and professor of technological innovation, I am looking forward to exploring opportunities
@@ -335,6 +332,9 @@
                       practices. Let’s harness this unique format and drive our industry towards a brighter, tech-savvy
                       future!"
                     </p>
+                    <h3 class="chair-name mb-1">Alexander Lennart Schmidt</h3>
+                    <p class="chair-title">Professor of Technological Innovation</p>
+                    <h5 class="chair-ratings">Hotelschool The Hague</h5>
                   </div>
                 </div>
               </div>
@@ -1019,12 +1019,24 @@
           </div>
           <div class="col-lg-4 col-md-6 col-sm-12 pass-texts" style="margin-bottom: 20px">
             <h2 class="sec-title">Event Pass & Tickets</h2>
-            <p class="package-text">
-              Registrants who cancel their registration less than six weeks before the event commencement date must
-              promptly notify the organizers. In such cases, they are required to arrange for a replacement attendee of
-              the same or equivalent job title.
-            </p>
-            <p class="package-text">If You are Looking to Book 5+ Tickets Please Get in Touch for Group Rates</p>
+            <p class="package-text fw-bold">Includes:</p>
+            <ul>
+              <li class="package-text">Access to all sessions taking place</li>
+              <li class="package-text">Access to the expo hall</li>
+              <li class="package-text">Seller Cocktail Hour</li>
+              <li class="package-text">Lunch/Coffee refreshments</li>
+            </ul>
+            <p class="package-text fw-bold">Does Not Include:</p>
+            <ul>
+              <li class="package-text">Flights and Accommodation in the venue hotel – must be purchased separately</li>
+            </ul>
+            <p class="package-text"><strong>Cancellations Before Ten Weeks:</strong> You have to provide the replacement
+              attendee of the
+              same or equivalent job title.</p>
+            <p class="package-text"><strong>Cancellations Before Six Weeks</strong>: You have to charge a cancellation
+              fee of 599 Pound.</p>
+            <p class="package-text"><strong>Cancellations Before Three Weeks</strong>: You have to pay the cancellation
+              fee and provide a replacement as well.</p>
             <p>
               <a href=""><button class="main-btn me-md-2">
                   View More Packages
@@ -1215,20 +1227,21 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1>
+          <div id="staticBackdropLabel">
+            <h1 class="modal-title fs-5"></h1>
+            <p class="modal-job_title text-secondary"></p>
+            <h5 class="modal-company"></h5>
+          </div>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <h3 class="modal-name"></h3>
-          <p class="modal-job_title text-secondary"></p>
-          <!-- <h5 class="modal-company"></h5>/ -->
           <p class="modal-bio" style="text-align: justify;"></p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Sponsor Model -->
+  <!-- Sponsor Fourm Model -->
   <div class="modal enquire-modal fade" id="sponosorModal" tabindex="-1" aria-labelledby="sponosorModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -1305,7 +1318,7 @@
     </div>
   </div>
 
-  <!-- Speaker Model -->
+  <!-- Speaker Fourm Model -->
   <div class="modal enquire-modal fade" id="speakerModal" tabindex="-1" aria-labelledby="speakerModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -1439,7 +1452,6 @@
     const speakers = [
       {
         id: 'antonio-ducceschi',
-        // title: 'Our Chairperson',
         title: 'Antonio Ducceschi',
         job_title: 'Chief Commercial Officer',
         company: 'Starhotels',
